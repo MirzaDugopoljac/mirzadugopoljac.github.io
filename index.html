@@ -1,1 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mirza Dugopoljac | Landscape Architecture</title>
+
+    <meta
+        name="description"
+        content="Portfolio and professional links of Mirza Dugopoljac, Landscape Architecture student."
+    >
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+
+            background: #f5f2e9;
+            color: #263b2c;
+
+            min-height: 100vh;
+        }
+
+
+        /* MAIN CONTAINER */
+
+        .container {
+            width: 90%;
+            max-width: 720px;
+            margin: auto;
+            padding: 70px 0 40px;
+        }
+
+
+        /* HEADER */
+
+        header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .small-title {
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #788578;
+
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            margin: 0;
+
+            font-size: clamp(32px, 6vw, 52px);
+            font-weight: 500;
+
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            max-width: 520px;
+            margin: 18px auto 0;
+
+            font-size: 16px;
+            line-height: 1.7;
+
+            color: #687468;
+        }
+
+
+        /* FEATURED BUTTON */
+
+        .featured {
+            display: block;
+
+            background: #314a38;
+            color: white;
+
+            text-decoration: none;
+
+            padding: 24px;
+            margin-bottom: 18px;
+
+            border-radius: 14px;
+
+            text-align: left;
+
+            transition: 0.25s;
+        }
+
+        .featured:hover {
+            transform: translateY(-3px);
+            background: #263b2c;
+        }
+
+        .featured-small {
+            display: block;
+
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+            opacity: 0.7;
+
+            margin-bottom: 7px;
+        }
+
+        .featured-title {
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+
+        /* MAIN LINKS */
+
+        .main-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 14px;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            min-height: 125px;
+
+            padding: 20px;
+
+            border: 1px solid #c8cec4;
+            border-radius: 14px;
+
+            color: #263b2c;
+            text-decoration: none;
+
+            background: rgba(255, 255, 255, 0.35);
+
+            transition: 0.25s;
+        }
+
+        .card:hover {
+            background: #ffffff;
+            transform: translateY(-3px);
+            border-color: #829080;
+        }
+
+        .icon {
+            font-size: 22px;
+        }
+
+        .card-title {
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+
+        /* SOCIAL LINKS */
+
+        .socials {
+            margin-top: 35px;
+
+            display: flex;
+            justify-content: center;
+
+            gap: 25px;
+
+            flex-wrap: wrap;
+        }
+
+        .socials a {
+            color: #687468;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            transition: 0.2s;
+        }
+
+        .socials a:hover {
+            color: #263b2c;
+        }
+
+
+        /* CONTACT */
+
+        .contact {
+            margin-top: 55px;
+
+            padding: 35px 25px;
+
+            text-align: center;
+
+            background: #e6e3d8;
+
+            border-radius: 16px;
+        }
+
+        .contact h2 {
+            margin-top: 0;
+
+            font-weight: 500;
+
+            font-size: 26px;
+        }
+
+        .contact p {
+            color: #687468;
+
+            line-height: 1.6;
+        }
+
+        .contact-button {
+            display: inline-block;
+
+            margin-top: 10px;
+
+            padding: 13px 24px;
+
+            background: #314a38;
+            color: white;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            transition: 0.2s;
+        }
+
+        .contact-button:hover {
+            background: #263b2c;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+
+            margin-top: 45px;
+
+            font-size: 12px;
+
+            color: #8d958b;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 550px) {
+
+            .container {
+                padding-top: 45px;
+            }
+
+            .main-links {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                min-height: 100px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="small-title">
+            Landscape Architecture
+        </div>
+
+        <h1>Mirza Dugopoljac</h1>
+
+        <p class="subtitle">
+            Landscape Architecture student interested in landscape design,
+            public spaces, planting design and digital visualization.
+        </p>
+
+    </header>
+
+
+
+    <!-- FEATURED PORTFOLIO -->
+
+    <a class="featured"
+       href="files/Portfolyo.pdf"
+       target="_blank">
+
+        <span class="featured-small">
+            Selected Work
+        </span>
+
+        <span class="featured-title">
+            🌿 View Landscape Architecture Portfolio →
+        </span>
+
+    </a>
+
+
+
+    <!-- MAIN LINKS -->
+
+    <div class="main-links">
+
+
+        <a class="card"
+           href="mirsev-studio-website/">
+
+            <span class="icon">🌱</span>
+
+            <span class="card-title">
+                Mirsev Studio →
+            </span>
+
+        </a>
+
+
+        <a class="card"
+           href="files/CV.pdf"
+           target="_blank">
+
+            <span class="icon">📄</span>
+
+            <span class="card-title">
+                Curriculum Vitae →
+            </span>
+
+        </a>
+
+
+        <a class="card"
+           href="https://github.com/MirzaDugopoljac"
+           target="_blank">
+
+            <span class="icon">💻</span>
+
+            <span class="card-title">
+                GitHub →
+            </span>
+
+        </a>
+
+
+        <a class="card"
+           href="contact.html">
+
+            <span class="icon">✉️</span>
+
+            <span class="card-title">
+                Contact →
+            </span>
+
+        </a>
+
+
+    </div>
+
+
+
+    <!-- SOCIAL MEDIA -->
+
+    <div class="socials">
+
+        <a href="https://www.instagram.com/mirza_dg99/"
+           target="_blank">
+            Instagram
+        </a>
+
+        <a href="https://www.linkedin.com/in/mirzadugopoljac/"
+           target="_blank">
+            LinkedIn
+        </a>
+
+        <a href="https://github.com/MirzaDugopoljac"
+           target="_blank">
+            GitHub
+        </a>
+
+    </div>
+
+
+
+    <!-- CONTACT -->
+
+    <section class="contact">
+
+        <h2>Let's Connect</h2>
+
+        <p>
+            Interested in collaboration, landscape architecture,
+            visualization or other creative opportunities?
+        </p>
+
+        <a class="contact-button"
+           href="contact.html">
+
+            Contact Me
+
+        </a>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Mirza Dugopoljac · Landscape Architecture
+
+    </footer>
+
+
+</div>
+
+</body>
+
+</html>
