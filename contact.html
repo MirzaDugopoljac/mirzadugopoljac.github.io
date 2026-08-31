@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Mirza Dugopoljac</title>
+
+    <meta
+        name="description"
+        content="Contact Mirza Dugopoljac for landscape architecture, visualization, collaboration and professional opportunities."
+    >
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+
+            background: #f5f2e9;
+            color: #263b2c;
+
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 760px;
+            margin: auto;
+            padding: 60px 0 40px;
+        }
+
+        /* TOP BAR */
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 70px;
+        }
+
+        .brand {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+
+            color: #263b2c;
+            text-decoration: none;
+        }
+
+        .back-link {
+            font-size: 14px;
+            color: #687468;
+            text-decoration: none;
+
+            transition: 0.2s;
+        }
+
+        .back-link:hover {
+            color: #263b2c;
+        }
+
+        /* HEADER */
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+
+            color: #7a8678;
+
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            margin: 0;
+
+            font-size: clamp(34px, 7vw, 58px);
+            font-weight: 500;
+        }
+
+        .intro {
+            max-width: 540px;
+            margin: 20px auto 0;
+
+            color: #687468;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        /* CONTACT PANEL */
+
+        .contact-panel {
+            background: #e7e3d8;
+
+            border-radius: 18px;
+            padding: 34px;
+
+            margin-bottom: 24px;
+        }
+
+        .contact-panel h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .contact-panel p {
+            margin-top: 0;
+            margin-bottom: 24px;
+
+            color: #687468;
+            line-height: 1.6;
+        }
+
+        .email-button {
+            display: block;
+
+            padding: 16px 20px;
+
+            background: #314a38;
+            color: white;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            border-radius: 10px;
+
+            transition: 0.25s;
+        }
+
+        .email-button:hover {
+            background: #263b2c;
+            transform: translateY(-2px);
+        }
+
+        /* PROFESSIONAL LINKS */
+
+        .professional-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 14px;
+
+            margin-top: 24px;
+        }
+
+        .professional-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            min-height: 90px;
+
+            padding: 20px;
+
+            border: 1px solid #c8cec4;
+            border-radius: 14px;
+
+            background: rgba(255, 255, 255, 0.35);
+
+            color: #263b2c;
+            text-decoration: none;
+
+            transition: 0.25s;
+        }
+
+        .professional-card:hover {
+            background: white;
+            border-color: #829080;
+            transform: translateY(-2px);
+        }
+
+        .card-left {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .card-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+            color: #7a8678;
+        }
+
+        .card-title {
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        .arrow {
+            font-size: 20px;
+            color: #7a8678;
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 55px;
+
+            text-align: center;
+
+            font-size: 12px;
+            color: #8d958b;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 560px) {
+
+            .container {
+                padding-top: 35px;
+            }
+
+            .topbar {
+                margin-bottom: 50px;
+            }
+
+            .professional-links {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-panel {
+                padding: 26px 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <!-- TOP BAR -->
+
+    <div class="topbar">
+
+        <a class="brand" href="index.html">
+            Mirza Dugopoljac
+        </a>
+
+        <a class="back-link" href="index.html">
+            ← Back Home
+        </a>
+
+    </div>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="eyebrow">
+            Contact
+        </div>
+
+        <h1>Let’s Connect</h1>
+
+        <p class="intro">
+            Feel free to get in touch regarding landscape architecture,
+            visualization, collaborations, internships, or other professional opportunities.
+        </p>
+
+    </header>
+
+
+    <!-- EMAIL -->
+
+    <section class="contact-panel">
+
+        <h2>Email</h2>
+
+        <p>
+            The best way to reach me is by email. I’ll get back to you as soon as possible.
+        </p>
+
+        <a
+            class="email-button"
+            href="mailto:mirzaadc@gmail.com?subject=Portfolio%20Inquiry"
+        >
+            ✉️ Send an Email
+        </a>
+
+    </section>
+
+
+    <!-- PROFESSIONAL LINKS -->
+
+    <div class="professional-links">
+
+        <a
+            class="professional-card"
+            href="https://www.linkedin.com/in/mirzadugopoljac/"
+            target="_blank"
+        >
+
+            <div class="card-left">
+                <span class="card-label">Professional Profile</span>
+                <span class="card-title">LinkedIn</span>
+            </div>
+
+            <span class="arrow">↗</span>
+
+        </a>
+
+
+        <a
+            class="professional-card"
+            href="https://github.com/MirzaDugopoljac"
+            target="_blank"
+        >
+
+            <div class="card-left">
+                <span class="card-label">Projects & Code</span>
+                <span class="card-title">GitHub</span>
+            </div>
+
+            <span class="arrow">↗</span>
+
+        </a>
+
+
+        <a
+            class="professional-card"
+            href="files/CV.pdf"
+            target="_blank"
+        >
+
+            <div class="card-left">
+                <span class="card-label">Professional Background</span>
+                <span class="card-title">Curriculum Vitae</span>
+            </div>
+
+            <span class="arrow">↗</span>
+
+        </a>
+
+
+        <a
+            class="professional-card"
+            href="files/Portfolyo.pdf"
+            target="_blank"
+        >
+
+            <div class="card-left">
+                <span class="card-label">Selected Work</span>
+                <span class="card-title">Portfolio</span>
+            </div>
+
+            <span class="arrow">↗</span>
+
+        </a>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        © 2026 Mirza Dugopoljac · Landscape Architecture
+    </footer>
+
+</div>
+
+</body>
