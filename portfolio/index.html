@@ -31,11 +31,16 @@
      <span class="monogram">
       MD
      </span>
-     <span>
-      Mirza Dugopoljac
+     <span class="brand-copy">
+      <strong>
+       Mirza Dugopoljac
+      </strong>
+      <small>
+       Landscape Architecture
+      </small>
      </span>
     </a>
-    <nav class="nav-links">
+    <nav aria-label="Primary navigation" class="nav-links">
      <a href="index.html#projects">
       <span data-lang="en">
        Projects
@@ -70,10 +75,10 @@
      </a>
     </nav>
     <div class="nav-actions">
-     <button class="lang-toggle" data-lang-btn="">
+     <button class="lang-toggle" data-lang-btn="" type="button">
       TR
      </button>
-     <button aria-expanded="false" aria-label="Menu" class="menu-toggle">
+     <button aria-expanded="false" aria-label="Menu" class="menu-toggle" type="button">
       <span>
       </span>
      </button>
@@ -82,6 +87,12 @@
   </header>
   <main id="main">
    <section class="hero">
+    <div aria-hidden="true" class="hero-decor">
+     <span class="hero-ring hero-ring-one">
+     </span>
+     <span class="hero-ring hero-ring-two">
+     </span>
+    </div>
     <div class="hero-media">
      <img alt="" fetchpriority="high" src="assets/img/hero-cover.webp"/>
     </div>
@@ -123,7 +134,7 @@
         </span>
         ↓
        </a>
-       <a class="btn" href="assets/Mirza-Dugopoljac-Portfolio.pdf" target="_blank">
+       <a class="btn" href="assets/Mirza-Dugopoljac-Portfolio.pdf" rel="noopener noreferrer" target="_blank">
         <span data-lang="en">
          Portfolio PDF
         </span>
@@ -132,6 +143,32 @@
         </span>
         ↗
        </a>
+      </div>
+     </div>
+     <div class="hero-focus-strip">
+      <div class="hero-focus-item">
+       <span data-lang="en">
+        Landscape Design
+       </span>
+       <span data-lang="tr">
+        Peyzaj Tasarımı
+       </span>
+      </div>
+      <div class="hero-focus-item">
+       <span data-lang="en">
+        Planning + GIS
+       </span>
+       <span data-lang="tr">
+        Planlama + CBS
+       </span>
+      </div>
+      <div class="hero-focus-item">
+       <span data-lang="en">
+        Visualization
+       </span>
+       <span data-lang="tr">
+        Görselleştirme
+       </span>
       </div>
      </div>
     </div>
@@ -170,7 +207,7 @@
       </p>
      </div>
      <div class="filters reveal">
-      <button class="filter-btn active" data-filter="all">
+      <button class="filter-btn active" data-filter="all" type="button">
        <span data-lang="en">
         All
        </span>
@@ -178,7 +215,7 @@
         Tümü
        </span>
       </button>
-      <button class="filter-btn" data-filter="design">
+      <button class="filter-btn" data-filter="design" type="button">
        <span data-lang="en">
         Landscape Design
        </span>
@@ -186,7 +223,7 @@
         Peyzaj Tasarımı
        </span>
       </button>
-      <button class="filter-btn" data-filter="planning">
+      <button class="filter-btn" data-filter="planning" type="button">
        <span data-lang="en">
         Planning
        </span>
@@ -194,7 +231,7 @@
         Planlama
        </span>
       </button>
-      <button class="filter-btn" data-filter="technical">
+      <button class="filter-btn" data-filter="technical" type="button">
        <span data-lang="en">
         Technical
        </span>
@@ -202,7 +239,7 @@
         Konstrüksiyon
        </span>
       </button>
-      <button class="filter-btn" data-filter="competition">
+      <button class="filter-btn" data-filter="competition" type="button">
        <span data-lang="en">
         Competition
        </span>
@@ -215,10 +252,23 @@
       <article class="project-card reveal" data-category="design">
        <a href="projects/urban-square.html">
         <div class="project-image">
-         <img alt="Urban Square" loading="lazy" src="assets/img/square-render-2-thumb.webp"/>
+         <img alt="Urban Square" decoding="async" loading="lazy" src="assets/img/square-render-2.webp"/>
          <span class="project-index">
           01
          </span>
+         <div class="project-image-overlay">
+          <span class="project-view-label">
+           <span data-lang="en">
+            View project
+           </span>
+           <span data-lang="tr">
+            Projeyi aç
+           </span>
+          </span>
+          <span class="project-view-arrow">
+           ↗
+          </span>
+         </div>
         </div>
         <div class="project-meta">
          <div>
@@ -256,10 +306,23 @@
       <article class="project-card reveal" data-category="planning">
        <a href="projects/urban-landscape-planning.html">
         <div class="project-image">
-         <img alt="Urban Landscape Planning" loading="lazy" src="assets/img/planning-natural-1-thumb.webp"/>
+         <img alt="Urban Landscape Planning" decoding="async" loading="lazy" src="assets/img/planning-natural-1.webp"/>
          <span class="project-index">
           02
          </span>
+         <div class="project-image-overlay">
+          <span class="project-view-label">
+           <span data-lang="en">
+            View project
+           </span>
+           <span data-lang="tr">
+            Projeyi aç
+           </span>
+          </span>
+          <span class="project-view-arrow">
+           ↗
+          </span>
+         </div>
         </div>
         <div class="project-meta">
          <div>
@@ -297,10 +360,23 @@
       <article class="project-card reveal" data-category="technical">
        <a href="projects/interactive-seating.html">
         <div class="project-image">
-         <img alt="Interactive Seating Unit" loading="lazy" src="assets/img/furniture-render2-1-thumb.webp"/>
+         <img alt="Interactive Seating Unit" decoding="async" loading="lazy" src="assets/img/furniture-render2-1.webp"/>
          <span class="project-index">
           03
          </span>
+         <div class="project-image-overlay">
+          <span class="project-view-label">
+           <span data-lang="en">
+            View project
+           </span>
+           <span data-lang="tr">
+            Projeyi aç
+           </span>
+          </span>
+          <span class="project-view-arrow">
+           ↗
+          </span>
+         </div>
         </div>
         <div class="project-meta">
          <div>
@@ -338,10 +414,23 @@
       <article class="project-card reveal" data-category="design">
        <a href="projects/collective-housing.html">
         <div class="project-image">
-         <img alt="Collective Housing Landscape" loading="lazy" src="assets/img/housing-render-2-thumb.webp"/>
+         <img alt="Collective Housing Landscape" decoding="async" loading="lazy" src="assets/img/housing-render-2.webp"/>
          <span class="project-index">
           04
          </span>
+         <div class="project-image-overlay">
+          <span class="project-view-label">
+           <span data-lang="en">
+            View project
+           </span>
+           <span data-lang="tr">
+            Projeyi aç
+           </span>
+          </span>
+          <span class="project-view-arrow">
+           ↗
+          </span>
+         </div>
         </div>
         <div class="project-meta">
          <div>
@@ -379,10 +468,23 @@
       <article class="project-card reveal" data-category="design">
        <a href="projects/single-residence.html">
         <div class="project-image">
-         <img alt="Single Residence Garden" loading="lazy" src="assets/img/residential-render-2-thumb.webp"/>
+         <img alt="Single Residence Garden" decoding="async" loading="lazy" src="assets/img/residential-render-2.webp"/>
          <span class="project-index">
           05
          </span>
+         <div class="project-image-overlay">
+          <span class="project-view-label">
+           <span data-lang="en">
+            View project
+           </span>
+           <span data-lang="tr">
+            Projeyi aç
+           </span>
+          </span>
+          <span class="project-view-arrow">
+           ↗
+          </span>
+         </div>
         </div>
         <div class="project-meta">
          <div>
@@ -420,10 +522,23 @@
       <article class="project-card reveal" data-category="design">
        <a href="projects/school-canteen.html">
         <div class="project-image">
-         <img alt="School Canteen Landscape" loading="lazy" src="assets/img/kantin-render-2-thumb.webp"/>
+         <img alt="School Canteen Landscape" decoding="async" loading="lazy" src="assets/img/kantin-render-2.webp"/>
          <span class="project-index">
           06
          </span>
+         <div class="project-image-overlay">
+          <span class="project-view-label">
+           <span data-lang="en">
+            View project
+           </span>
+           <span data-lang="tr">
+            Projeyi aç
+           </span>
+          </span>
+          <span class="project-view-arrow">
+           ↗
+          </span>
+         </div>
         </div>
         <div class="project-meta">
          <div>
@@ -461,10 +576,23 @@
       <article class="project-card reveal" data-category="competition">
        <a href="projects/cat-house.html">
         <div class="project-image">
-         <img alt="Cat House Design" loading="lazy" src="assets/img/cat-house-1-thumb.webp"/>
+         <img alt="Cat House Design" decoding="async" loading="lazy" src="assets/img/cat-house-1.webp"/>
          <span class="project-index">
           07
          </span>
+         <div class="project-image-overlay">
+          <span class="project-view-label">
+           <span data-lang="en">
+            View project
+           </span>
+           <span data-lang="tr">
+            Projeyi aç
+           </span>
+          </span>
+          <span class="project-view-arrow">
+           ↗
+          </span>
+         </div>
         </div>
         <div class="project-meta">
          <div>
@@ -503,13 +631,8 @@
     </div>
    </section>
    <section class="about" id="about">
-    <div class="container about-grid">
-     <div class="reveal">
-      <div class="portrait">
-       <img alt="Mirza Dugopoljac" loading="lazy" src="assets/img/profile-2.webp"/>
-      </div>
-     </div>
-     <div class="reveal">
+    <div class="container about-shell">
+     <div class="about-intro reveal">
       <div class="kicker">
        <span data-lang="en">
         About
@@ -520,58 +643,105 @@
       </div>
       <h2 class="section-title">
        <span data-lang="en">
-        Landscape, people and place.
+        Designing landscapes as connected systems.
        </span>
        <span data-lang="tr">
-        Peyzaj, insan ve mekân.
+        Peyzajı bağlantılı bir sistem olarak tasarlamak.
        </span>
       </h2>
-      <p>
+     </div>
+     <div class="about-content reveal">
+      <div class="about-copy">
+       <p class="about-lead">
+        <span data-lang="en">
+         I am a Landscape Architecture student at Bursa Uludağ University, interested in the point where spatial experience, ecology, planning and visual communication meet.
+        </span>
+        <span data-lang="tr">
+         Bursa Uludağ Üniversitesi Peyzaj Mimarlığı öğrencisiyim. Mekânsal deneyim, ekoloji, planlama ve görsel iletişimin kesiştiği tasarım süreçleriyle ilgileniyorum.
+        </span>
+       </p>
+       <p>
+        <span data-lang="en">
+         My work moves between public space, residential landscape, urban planning, technical detailing and visualization. I focus on turning research and site analysis into clear design decisions, then communicating those decisions through plans, diagrams, models and renders.
+        </span>
+        <span data-lang="tr">
+         Çalışmalarım kamusal alan, konut peyzajı, kentsel planlama, teknik detay ve görselleştirme arasında ilerliyor. Araştırma ve alan analizini net tasarım kararlarına dönüştürmeye; ardından bu kararları plan, diyagram, model ve renderlarla anlatmaya odaklanıyorum.
+        </span>
+       </p>
+      </div>
+      <div class="about-focus">
+       <div class="about-focus-label">
+        <span data-lang="en">
+         Current focus
+        </span>
+        <span data-lang="tr">
+         Odak alanlarım
+        </span>
+       </div>
+       <div class="focus-list">
+        <div class="focus-item">
+         <span>
+          01
+         </span>
+         <strong>
+          <span data-lang="en">
+           Public space + landscape design
+          </span>
+          <span data-lang="tr">
+           Kamusal alan + peyzaj tasarımı
+          </span>
+         </strong>
+        </div>
+        <div class="focus-item">
+         <span>
+          02
+         </span>
+         <strong>
+          <span data-lang="en">
+           Urban planning + GIS
+          </span>
+          <span data-lang="tr">
+           Kentsel planlama + CBS
+          </span>
+         </strong>
+        </div>
+        <div class="focus-item">
+         <span>
+          03
+         </span>
+         <strong>
+          <span data-lang="en">
+           Technical development
+          </span>
+          <span data-lang="tr">
+           Teknik geliştirme
+          </span>
+         </strong>
+        </div>
+        <div class="focus-item">
+         <span>
+          04
+         </span>
+         <strong>
+          <span data-lang="en">
+           3D visualization + storytelling
+          </span>
+          <span data-lang="tr">
+           3B görselleştirme + anlatım
+          </span>
+         </strong>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="about-tools reveal">
+      <div class="about-tools-label">
        <span data-lang="en">
-        I am a landscape architecture student at Bursa Uludağ University. I am developing my practice across design, project development, teamwork and visualization, with a particular interest in turning analysis and concept into clear spatial decisions.
+        Tools I work with
        </span>
        <span data-lang="tr">
-        Bursa Uludağ Üniversitesi Peyzaj Mimarlığı öğrencisiyim. Tasarım, proje geliştirme, ekip çalışması ve görselleştirme alanlarında kendimi geliştiriyor; analiz ve konsepti anlaşılır mekânsal kararlara dönüştürmeye özellikle önem veriyorum.
+        Kullandığım araçlar
        </span>
-      </p>
-      <p>
-       <span data-lang="en">
-        My portfolio moves across campus landscapes, private and collective housing, public space, urban planning, technical detailing and competition work.
-       </span>
-       <span data-lang="tr">
-        Portfolyom; kampüs peyzajı, tek ve toplu konut, kamusal alan, kentsel planlama, teknik detay ve yarışma çalışmalarını bir araya getiriyor.
-       </span>
-      </p>
-      <div class="stats">
-       <div class="stat">
-        <strong>
-         3.10
-        </strong>
-        <span>
-         <span data-lang="en">
-          GPA
-         </span>
-         <span data-lang="tr">
-          GNO
-         </span>
-        </span>
-       </div>
-       <div class="stat">
-        <strong>
-         C2
-        </strong>
-        <span>
-         English
-        </span>
-       </div>
-       <div class="stat">
-        <strong>
-         C1
-        </strong>
-        <span>
-         Türkçe
-        </span>
-       </div>
       </div>
       <div class="skill-cloud">
        <span class="skill">
@@ -633,9 +803,11 @@
       </p>
      </div>
      <div class="capabilities-grid reveal">
-      <div class="capability">
+      <div class="capability capability-card">
        <span class="num">
         01
+       </span>
+       <span aria-hidden="true" class="capability-line">
        </span>
        <div>
         <h3>
@@ -656,9 +828,11 @@
         </p>
        </div>
       </div>
-      <div class="capability">
+      <div class="capability capability-card">
        <span class="num">
         02
+       </span>
+       <span aria-hidden="true" class="capability-line">
        </span>
        <div>
         <h3>
@@ -679,9 +853,11 @@
         </p>
        </div>
       </div>
-      <div class="capability">
+      <div class="capability capability-card">
        <span class="num">
         03
+       </span>
+       <span aria-hidden="true" class="capability-line">
        </span>
        <div>
         <h3>
@@ -702,9 +878,11 @@
         </p>
        </div>
       </div>
-      <div class="capability">
+      <div class="capability capability-card">
        <span class="num">
         04
+       </span>
+       <span aria-hidden="true" class="capability-line">
        </span>
        <div>
         <h3>
@@ -747,8 +925,16 @@
         İletişime geçelim.
        </span>
       </h2>
+      <p class="contact-copy">
+       <span data-lang="en">
+        For internships, collaborations, project discussions or simply to connect, you can reach me through the links below.
+       </span>
+       <span data-lang="tr">
+        Staj, işbirliği, proje konuşmaları veya yalnızca iletişim kurmak için aşağıdaki bağlantılardan bana ulaşabilirsiniz.
+       </span>
+      </p>
       <div class="contact-links">
-       <a class="contact-link" href="https://github.com/MirzaDugopoljac" target="_blank">
+       <a class="contact-link" href="https://github.com/MirzaDugopoljac" rel="noopener noreferrer" target="_blank">
         <span>
          GitHub
         </span>
@@ -756,7 +942,7 @@
          MirzaDugopoljac ↗
         </small>
        </a>
-       <a class="contact-link" href="https://www.linkedin.com/in/mirzadugopoljac/" target="_blank">
+       <a class="contact-link" href="https://www.linkedin.com/in/mirzadugopoljac/" rel="noopener noreferrer" target="_blank">
         <span>
          LinkedIn
         </span>
@@ -795,7 +981,7 @@
     </div>
    </div>
   </footer>
-  <button aria-label="Back to top" class="back-top">
+  <button aria-label="Back to top" class="back-top" type="button">
    ↑
   </button>
   <script type="application/ld+json">
@@ -805,4 +991,3 @@
   </script>
  </body>
 </html>
-
