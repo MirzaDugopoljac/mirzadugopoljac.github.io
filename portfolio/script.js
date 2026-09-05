@@ -1,25 +1,21 @@
-
 (() => {
   const html = document.documentElement;
 
-  // -----------------------------
   // Language switcher
-  // -----------------------------
   html.dataset.language =
     localStorage.getItem("portfolio-language") ||
     html.dataset.language ||
     "en";
 
-  const updateLanguage = () => {
+  function updateLanguageButton() {
     document.documentElement.lang = html.dataset.language;
 
     document.querySelectorAll("[data-lang-btn]").forEach((button) => {
-      button.textContent =
-        html.dataset.language === "en" ? "TR" : "EN";
+      button.textContent = html.dataset.language === "en" ? "TR" : "EN";
     });
-  };
+  }
 
-  updateLanguage();
+  updateLanguageButton();
 
   document.querySelectorAll("[data-lang-btn]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -31,52 +27,33 @@
         html.dataset.language
       );
 
-      updateLanguage();
+      updateLanguageButton();
     });
   });
 
-  // -----------------------------
-  // Header, scroll progress,
-  // and back-to-top button
-  // -----------------------------
+  // Header, scroll progress and back-to-top button
   const header = document.querySelector(".site-header");
   const progressBar = document.querySelector(".progress");
   const backTopButton = document.querySelector(".back-top");
 
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY;
-
+  function handleScroll() {
+    const currentScroll = window.scrollY;
     const maxScroll =
-      document.documentElement.scrollHeight -
-      window.innerHeight;
+      document.documentElement.scrollHeight - window.innerHeight;
 
-    header?.classList.toggle(
-      "scrolled",
-      scrollPosition > 30
-    );
-
-    backTopButton?.classList.toggle(
-      "show",
-      scrollPosition > 700
-    );
+    header?.classList.toggle("scrolled", currentScroll > 30);
+    backTopButton?.classList.toggle("show", currentScroll > 700);
 
     if (progressBar) {
       const percentage =
-        maxScroll > 0
-          ? (scrollPosition / maxScroll) * 100
-          : 0;
+        maxScroll > 0 ? (currentScroll / maxScroll) * 100 : 0;
 
       progressBar.style.width = `${percentage}%`;
     }
-  };
+  }
 
   handleScroll();
-
-  window.addEventListener(
-    "scroll",
-    handleScroll,
-    { passive: true }
-  );
+  window.addEventListener("scroll", handleScroll, { passive: true });
 
   backTopButton?.addEventListener("click", () => {
     window.scrollTo({
@@ -85,18 +62,12 @@
     });
   });
 
-  // -----------------------------
-  // Mobile navigation
-  // -----------------------------
-  const menuButton =
-    document.querySelector(".menu-toggle");
-
-  const navLinks =
-    document.querySelector(".nav-links");
+  // Mobile menu
+  const menuButton = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
 
   menuButton?.addEventListener("click", () => {
-    const isOpen =
-      navLinks?.classList.toggle("open");
+    const isOpen = navLinks?.classList.toggle("open");
 
     menuButton.setAttribute(
       "aria-expanded",
@@ -104,54 +75,34 @@
     );
   });
 
-  navLinks
-    ?.querySelectorAll("a")
-    .forEach((link) => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-
-        menuButton?.setAttribute(
-          "aria-expanded",
-          "false"
-        );
-      });
+  navLinks?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menuButton?.setAttribute("aria-expanded", "false");
     });
+  });
 
-  // -----------------------------
-  // Reveal animations
-  // -----------------------------
+  // Reveal elements as they enter the viewport
   const revealElements = [
     ...document.querySelectorAll(".reveal"),
   ];
 
-  const reducedMotion =
-    window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
 
-  if (
-    "IntersectionObserver" in window &&
-    !reducedMotion
-  ) {
-    const observer =
-      new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add(
-                "visible"
-              );
-
-              observer.unobserve(
-                entry.target
-              );
-            }
-          });
-        },
-        {
-          threshold: 0.12,
-        }
-      );
+  if ("IntersectionObserver" in window && !reducedMotion) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
 
     revealElements.forEach((element) => {
       observer.observe(element);
@@ -162,147 +113,76 @@
     });
   }
 
-  // -----------------------------
   // Project filters
-  // -----------------------------
-  document
-    .querySelectorAll("[data-filter]")
-    .forEach((button) => {
-      button.addEventListener(
-        "click",
-        () => {
-          document
-            .querySelectorAll(
-              "[data-filter]"
-            )
-            .forEach((item) => {
-              item.classList.remove(
-                "active"
-              );
-            });
+  document.querySelectorAll("[data-filter]").forEach((button) => {
+    button.addEventListener("click", () => {
+      document.querySelectorAll("[data-filter]").forEach((item) => {
+        item.classList.remove("active");
+      });
 
-          button.classList.add("active");
+      button.classList.add("active");
 
-          const selectedFilter =
-            button.dataset.filter;
+      const selectedFilter = button.dataset.filter;
 
-          document
-            .querySelectorAll(
-              "[data-category]"
-            )
-            .forEach((card) => {
-              const shouldShow =
-                selectedFilter ===
-                  "all" ||
-                card.dataset.category ===
-                  selectedFilter;
+      document.querySelectorAll("[data-category]").forEach((card) => {
+        const shouldShow =
+          selectedFilter === "all" ||
+          card.dataset.category === selectedFilter;
 
-              card.style.display =
-                shouldShow ? "" : "none";
-            });
-        }
-      );
+        card.style.display = shouldShow ? "" : "none";
+      });
     });
+  });
 
-  // -----------------------------
   // Project tabs
-  // -----------------------------
-  document
-    .querySelectorAll(
-      "[data-tab-target]"
-    )
-    .forEach((button) => {
-      button.addEventListener(
-        "click",
-        () => {
-          const tabsGroup =
-            button.closest(
-              "[data-tabs]"
-            );
+  document.querySelectorAll("[data-tab-target]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const tabsGroup = button.closest("[data-tabs]");
 
-          if (!tabsGroup) {
-            return;
-          }
+      if (!tabsGroup) return;
 
-          tabsGroup
-            .querySelectorAll(
-              "[data-tab-target]"
-            )
-            .forEach((item) => {
-              item.classList.remove(
-                "active"
-              );
-            });
+      tabsGroup
+        .querySelectorAll("[data-tab-target]")
+        .forEach((item) => item.classList.remove("active"));
 
-          tabsGroup
-            .querySelectorAll(
-              ".tab-panel"
-            )
-            .forEach((panel) => {
-              panel.classList.remove(
-                "active"
-              );
-            });
+      tabsGroup
+        .querySelectorAll(".tab-panel")
+        .forEach((panel) => panel.classList.remove("active"));
 
-          button.classList.add("active");
+      button.classList.add("active");
 
-          const targetPanel =
-            tabsGroup.querySelector(
-              button.dataset.tabTarget
-            );
-
-          targetPanel?.classList.add(
-            "active"
-          );
-        }
+      const targetPanel = tabsGroup.querySelector(
+        button.dataset.tabTarget
       );
-    });
 
-  // -----------------------------
+      targetPanel?.classList.add("active");
+    });
+  });
+
   // Image lightbox
-  // -----------------------------
   const zoomableImages = [
-    ...document.querySelectorAll(
-      ".zoomable"
-    ),
+    ...document.querySelectorAll(".zoomable"),
   ];
 
-  const lightbox =
-    document.querySelector(".lightbox");
-
-  const lightboxImage =
-    lightbox?.querySelector("img");
-
+  const lightbox = document.querySelector(".lightbox");
+  const lightboxImage = lightbox?.querySelector("img");
   const lightboxCaption =
-    lightbox?.querySelector(
-      ".lightbox-caption"
-    );
+    lightbox?.querySelector(".lightbox-caption");
 
   let currentImageIndex = 0;
 
-  const showImage = (index) => {
-    if (
-      !lightbox ||
-      zoomableImages.length === 0
-    ) {
-      return;
-    }
+  function showImage(index) {
+    if (!lightbox || zoomableImages.length === 0) return;
 
     currentImageIndex =
-      (index +
-        zoomableImages.length) %
-      zoomableImages.length;
+      (index + zoomableImages.length) % zoomableImages.length;
 
-    const selectedImage =
-      zoomableImages[currentImageIndex];
+    const selectedImage = zoomableImages[currentImageIndex];
 
     if (lightboxImage) {
       lightboxImage.src =
-        selectedImage.dataset.full ||
-        selectedImage.src;
-
-      lightboxImage.alt =
-        selectedImage.alt || "";
+        selectedImage.dataset.full || selectedImage.src;
+      lightboxImage.alt = selectedImage.alt || "";
     }
 
     if (lightboxCaption) {
@@ -313,122 +193,68 @@
     }
 
     lightbox.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
 
-    document.body.style.overflow =
-      "hidden";
-  };
-
-  const closeLightbox = () => {
+  function closeLightbox() {
     lightbox?.classList.remove("open");
+    document.body.style.overflow = "";
+  }
 
-    document.body.style.overflow =
-      "";
-  };
+  zoomableImages.forEach((image, index) => {
+    image.tabIndex = 0;
 
-  zoomableImages.forEach(
-    (image, index) => {
-      image.tabIndex = 0;
-
-      image.addEventListener(
-        "click",
-        () => {
-          showImage(index);
-        }
-      );
-
-      image.addEventListener(
-        "keydown",
-        (event) => {
-          if (event.key === "Enter") {
-            showImage(index);
-          }
-        }
-      );
-    }
-  );
-
-  lightbox
-    ?.querySelector(
-      ".lightbox-close"
-    )
-    ?.addEventListener(
-      "click",
-      closeLightbox
-    );
-
-  lightbox
-    ?.querySelector(
-      ".lightbox-prev"
-    )
-    ?.addEventListener(
-      "click",
-      () => {
-        showImage(
-          currentImageIndex - 1
-        );
-      }
-    );
-
-  lightbox
-    ?.querySelector(
-      ".lightbox-next"
-    )
-    ?.addEventListener(
-      "click",
-      () => {
-        showImage(
-          currentImageIndex + 1
-        );
-      }
-    );
-
-  lightbox?.addEventListener(
-    "click",
-    (event) => {
-      if (
-        event.target === lightbox
-      ) {
-        closeLightbox();
-      }
-    }
-  );
-
-  window.addEventListener(
-    "keydown",
-    (event) => {
-      if (
-        !lightbox?.classList.contains(
-          "open"
-        )
-      ) {
-        return;
-      }
-
-      if (event.key === "Escape") {
-        closeLightbox();
-      }
-
-      if (event.key === "ArrowLeft") {
-        showImage(
-          currentImageIndex - 1
-        );
-      }
-
-      if (event.key === "ArrowRight") {
-        showImage(
-          currentImageIndex + 1
-        );
-      }
-    }
-  );
-
-  // -----------------------------
-  // Current year
-  // -----------------------------
-  document
-    .querySelectorAll("[data-year]")
-    .forEach((element) => {
-      element.textContent =
-        new Date().getFullYear();
+    image.addEventListener("click", () => {
+      showImage(index);
     });
+
+    image.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        showImage(index);
+      }
+    });
+  });
+
+  lightbox
+    ?.querySelector(".lightbox-close")
+    ?.addEventListener("click", closeLightbox);
+
+  lightbox
+    ?.querySelector(".lightbox-prev")
+    ?.addEventListener("click", () => {
+      showImage(currentImageIndex - 1);
+    });
+
+  lightbox
+    ?.querySelector(".lightbox-next")
+    ?.addEventListener("click", () => {
+      showImage(currentImageIndex + 1);
+    });
+
+  lightbox?.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  window.addEventListener("keydown", (event) => {
+    if (!lightbox?.classList.contains("open")) return;
+
+    if (event.key === "Escape") {
+      closeLightbox();
+    }
+
+    if (event.key === "ArrowLeft") {
+      showImage(currentImageIndex - 1);
+    }
+
+    if (event.key === "ArrowRight") {
+      showImage(currentImageIndex + 1);
+    }
+  });
+
+  // Current year
+  document.querySelectorAll("[data-year]").forEach((element) => {
+    element.textContent = new Date().getFullYear();
+  });
 })();
