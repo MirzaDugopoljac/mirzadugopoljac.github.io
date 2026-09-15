@@ -149,8 +149,25 @@
     }
 
     .shell {
-      width: min(calc(100% - 48px), var(--max));
+      width: min(calc(100% - 84px), var(--max));
       margin: 0 auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    .hero-statement,
+    .project-info strong,
+    .manifesto blockquote {
+      text-wrap: balance;
+    }
+
+    p,
+    .work-meta p,
+    .path-card p,
+    .identity-copy,
+    .hero-statement {
+      text-wrap: pretty;
     }
 
     .mono {
@@ -318,30 +335,38 @@
 
     .brand-mark {
       position: relative;
-      width: 44px;
-      height: 44px;
+      width: 58px;
+      height: 58px;
+      flex: 0 0 58px;
       display: grid;
       place-items: center;
       overflow: hidden;
+      padding: 6px;
       border: 1px solid rgba(255,255,255,.17);
-      border-radius: 14px;
+      border-radius: 18px;
       background:
-        linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.02)),
-        rgba(255,255,255,.035);
+        linear-gradient(145deg, rgba(255,255,255,.16), rgba(255,255,255,.03)),
+        rgba(255,255,255,.045);
       box-shadow:
         inset 0 1px rgba(255,255,255,.12),
         0 13px 30px rgba(0,0,0,.18);
       backdrop-filter: blur(12px);
-      font: 500 .72rem "DM Mono", monospace;
     }
 
     .brand-mark::after {
-      content: "";
-      position: absolute;
-      width: 55px;
-      height: 1px;
-      background: rgba(255,255,255,.22);
-      transform: rotate(-38deg);
+      display: none;
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 12px;
+    }
+
+    .brand-name {
+      font-size: .94rem;
+      line-height: 1.15;
     }
 
     .nav-links {
@@ -452,7 +477,7 @@
       grid-template-columns: minmax(0,.78fr) minmax(560px,1.22fr);
       gap: clamp(46px, 5vw, 82px);
       align-items: center;
-      padding: 136px 0 84px;
+      padding: 152px 0 104px;
     }
 
     .hero-copy-side {
@@ -483,7 +508,7 @@
 
     .hero h1 {
       margin: 0;
-      max-width: 710px;
+      max-width: 760px;
       font: 400 clamp(4.45rem, 7.6vw, 7.45rem)/.83 "Newsreader", Georgia, serif;
       letter-spacing: -.064em;
     }
@@ -500,7 +525,7 @@
 
     .hero-statement {
       max-width: 650px;
-      margin: 30px 0 0;
+      margin: 32px 0 0;
       color: rgba(255,255,255,.61);
       font-size: clamp(.98rem,1.25vw,1.1rem);
       line-height: 1.8;
@@ -794,7 +819,7 @@
       left: -2%;
       bottom: 2%;
       width: min(420px, 68%);
-      padding: 21px 22px;
+      padding: 24px 24px;
       color: white;
       border: 1px solid rgba(255,255,255,.13);
       border-radius: 21px;
@@ -1654,7 +1679,7 @@
 
     @media (max-width: 760px) {
       .shell {
-        width: min(calc(100% - 28px), var(--max));
+        width: min(calc(100% - 48px), var(--max));
       }
 
       .nav {
@@ -1666,7 +1691,7 @@
       }
 
       .hero-grid {
-        padding-top: 112px;
+        padding-top: 124px;
         padding-bottom: 68px;
       }
 
@@ -1851,14 +1876,17 @@
     </div>
   </div>
 
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
   <div class="scroll-progress" id="scrollProgress"></div>
 
   <!-- NAV -->
   <div class="nav-wrap" id="navWrap">
     <nav class="nav shell" aria-label="Main navigation">
       <a class="brand" href="index.html">
-        <span class="brand-mark">MD</span>
-        <span>Mirza Dugopoljac</span>
+        <span class="brand-mark"><img src="assets/brand/logo-monogram.png" alt="Mirza Dugopoljac logo"></span>
+        <span class="brand-name">Mirza Dugopoljac</span>
       </a>
 
       <div class="nav-links">
@@ -2251,6 +2279,8 @@
     const navWrap = document.getElementById("navWrap");
     const hero = document.getElementById("hero");
     const project = document.getElementById("projectReveal");
+    const cursorDot = document.getElementById("cursorDot");
+    const cursorRing = document.getElementById("cursorRing");
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     /* ---------------------------------------------------------
@@ -2347,6 +2377,53 @@
         root.style.setProperty("--pointer-y", y + "%");
       });
     }
+
+
+
+    /* ---------------------------------------------------------
+       CUSTOM CURSOR
+    --------------------------------------------------------- */
+
+    if (!reducedMotion && window.matchMedia("(pointer:fine)").matches && cursorDot && cursorRing) {
+      let mouseX = window.innerWidth / 2;
+      let mouseY = window.innerHeight / 2;
+      let ringX = mouseX;
+      let ringY = mouseY;
+
+      function setCursorActive(isActive) {
+        cursorRing.classList.toggle("is-active", isActive);
+        cursorDot.style.transform = `translate(-50%, -50%) scale(${isActive ? 1.35 : 1})`;
+      }
+
+      addEventListener("pointermove", (event) => {
+        mouseX = event.clientX;
+        mouseY = event.clientY;
+        cursorDot.style.left = mouseX + "px";
+        cursorDot.style.top = mouseY + "px";
+        document.body.classList.add("cursor-ready");
+      }, { passive: true });
+
+      addEventListener("pointerleave", () => {
+        document.body.classList.remove("cursor-ready");
+      });
+
+      const hoverTargets = document.querySelectorAll('a, button, .button, .magnetic, .project-stack, .palette-button');
+      hoverTargets.forEach((target) => {
+        target.addEventListener("pointerenter", () => setCursorActive(true));
+        target.addEventListener("pointerleave", () => setCursorActive(false));
+      });
+
+      function animateCursor() {
+        ringX += (mouseX - ringX) * 0.17;
+        ringY += (mouseY - ringY) * 0.17;
+        cursorRing.style.left = ringX + "px";
+        cursorRing.style.top = ringY + "px";
+        requestAnimationFrame(animateCursor);
+      }
+
+      animateCursor();
+    }
+
 
     /* ---------------------------------------------------------
        PROJECT PLAN → RENDER
