@@ -1,491 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Contact | Mirza Dugopoljac</title>
-
-    <meta
-        name="description"
-        content="Contact Mirza Dugopoljac for landscape architecture, visualization, collaborations and professional opportunities."
-    >
-
-    <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-
-            background: #f5f2e9;
-            color: #263b2c;
-
-            min-height: 100vh;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 760px;
-
-            margin: auto;
-            padding: 50px 0 35px;
-        }
-
-        /* TOP BAR */
-
-        .topbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            margin-bottom: 55px;
-        }
-
-        .brand {
-            color: #263b2c;
-
-            font-size: 14px;
-            font-weight: 600;
-
-            letter-spacing: 2px;
-            text-transform: uppercase;
-
-            text-decoration: none;
-        }
-
-        .back-link {
-            color: #687468;
-
-            font-size: 14px;
-
-            text-decoration: none;
-
-            transition: 0.2s;
-        }
-
-        .back-link:hover {
-            color: #263b2c;
-        }
-
-        /* LANGUAGE SWITCH */
-
-        .language-switch {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            gap: 8px;
-
-            margin-bottom: 30px;
-        }
-
-        .language-switch button {
-            border: none;
-            background: none;
-
-            color: #7a8678;
-
-            font-size: 13px;
-            letter-spacing: 1px;
-
-            padding: 5px;
-
-            cursor: pointer;
-
-            transition: 0.2s;
-        }
-
-        .language-switch button:hover {
-            color: #263b2c;
-        }
-
-        .language-switch button.active {
-            color: #263b2c;
-            font-weight: bold;
-        }
-
-        .language-switch span {
-            color: #a1a89f;
-        }
-
-        /* HEADER */
-
-        header {
-            text-align: center;
-
-            margin-bottom: 45px;
-        }
-
-        .eyebrow {
-            margin-bottom: 14px;
-
-            color: #7a8678;
-
-            font-size: 12px;
-
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
-
-        h1 {
-            margin: 0;
-
-            font-size: clamp(36px, 7vw, 58px);
-            font-weight: 500;
-        }
-
-        .intro {
-            max-width: 560px;
-
-            margin: 20px auto 0;
-
-            color: #687468;
-
-            font-size: 16px;
-            line-height: 1.7;
-        }
-
-        /* CONTACT LINKS */
-
-        .professional-links {
-            display: grid;
-            grid-template-columns: 1fr;
-
-            gap: 14px;
-        }
-
-        .professional-card {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            min-height: 96px;
-
-            padding: 20px 22px;
-
-            border: 1px solid #c8cec4;
-            border-radius: 14px;
-
-            background: rgba(255,255,255,0.35);
-
-            color: #263b2c;
-            text-decoration: none;
-
-            transition: 0.25s;
-        }
-
-        .professional-card:hover {
-            background: #ffffff;
-
-            border-color: #829080;
-
-            transform: translateY(-2px);
-        }
-
-        .card-left {
-            display: flex;
-            flex-direction: column;
-
-            gap: 6px;
-        }
-
-        .card-label {
-            color: #7a8678;
-
-            font-size: 12px;
-
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .card-title {
-            font-size: 18px;
-            font-weight: 500;
-        }
-
-        .arrow {
-            color: #7a8678;
-
-            font-size: 20px;
-        }
-
-        /* FOOTER */
-
-        footer {
-            margin-top: 55px;
-
-            text-align: center;
-
-            color: #8d958b;
-
-            font-size: 12px;
-        }
-
-        /* MOBILE */
-
-        @media (max-width: 560px) {
-
-            .container {
-                padding-top: 30px;
-            }
-
-            .topbar {
-                margin-bottom: 40px;
-            }
-
-            .brand {
-                font-size: 12px;
-            }
-
-            .professional-card {
-                min-height: 88px;
-            }
-
-        }
-
-    </style>
-
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Contact | Mirza Dugopoljac</title>
+  <meta name="description" content="Contact Mirza Dugopoljac for landscape architecture, visualization, GIS and collaboration.">
+  <meta name="theme-color" content="#0c120e">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
-
-
 <body>
 
-<div class="container">
-
-    <!-- TOP BAR -->
-
-    <div class="topbar">
-
-        <a class="brand" href="index.html">
-            Mirza Dugopoljac
-        </a>
-
-        <a
-            class="back-link"
-            href="index.html"
-            data-en="← Back Home"
-            data-tr="← Ana Sayfa"
-        >
-            ← Back Home
-        </a>
-
+<div class="nav-wrap" id="navWrap">
+  <nav class="nav shell" aria-label="Main navigation">
+    <a class="brand" href="index.html" data-cursor="HOME">
+      <span class="brand-mark"><img src="assets/brand/logo-monogram.png" alt="Mirza Dugopoljac logo"></span>
+      <span class="brand-name">Mirza Dugopoljac</span>
+    </a>
+    <div class="nav-links">
+      <a href="portfolio/index.html" data-cursor="WORK">Work</a>
+      <a href="about.html" data-cursor="ABOUT">About</a>
+      <a href="https://github.com/MirzaDugopoljac" target="_blank" rel="noopener noreferrer" data-cursor="CODE">GitHub</a>
+      <a class="nav-cta" href="contact.html" aria-current="page" data-cursor="CONTACT">Contact ↗</a>
     </div>
-
-
-    <!-- LANGUAGE -->
-
-    <div class="language-switch">
-
-        <button
-            id="englishButton"
-            class="active"
-            onclick="setLanguage('en')"
-        >
-            EN
-        </button>
-
-        <span>/</span>
-
-        <button
-            id="turkishButton"
-            onclick="setLanguage('tr')"
-        >
-            TR
-        </button>
-
-    </div>
-
-
-    <!-- HEADER -->
-
-    <header>
-
-        <div
-            class="eyebrow"
-            data-en="Contact"
-            data-tr="İletişim"
-        >
-            Contact
-        </div>
-
-        <h1
-            data-en="Let’s Connect"
-            data-tr="İletişime Geçelim"
-        >
-            Let’s Connect
-        </h1>
-
-        <p
-            class="intro"
-            data-en="For collaborations, professional opportunities, project-related inquiries, or simply to connect, feel free to reach out through email, LinkedIn, or GitHub."
-            data-tr="İş birlikleri, profesyonel fırsatlar, proje ile ilgili görüşmeler veya iletişim kurmak için e-posta, LinkedIn ya da GitHub üzerinden benimle iletişime geçebilirsiniz."
-        >
-            For collaborations, professional opportunities, project-related inquiries,
-            or simply to connect, feel free to reach out through email, LinkedIn, or GitHub.
-        </p>
-
-    </header>
-
-
-    <!-- CONTACT LINKS -->
-
-    <div class="professional-links">
-
-
-        <!-- EMAIL -->
-
-        <a
-            class="professional-card"
-            href="mailto:mirzaadc@gmail.com?subject=Portfolio%20Inquiry"
-        >
-
-            <div class="card-left">
-
-                <span
-                    class="card-label"
-                    data-en="Email"
-                    data-tr="E-posta"
-                >
-                    Email
-                </span>
-
-                <span
-                    class="card-title"
-                    data-en="Get in Touch"
-                    data-tr="İletişime Geç"
-                >
-                    Get in Touch
-                </span>
-
-            </div>
-
-            <span class="arrow">→</span>
-
-        </a>
-
-
-        <!-- LINKEDIN -->
-
-        <a
-            class="professional-card"
-            href="https://www.linkedin.com/in/mirzadugopoljac/"
-            target="_blank"
-        >
-
-            <div class="card-left">
-
-                <span
-                    class="card-label"
-                    data-en="Professional Profile"
-                    data-tr="Profesyonel Profil"
-                >
-                    Professional Profile
-                </span>
-
-                <span class="card-title">
-                    LinkedIn
-                </span>
-
-            </div>
-
-            <span class="arrow">↗</span>
-
-        </a>
-
-
-        <!-- GITHUB -->
-
-        <a
-            class="professional-card"
-            href="https://github.com/MirzaDugopoljac"
-            target="_blank"
-        >
-
-            <div class="card-left">
-
-                <span
-                    class="card-label"
-                    data-en="Projects & Code"
-                    data-tr="Projeler & Kod"
-                >
-                    Projects & Code
-                </span>
-
-                <span class="card-title">
-                    GitHub
-                </span>
-
-            </div>
-
-            <span class="arrow">↗</span>
-
-        </a>
-
-
-    </div>
-
-
-    <!-- FOOTER -->
-
-    <footer
-        data-en="© 2026 Mirza Dugopoljac · Landscape Architecture"
-        data-tr="© 2026 Mirza Dugopoljac · Peyzaj Mimarlığı"
-    >
-        © 2026 Mirza Dugopoljac · Landscape Architecture
-    </footer>
-
+  </nav>
 </div>
 
 
-<script>
-
-    function setLanguage(language) {
-
-        const elements = document.querySelectorAll("[data-en]");
-
-        elements.forEach(function(element) {
-
-            const newText = element.getAttribute("data-" + language);
-
-            if (newText) {
-                element.textContent = newText;
-            }
-
-        });
+<div class="cursor-lens" id="cursorLens" aria-hidden="true"></div>
+<div class="cursor-core" id="cursorCore" aria-hidden="true"></div>
+<div class="cursor-label" id="cursorLabel" aria-hidden="true"></div>
 
 
-        document.documentElement.lang = language;
+<header class="hero" id="hero" style="min-height:86svh">
+  <div class="survey-field"></div>
+<svg class="survey-svg" viewBox="0 0 900 700" aria-hidden="true">
+  <path d="M80 515L256 94L711 186L790 538L421 627Z"/>
+  <path d="M256 94L421 627M711 186L80 515M80 515L711 186M256 94L790 538"/>
+  <path d="M153 394L314 189L618 226L696 461L441 561L214 506Z"/>
+  <circle cx="256" cy="94" r="8"/><circle cx="711" cy="186" r="8"/><circle cx="790" cy="538" r="8"/>
+  <circle cx="421" cy="627" r="8"/><circle cx="80" cy="515" r="8"/>
+  <circle class="point" cx="441" cy="561" r="5"/><circle class="point" cx="314" cy="189" r="5"/>
+</svg>
 
+  <div class="hero-grid shell" style="grid-template-columns:minmax(0,1fr) minmax(330px,.52fr)">
+    <div>
+      <div class="hero-kicker"><span>C O N T A C T · 2 0 2 6</span><i></i><span>Bursa · Türkiye</span></div>
+      <h1 class="hero-title balance">Tell me what<br>you are trying<br><em>to change.</em></h1>
+      <p class="hero-copy pretty">
+        A site, a visual problem, a collaboration or an opportunity — start with the context.
+        A clear question is more useful than a formal introduction.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="mailto:mirzaadc@gmail.com" data-cursor="MAIL">Email me ↗</a>
+        <a class="btn secondary" href="portfolio/index.html" data-cursor="WORK">See my work</a>
+      </div>
+    </div>
+    <div class="stack">
+      <div class="mini-card" style="color:#fff;border-color:rgba(255,255,255,.12);background:rgba(255,255,255,.045);backdrop-filter:blur(12px)">
+        <small style="color:rgba(255,255,255,.40)">Preferred</small>
+        <strong>Email or LinkedIn.</strong>
+      </div>
+      <div class="mini-card" style="color:#fff;border-color:rgba(255,255,255,.12);background:rgba(255,255,255,.045);backdrop-filter:blur(12px)">
+        <small style="color:rgba(255,255,255,.40)">Good topics</small>
+        <strong>Landscape · GIS · Visualization · Collaboration</strong>
+      </div>
+    </div>
+  </div>
+</header>
 
-        const englishButton =
-            document.getElementById("englishButton");
+<section class="data-band">
+  <div class="data-grid shell">
+    <div class="data-cell data-lead">
+      <div><small>Best way to reach me</small><h2>Give me enough context to understand the problem.</h2></div>
+      <p>I do not need a long message — project, place, goal and what you want help with is enough.</p>
+    </div>
+    <div class="data-cell"><span class="big">01</span><small>Context</small></div>
+    <div class="data-cell"><span class="big">02</span><small>Question</small></div>
+    <div class="data-cell"><span class="big">03</span><small>Conversation</small></div>
+  </div>
+</section>
 
-        const turkishButton =
-            document.getElementById("turkishButton");
+<section class="section">
+  <div class="field-notes"></div>
+  <div class="shell">
+    <div class="section-head reveal">
+      <div class="section-label">01 / Get in touch</div>
+      <h2 class="section-title">Start with the <em>question.</em> We can figure out the rest.</h2>
+    </div>
 
+    <div class="contact-grid">
+      <article class="contact-main reveal">
+        <small>Email</small>
+        <h2>For project conversations, collaboration or opportunities.</h2>
+        <p>
+          Tell me what you are working on, the place or problem involved, and what made you reach out.
+          I prefer useful context over a formal introduction.
+        </p>
+        <div class="contact-email">
+          <a href="mailto:mirzaadc@gmail.com" data-cursor="MAIL">mirzaadc@gmail.com</a>
+          <button class="copy-btn" id="copyEmail" type="button" data-cursor="COPY">Copy email</button>
+        </div>
+      </article>
 
-        if (language === "en") {
+      <div class="contact-stack">
+        <a class="contact-card reveal" href="https://www.linkedin.com/in/mirzadugopoljac/" target="_blank" rel="noopener noreferrer" data-cursor="LINKEDIN">
+          <small>LinkedIn</small><span class="go">↗</span>
+          <h3>Professional conversations.</h3>
+          <p>Connect for landscape architecture, internship, collaboration and design-related opportunities.</p>
+        </a>
 
-            englishButton.classList.add("active");
-            turkishButton.classList.remove("active");
+        <a class="contact-card reveal" href="https://github.com/MirzaDugopoljac" target="_blank" rel="noopener noreferrer" data-cursor="GITHUB">
+          <small>GitHub</small><span class="go">↗</span>
+          <h3>Digital work & experiments.</h3>
+          <p>Code, websites and experiments that sit alongside my spatial and visual work.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-        } else {
+<section class="section soft">
+  <div class="shell">
+    <div class="section-head reveal">
+      <div class="section-label">02 / A useful message</div>
+      <h2 class="section-title">Three things make it easier to have a <em>good first conversation.</em></h2>
+    </div>
 
-            turkishButton.classList.add("active");
-            englishButton.classList.remove("active");
+    <div class="process-grid">
+      <article class="process reveal"><span class="process-no">01 / PLACE</span><h3>What are we looking at?</h3><p>Give me the site, context, scale or project type so I understand the situation.</p><div class="tags"><span>Site</span><span>Scale</span><span>Context</span></div></article>
+      <article class="process reveal"><span class="process-no">02 / PROBLEM</span><h3>What needs to change?</h3><p>Explain the question, difficulty or opportunity rather than only naming a deliverable.</p><div class="tags"><span>Goal</span><span>Constraint</span><span>Need</span></div></article>
+      <article class="process reveal"><span class="process-no">03 / NEXT STEP</span><h3>What would be useful now?</h3><p>A conversation, visual direction, analysis, collaboration or something else — clarity helps.</p><div class="tags"><span>Talk</span><span>Design</span><span>Collaborate</span></div></article>
+    </div>
+  </div>
+</section>
 
-        }
+<section class="cta-wrap">
+  <div class="shell">
+    <div class="cta reveal">
+      <h2>Send the context.<br><em>I’ll read the site.</em></h2>
+      <div class="cta-side">
+        <p>You can email me directly, connect on LinkedIn, or look through the portfolio first if you want more context.</p>
+        <div class="cta-links">
+          <a href="mailto:mirzaadc@gmail.com" data-cursor="MAIL">Email me ↗</a>
+          <a href="portfolio/index.html" data-cursor="WORK">View portfolio ↗</a>
+          <a href="files/CV.pdf" target="_blank" rel="noopener noreferrer" data-cursor="CV">View CV ↗</a>
+        </div>
+      </div>
+    </div>
+    <footer><span>© 2026 Mirza Dugopoljac</span><span>Landscape Architecture · Spatial Systems · Visualization</span></footer>
+  </div>
+</section>
 
-    }
-
-</script>
-
-
+<script src="assets/js/site.js"></script>
 </body>
-
 </html>
