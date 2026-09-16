@@ -1,157 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Contact | Mirza Dugopoljac</title>
-  <meta name="description" content="Contact Mirza Dugopoljac for landscape architecture, visualization, GIS and collaboration.">
-  <meta name="theme-color" content="#0c120e">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css">
+  <meta name="theme-color" content="#211713">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="./assets/css/site.css">
+
+  <!-- Prevent transition flash between internal pages -->
+  <script>
+    (() => {
+      try {
+        if (sessionStorage.getItem("mirza-transition") === "1") {
+          document.documentElement.classList.add("transition-pending");
+
+          setTimeout(() => {
+            document.documentElement.classList.remove("transition-pending");
+          }, 1800);
+        }
+      } catch (error) {
+        // Ignore sessionStorage errors.
+      }
+    })();
+  </script>
 </head>
-<body>
 
-<div class="nav-wrap" id="navWrap">
-  <nav class="nav shell" aria-label="Main navigation">
-    <a class="brand" href="index.html" data-cursor="HOME">
-      <span class="brand-mark"><img src="assets/brand/logo-monogram.png" alt="Mirza Dugopoljac logo"></span>
-      <span class="brand-name">Mirza Dugopoljac</span>
-    </a>
-    <div class="nav-links">
-      <a href="portfolio/index.html" data-cursor="WORK">Work</a>
-      <a href="about.html" data-cursor="ABOUT">About</a>
-      <a href="https://github.com/MirzaDugopoljac" target="_blank" rel="noopener noreferrer" data-cursor="CODE">GitHub</a>
-      <a class="nav-cta" href="contact.html" aria-current="page" data-cursor="CONTACT">Contact ↗</a>
-    </div>
-  </nav>
-</div>
+<body
+  data-root="./"
+  data-active="contact"
+  data-title-key="title.contact"
+>
+  <!-- Hero -->
+  <header class="hero">
+    <div class="texture"></div>
 
-
-<div class="cursor-lens" id="cursorLens" aria-hidden="true"></div>
-<div class="cursor-core" id="cursorCore" aria-hidden="true"></div>
-<div class="cursor-label" id="cursorLabel" aria-hidden="true"></div>
-
-
-<header class="hero" id="hero" style="min-height:86svh">
-  <div class="survey-field"></div>
-<svg class="survey-svg" viewBox="0 0 900 700" aria-hidden="true">
-  <path d="M80 515L256 94L711 186L790 538L421 627Z"/>
-  <path d="M256 94L421 627M711 186L80 515M80 515L711 186M256 94L790 538"/>
-  <path d="M153 394L314 189L618 226L696 461L441 561L214 506Z"/>
-  <circle cx="256" cy="94" r="8"/><circle cx="711" cy="186" r="8"/><circle cx="790" cy="538" r="8"/>
-  <circle cx="421" cy="627" r="8"/><circle cx="80" cy="515" r="8"/>
-  <circle class="point" cx="441" cy="561" r="5"/><circle class="point" cx="314" cy="189" r="5"/>
-</svg>
-
-  <div class="hero-grid shell" style="grid-template-columns:minmax(0,1fr) minmax(330px,.52fr)">
-    <div>
-      <div class="hero-kicker"><span>C O N T A C T · 2 0 2 6</span><i></i><span>Bursa · Türkiye</span></div>
-      <h1 class="hero-title balance">Tell me what<br>you are trying<br><em>to change.</em></h1>
-      <p class="hero-copy pretty">
-        A site, a visual problem, a collaboration or an opportunity — start with the context.
-        A clear question is more useful than a formal introduction.
-      </p>
-      <div class="hero-actions">
-        <a class="btn primary" href="mailto:mirzaadc@gmail.com" data-cursor="MAIL">Email me ↗</a>
-        <a class="btn secondary" href="portfolio/index.html" data-cursor="WORK">See my work</a>
+    <div class="hero-center hero-shell">
+      <div class="kicker">
+        <span data-i18n="contact.kicker"></span>
+        <i></i>
+        <span>Bursa · Türkiye</span>
       </div>
-    </div>
-    <div class="stack">
-      <div class="mini-card" style="color:#fff;border-color:rgba(255,255,255,.12);background:rgba(255,255,255,.045);backdrop-filter:blur(12px)">
-        <small style="color:rgba(255,255,255,.40)">Preferred</small>
-        <strong>Email or LinkedIn.</strong>
-      </div>
-      <div class="mini-card" style="color:#fff;border-color:rgba(255,255,255,.12);background:rgba(255,255,255,.045);backdrop-filter:blur(12px)">
-        <small style="color:rgba(255,255,255,.40)">Good topics</small>
-        <strong>Landscape · GIS · Visualization · Collaboration</strong>
-      </div>
-    </div>
-  </div>
-</header>
 
-<section class="data-band">
-  <div class="data-grid shell">
-    <div class="data-cell data-lead">
-      <div><small>Best way to reach me</small><h2>Give me enough context to understand the problem.</h2></div>
-      <p>I do not need a long message — project, place, goal and what you want help with is enough.</p>
-    </div>
-    <div class="data-cell"><span class="big">01</span><small>Context</small></div>
-    <div class="data-cell"><span class="big">02</span><small>Question</small></div>
-    <div class="data-cell"><span class="big">03</span><small>Conversation</small></div>
-  </div>
-</section>
+      <h1 data-i18n="contact.title"></h1>
 
-<section class="section">
-  <div class="field-notes"></div>
-  <div class="shell">
-    <div class="section-head reveal">
-      <div class="section-label">01 / Get in touch</div>
-      <h2 class="section-title">Start with the <em>question.</em> We can figure out the rest.</h2>
-    </div>
+      <p
+        class="hero-copy"
+        data-i18n="contact.copy"
+      ></p>
 
-    <div class="contact-grid">
-      <article class="contact-main reveal">
-        <small>Email</small>
-        <h2>For project conversations, collaboration or opportunities.</h2>
-        <p>
-          Tell me what you are working on, the place or problem involved, and what made you reach out.
-          I prefer useful context over a formal introduction.
-        </p>
-        <div class="contact-email">
-          <a href="mailto:mirzaadc@gmail.com" data-cursor="MAIL">mirzaadc@gmail.com</a>
-          <button class="copy-btn" id="copyEmail" type="button" data-cursor="COPY">Copy email</button>
-        </div>
-      </article>
-
-      <div class="contact-stack">
-        <a class="contact-card reveal" href="https://www.linkedin.com/in/mirzadugopoljac/" target="_blank" rel="noopener noreferrer" data-cursor="LINKEDIN">
-          <small>LinkedIn</small><span class="go">↗</span>
-          <h3>Professional conversations.</h3>
-          <p>Connect for landscape architecture, internship, collaboration and design-related opportunities.</p>
+      <div class="actions">
+        <a
+          class="btn primary"
+          href="mailto:mirzaadc@gmail.com"
+          data-cursor="EMAIL"
+        >
+          mirzaadc@gmail.com ↗
         </a>
 
-        <a class="contact-card reveal" href="https://github.com/MirzaDugopoljac" target="_blank" rel="noopener noreferrer" data-cursor="GITHUB">
-          <small>GitHub</small><span class="go">↗</span>
-          <h3>Digital work & experiments.</h3>
-          <p>Code, websites and experiments that sit alongside my spatial and visual work.</p>
-        </a>
+        <a
+          class="btn secondary"
+          href="portfolio/index.html"
+          data-transition
+          data-i18n="common.viewWork"
+        ></a>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="section soft">
-  <div class="shell">
-    <div class="section-head reveal">
-      <div class="section-label">02 / A useful message</div>
-      <h2 class="section-title">Three things make it easier to have a <em>good first conversation.</em></h2>
-    </div>
+  <!-- Contact options -->
+  <section class="section">
+    <div class="paper-texture"></div>
 
-    <div class="process-grid">
-      <article class="process reveal"><span class="process-no">01 / PLACE</span><h3>What are we looking at?</h3><p>Give me the site, context, scale or project type so I understand the situation.</p><div class="tags"><span>Site</span><span>Scale</span><span>Context</span></div></article>
-      <article class="process reveal"><span class="process-no">02 / PROBLEM</span><h3>What needs to change?</h3><p>Explain the question, difficulty or opportunity rather than only naming a deliverable.</p><div class="tags"><span>Goal</span><span>Constraint</span><span>Need</span></div></article>
-      <article class="process reveal"><span class="process-no">03 / NEXT STEP</span><h3>What would be useful now?</h3><p>A conversation, visual direction, analysis, collaboration or something else — clarity helps.</p><div class="tags"><span>Talk</span><span>Design</span><span>Collaborate</span></div></article>
-    </div>
-  </div>
-</section>
+    <div class="shell">
+      <div class="section-head reveal">
+        <div
+          class="section-label"
+          data-i18n="contact.section"
+        ></div>
 
-<section class="cta-wrap">
-  <div class="shell">
-    <div class="cta reveal">
-      <h2>Send the context.<br><em>I’ll read the site.</em></h2>
-      <div class="cta-side">
-        <p>You can email me directly, connect on LinkedIn, or look through the portfolio first if you want more context.</p>
-        <div class="cta-links">
-          <a href="mailto:mirzaadc@gmail.com" data-cursor="MAIL">Email me ↗</a>
-          <a href="portfolio/index.html" data-cursor="WORK">View portfolio ↗</a>
-          <a href="files/CV.pdf" target="_blank" rel="noopener noreferrer" data-cursor="CV">View CV ↗</a>
+        <h2
+          class="section-title"
+          data-i18n="contact.sectionTitle"
+        ></h2>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Email -->
+        <article class="contact-main reveal">
+          <small>Email</small>
+
+          <h2 data-i18n="contact.emailTitle"></h2>
+          <p data-i18n="contact.emailP"></p>
+
+          <div class="contact-email">
+            <a href="mailto:mirzaadc@gmail.com">
+              mirzaadc@gmail.com
+            </a>
+
+            <button
+              class="copy"
+              id="copyEmail"
+              type="button"
+              data-i18n="contact.copyButton"
+            ></button>
+          </div>
+        </article>
+
+        <!-- Social links -->
+        <div class="stack">
+          <a
+            class="contact-card reveal"
+            href="https://www.linkedin.com/in/mirzadugopoljac/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <small>LinkedIn</small>
+            <span class="go">↗</span>
+
+            <h3 data-i18n="contact.linkedinTitle"></h3>
+            <p data-i18n="contact.linkedinP"></p>
+          </a>
+
+          <a
+            class="contact-card reveal"
+            href="https://github.com/MirzaDugopoljac"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <small>GitHub</small>
+            <span class="go">↗</span>
+
+            <h3 data-i18n="contact.githubTitle"></h3>
+            <p data-i18n="contact.githubP"></p>
+          </a>
         </div>
       </div>
     </div>
-    <footer><span>© 2026 Mirza Dugopoljac</span><span>Landscape Architecture · Spatial Systems · Visualization</span></footer>
-  </div>
-</section>
+  </section>
 
-<script src="assets/js/site.js"></script>
+  <!-- CTA -->
+  <section class="cta-wrap">
+    <div class="shell">
+      <div class="cta reveal">
+        <div class="texture"></div>
+
+        <h2 data-i18n="contact.footerCta"></h2>
+
+        <div class="cta-side">
+          <p data-i18n="contact.footerText"></p>
+
+          <div class="cta-links">
+            <a
+              href="./portfolio/index.html"
+              data-transition
+              data-i18n="common.viewWork"
+            ></a>
+
+            <a
+              href="./contact.html"
+              data-transition
+              data-i18n="common.contact"
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <span>© 2026 Mirza Dugopoljac</span>
+        <span data-i18n="common.footer"></span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="./assets/js/i18n.js"></script>
+  <script src="./assets/js/projects.js"></script>
+  <script src="./assets/js/components.js"></script>
+  <script src="./assets/js/site.js"></script>
 </body>
 </html>
