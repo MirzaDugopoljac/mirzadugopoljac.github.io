@@ -1,258 +1,215 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Mirza Dugopoljac | Landscape Architecture</title>
-  <meta name="description" content="Mirza Dugopoljac — Landscape Architecture student working across landscape design, planning, visualization and GIS.">
-  <meta name="theme-color" content="#0c120e">
+  <meta name="theme-color" content="#211713">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="./assets/css/site.css">
+
+  <!-- Prevent transition flash between internal pages -->
+  <script>
+    (() => {
+      try {
+        if (sessionStorage.getItem("mirza-transition") === "1") {
+          document.documentElement.classList.add("transition-pending");
+
+          setTimeout(() => {
+            document.documentElement.classList.remove("transition-pending");
+          }, 1800);
+        }
+      } catch (error) {
+        // Ignore sessionStorage errors.
+      }
+    })();
+  </script>
 </head>
-<body>
 
-<div class="loader" id="loader" aria-hidden="true">
-  <div class="loader-inner">
-    <div class="loader-top">
-      <div class="loader-logo">
-        <img src="assets/brand/logo-monogram.png" alt="">
-        <strong>Mirza Dugopoljac</strong>
-      </div>
-      <span>Site / 2026</span>
-    </div>
-    <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
-    <div class="loader-bottom"><span>Reading site conditions</span><span id="loaderPct">00%</span></div>
-  </div>
-</div>
+<body
+  data-root="./"
+  data-active="home"
+  data-title-key="title.home"
+>
+  <!-- Hero -->
+  <header class="hero">
+    <div class="texture"></div>
 
-
-<div class="nav-wrap" id="navWrap">
-  <nav class="nav shell" aria-label="Main navigation">
-    <a class="brand" href="index.html" data-cursor="HOME">
-      <span class="brand-mark"><img src="assets/brand/logo-monogram.png" alt="Mirza Dugopoljac logo"></span>
-      <span class="brand-name">Mirza Dugopoljac</span>
-    </a>
-    <div class="nav-links">
-      <a href="portfolio/index.html" data-cursor="WORK">Work</a>
-      <a href="about.html" data-cursor="ABOUT">About</a>
-      <a href="https://github.com/MirzaDugopoljac" target="_blank" rel="noopener noreferrer" data-cursor="CODE">GitHub</a>
-      <a class="nav-cta" href="contact.html" data-cursor="CONTACT">Contact ↗</a>
-    </div>
-  </nav>
-</div>
-
-
-<div class="cursor-lens" id="cursorLens" aria-hidden="true"></div>
-<div class="cursor-core" id="cursorCore" aria-hidden="true"></div>
-<div class="cursor-label" id="cursorLabel" aria-hidden="true"></div>
-
-
-<header class="hero" id="hero">
-  <div class="survey-field"></div>
-  
-<svg class="survey-svg" viewBox="0 0 900 700" aria-hidden="true">
-  <path d="M80 515L256 94L711 186L790 538L421 627Z"/>
-  <path d="M256 94L421 627M711 186L80 515M80 515L711 186M256 94L790 538"/>
-  <path d="M153 394L314 189L618 226L696 461L441 561L214 506Z"/>
-  <circle cx="256" cy="94" r="8"/><circle cx="711" cy="186" r="8"/><circle cx="790" cy="538" r="8"/>
-  <circle cx="421" cy="627" r="8"/><circle cx="80" cy="515" r="8"/>
-  <circle class="point" cx="441" cy="561" r="5"/><circle class="point" cx="314" cy="189" r="5"/>
-</svg>
-
-
-  <div class="hero-grid shell">
-    <div>
-      <div class="hero-kicker">
-        <span>M I R Z A · D U G O P O L J A C</span><i></i><span>Landscape Architecture</span>
+    <div class="hero-center hero-shell">
+      <div class="kicker">
+        <span data-i18n="home.kicker"></span>
+        <i></i>
+        <span>Bursa · Türkiye</span>
       </div>
 
-      <h1 class="hero-title balance">
-        Designing<br>
-        <em>change</em> into<br>
-        the <span class="stroke">landscape.</span>
-      </h1>
+      <h1 data-i18n="home.title"></h1>
 
-      <p class="hero-copy pretty">
-        I work by reading what is already there — terrain, movement, ecology, behavior and time —
-        then turning those conditions into <strong>clear spatial decisions</strong>.
-        The goal is not to place design on a site, but to make the site work differently because of it.
-      </p>
+      <p
+        class="hero-copy"
+        data-i18n="home.copy"
+      ></p>
 
-      <div class="hero-actions">
-        <a class="btn primary" href="portfolio/index.html" data-cursor="VIEW">View selected work ↗</a>
-        <a class="btn secondary" href="about.html" data-cursor="ABOUT">How I work</a>
+      <div class="actions">
+        <a
+          class="btn primary"
+          href="portfolio/index.html"
+          data-transition
+          data-i18n="home.ctaWork"
+        ></a>
+
+        <a
+          class="btn secondary"
+          href="about.html"
+          data-transition
+          data-i18n="home.ctaAbout"
+        ></a>
       </div>
 
-      <div class="hero-method">
-        <div><span>01 / Read</span><strong>Site · systems · people</strong></div>
-        <div><span>02 / Reframe</span><strong>Find the leverage point</strong></div>
-        <div><span>03 / Shape</span><strong>Make change spatial</strong></div>
+      <div class="hero-chips">
+        <span data-i18n="home.chipDesign"></span>
+        <span data-i18n="home.chipPlanning"></span>
+        <span>GIS</span>
+        <span data-i18n="home.chipVisualization"></span>
       </div>
     </div>
+  </header>
 
-    <div class="project-stage">
-      <div class="project-object" id="projectObject" tabindex="0" data-cursor="REVEAL">
-        <div class="project-section"><img src="assets/home/urban-square-section.webp" alt=""></div>
+  <!-- Stats -->
+  <section class="strip">
+    <div class="strip-grid shell">
+      <div class="strip-cell strip-lead">
+        <h2 data-i18n="home.bandTitle"></h2>
+        <p data-i18n="home.bandText"></p>
+      </div>
 
-        <div class="project-frame">
-          <img src="assets/home/urban-square-plan.webp" alt="Urban Square landscape plan">
-          <span class="project-label plan-label">PLAN / SITE LOGIC</span>
-          <div class="render-reveal">
-            <img src="assets/home/urban-square-render.webp" alt="Urban Square visualization">
-            <span class="project-label render-label">EXPERIENCE / ATMOSPHERE</span>
+      <div class="strip-cell">
+        <strong class="big">07</strong>
+        <small data-i18n="home.statProjects"></small>
+      </div>
+
+      <div class="strip-cell">
+        <strong class="big">03</strong>
+        <small data-i18n="home.statLanguages"></small>
+      </div>
+
+      <div class="strip-cell">
+        <strong class="big">LA</strong>
+        <small data-i18n="home.statLandscape"></small>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section">
+    <div class="paper-texture"></div>
+
+    <div class="shell">
+      <div class="section-head reveal">
+        <div
+          class="section-label"
+          data-i18n="home.section1"
+        ></div>
+
+        <h2
+          class="section-title"
+          data-i18n="home.section1Title"
+        ></h2>
+      </div>
+
+      <div class="process-grid">
+        <article class="process reveal">
+          <small>01 / READ</small>
+          <h3 data-i18n="home.p1"></h3>
+          <p data-i18n="home.p1p"></p>
+        </article>
+
+        <article class="process reveal">
+          <small>02 / TEST</small>
+          <h3 data-i18n="home.p2"></h3>
+          <p data-i18n="home.p2p"></p>
+        </article>
+
+        <article class="process reveal">
+          <small>03 / SHAPE</small>
+          <h3 data-i18n="home.p3"></h3>
+          <p data-i18n="home.p3p"></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected projects -->
+  <section class="section alt">
+    <div class="paper-texture"></div>
+
+    <div class="shell">
+      <div class="section-head reveal">
+        <div
+          class="section-label"
+          data-i18n="home.section2"
+        ></div>
+
+        <h2
+          class="section-title"
+          data-i18n="home.section2Title"
+        ></h2>
+      </div>
+
+      <div
+        class="projects"
+        id="homeProjects"
+      ></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-wrap">
+    <div class="shell">
+      <div class="cta reveal">
+        <div class="texture"></div>
+
+        <h2 data-i18n="home.footerCta"></h2>
+
+        <div class="cta-side">
+          <p data-i18n="home.footerText"></p>
+
+          <div class="cta-links">
+            <a
+              href="./portfolio/index.html"
+              data-transition
+              data-i18n="common.viewWork"
+            ></a>
+
+            <a
+              href="./contact.html"
+              data-transition
+              data-i18n="common.contact"
+            ></a>
           </div>
         </div>
-
-        <div class="project-card">
-          <small>01 / Urban Square · Bursa</small>
-          <strong>Move across the plan.</strong>
-          <p>The drawing reveals the atmosphere it is trying to create. Tap to hold the render open.</p>
-        </div>
       </div>
+
+      <footer>
+        <span>© 2026 Mirza Dugopoljac</span>
+        <span data-i18n="common.footer"></span>
+      </footer>
     </div>
-  </div>
-</header>
+  </section>
 
-<section class="data-band">
-  <div class="data-grid shell">
-    <div class="data-cell data-lead">
-      <div>
-        <small>Current practice</small>
-        <h2>Landscape, analysis and visual communication.</h2>
-      </div>
-      <p>I use different tools, but the question stays the same: what change makes the site better?</p>
-    </div>
-    <div class="data-cell"><span class="big">07</span><small>Selected projects</small></div>
-    <div class="data-cell"><span class="big">03</span><small>Working scales</small></div>
-    <div class="data-cell"><span class="big">01</span><small>Landscape practice in progress</small></div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="field-notes"></div>
-  <div class="shell">
-    <div class="section-head reveal">
-      <div class="section-label">01 / How I work</div>
-      <h2 class="section-title">From site reading to <em>spatial consequence.</em></h2>
-    </div>
-
-    <div class="process-grid">
-      <article class="process reveal">
-        <span class="process-no">01 / ANALYZE</span>
-        <h3>See what is already happening.</h3>
-        <p>Terrain, users, movement, climate, vegetation and context create the first design brief.</p>
-        <div class="tags"><span>GIS</span><span>Survey</span><span>Behavior</span></div>
-      </article>
-      <article class="process reveal">
-        <span class="process-no">02 / FRAME</span>
-        <h3>Choose the move that matters.</h3>
-        <p>I look for one decision that can improve several relationships at once instead of adding isolated features.</p>
-        <div class="tags"><span>Strategy</span><span>Hierarchy</span><span>Systems</span></div>
-      </article>
-      <article class="process reveal">
-        <span class="process-no">03 / SHAPE</span>
-        <h3>Turn the strategy into experience.</h3>
-        <p>Paths, planting, edges, materials, structures and atmosphere make the idea real and inhabitable.</p>
-        <div class="tags"><span>Plan</span><span>Section</span><span>Visualization</span></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section soft">
-  <div class="field-notes"></div>
-  <div class="shell">
-    <div class="section-head reveal">
-      <div class="section-label">02 / Selected work</div>
-      <h2 class="section-title">Different scales. Same intention: <em>make the condition better.</em></h2>
-    </div>
-
-    <div class="projects">
-      <a class="project-row reveal" href="portfolio/projects/urban-square.html" data-cursor="PROJECT">
-        <div class="project-text">
-          <small>01 / Public Space · Bursa</small>
-          <h3>Urban Square</h3>
-          <p>Movement, gathering, planting and atmosphere organized as one public-space system.</p>
-        </div>
-        <div class="project-image"><img src="assets/home/urban-square-render.webp" alt="Urban Square project visualization"></div>
-        <span class="project-index">01</span>
-      </a>
-
-      <a class="project-row reveal" href="portfolio/projects/urban-landscape-planning.html" data-cursor="PROJECT">
-        <div class="project-text">
-          <small>02 / Planning · GIS</small>
-          <h3>Urban Landscape Planning</h3>
-          <p>Natural and cultural layers translated into strategy through spatial analysis and landscape planning.</p>
-        </div>
-        <div class="project-image"><img src="assets/home/urban-planning.webp" alt="Urban landscape planning project"></div>
-        <span class="project-index">02</span>
-      </a>
-
-      <a class="project-row reveal" href="portfolio/projects/collective-housing.html" data-cursor="PROJECT">
-        <div class="project-text">
-          <small>03 / Residential Landscape</small>
-          <h3>Collective Housing</h3>
-          <p>Shared outdoor space designed as the social infrastructure of everyday residential life.</p>
-        </div>
-        <div class="project-image"><img src="assets/home/collective-housing.webp" alt="Collective Housing landscape visualization"></div>
-        <span class="project-index">03</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="shell">
-    <div class="section-head reveal">
-      <div class="section-label">03 / What I bring</div>
-      <h2 class="section-title">I want the design to have a <em>reason for being there.</em></h2>
-    </div>
-
-    <div class="value-grid">
-      <article class="value-panel reveal">
-        <div class="kicker">Design applied to a site</div>
-        <h3>Objects first. Relationships second.</h3>
-        <p>A place can look finished and still ignore the forces that shape how it works.</p>
-        <div class="value-list">
-          <div class="value-item"><span>Form before evidence</span><span>01</span></div>
-          <div class="value-item"><span>Features as isolated pieces</span><span>02</span></div>
-          <div class="value-item"><span>Visualization as decoration</span><span>03</span></div>
-        </div>
-      </article>
-
-      <article class="value-panel dark reveal">
-        <div class="kicker">How I want to work</div>
-        <h3>Read first. Change deliberately.</h3>
-        <p>The visual result matters, but it should come from understanding movement, ecology, use and spatial consequence.</p>
-        <div class="value-list">
-          <div class="value-item"><span>Analysis informs form</span><span>01</span></div>
-          <div class="value-item"><span>Systems connect decisions</span><span>02</span></div>
-          <div class="value-item"><span>Visualization tests experience</span><span>03</span></div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="cta-wrap">
-  <div class="shell">
-    <div class="cta reveal">
-      <h2>Places change.<br><em>Design decides how.</em></h2>
-      <div class="cta-side">
-        <p>If you want to talk about landscape architecture, visualization, GIS or a possible collaboration, get in touch.</p>
-        <div class="cta-links">
-          <a href="contact.html" data-cursor="CONTACT">Contact me ↗</a>
-          <a href="about.html" data-cursor="ABOUT">About my approach ↗</a>
-          <a href="files/CV.pdf" target="_blank" rel="noopener noreferrer" data-cursor="CV">View CV ↗</a>
-        </div>
-      </div>
-    </div>
-    <footer><span>© 2026 Mirza Dugopoljac</span><span>Landscape Architecture · Spatial Systems · Visualization</span></footer>
-  </div>
-</section>
-
-<script src="assets/js/site.js"></script>
+  <!-- Scripts -->
+  <script src="./assets/js/i18n.js"></script>
+  <script src="./assets/js/projects.js"></script>
+  <script src="./assets/js/components.js"></script>
+  <script src="./assets/js/site.js"></script>
 </body>
 </html>
