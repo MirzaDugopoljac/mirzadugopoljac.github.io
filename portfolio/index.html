@@ -1,242 +1,179 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Portfolio | Mirza Dugopoljac</title>
-  <meta name="description" content="Landscape architecture portfolio by Mirza Dugopoljac.">
-  <meta name="theme-color" content="#0c120e">
+  <meta name="theme-color" content="#211713">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="../assets/css/site.css">
-  <link rel="stylesheet" href="portfolio.css">
+
+  <!-- Prevent transition flash between internal pages -->
+  <script>
+    (() => {
+      try {
+        if (sessionStorage.getItem("mirza-transition") === "1") {
+          document.documentElement.classList.add("transition-pending");
+
+          setTimeout(() => {
+            document.documentElement.classList.remove("transition-pending");
+          }, 1800);
+        }
+      } catch (error) {
+        // Ignore sessionStorage errors.
+      }
+    })();
+  </script>
 </head>
-<body>
 
+<body
+  data-root="../"
+  data-active="work"
+  data-title-key="title.portfolio"
+>
+  <!-- Hero -->
+  <header class="hero">
+    <div class="texture"></div>
 
-<div class="loader" id="loader" aria-hidden="true">
-  <div class="loader-inner">
-    <div class="loader-top">
-      <div class="loader-logo">
-        <img src="../assets/brand/logo-monogram.png" alt="">
-        <strong>Mirza Dugopoljac</strong>
-      </div>
-      <span>Portfolio / 2026</span>
-    </div>
-    <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
-    <div class="loader-bottom"><span>Reading project layers</span><span id="loaderPct">00%</span></div>
-  </div>
-</div>
-
-<div class="nav-wrap" id="navWrap">
-  <nav class="nav shell" aria-label="Main navigation">
-    <a class="brand" href="../index.html" data-cursor="HOME">
-      <span class="brand-mark"><img src="../assets/brand/logo-monogram.png" alt="Mirza Dugopoljac logo"></span>
-      <span class="brand-name">Mirza Dugopoljac</span>
-    </a>
-    <div class="nav-links">
-      <a href="../portfolio/index.html" aria-current="page" data-cursor="WORK">Work</a>
-      <a href="../about.html" data-cursor="ABOUT">About</a>
-      <a href="https://github.com/MirzaDugopoljac" target="_blank" rel="noopener noreferrer" data-cursor="CODE">GitHub</a>
-      <a class="nav-cta" href="../contact.html" data-cursor="CONTACT">Contact ↗</a>
-    </div>
-  </nav>
-</div>
-
-<div class="cursor-lens" id="cursorLens" aria-hidden="true"></div>
-<div class="cursor-core" id="cursorCore" aria-hidden="true"></div>
-<div class="cursor-label" id="cursorLabel" aria-hidden="true"></div>
-
-<header class="hero portfolio-hero" id="hero">
-  <div class="survey-field"></div>
-  
-<svg class="survey-svg" viewBox="0 0 900 700" aria-hidden="true">
-  <path d="M80 515L256 94L711 186L790 538L421 627Z"/>
-  <path d="M256 94L421 627M711 186L80 515M80 515L711 186M256 94L790 538"/>
-  <path d="M153 394L314 189L618 226L696 461L441 561L214 506Z"/>
-  <circle cx="256" cy="94" r="8"/><circle cx="711" cy="186" r="8"/><circle cx="790" cy="538" r="8"/>
-  <circle cx="421" cy="627" r="8"/><circle cx="80" cy="515" r="8"/>
-  <circle class="point" cx="441" cy="561" r="5"/><circle class="point" cx="314" cy="189" r="5"/>
-</svg>
-
-
-  <div class="hero-grid shell">
-    <div>
-      <div class="hero-kicker">
-        <span>SELECTED WORK · 07 PROJECTS</span><i></i><span>Landscape Architecture</span>
+    <div class="hero-center hero-shell">
+      <div class="kicker">
+        <span data-i18n="portfolio.kicker"></span>
+        <i></i>
+        <span>Landscape Architecture</span>
       </div>
 
-      <h1 class="hero-title balance">
-        Landscape<br>
-        at <em>different scales.</em>
-      </h1>
+      <h1 data-i18n="portfolio.title"></h1>
 
-      <p class="hero-copy pretty">
-        Seven projects moving between public space, planning, residential landscape,
-        technical design and competition work. Different briefs, but the same interest
-        in how a site can become <strong>clearer, more useful and more memorable.</strong>
-      </p>
+      <p
+        class="hero-copy"
+        data-i18n="portfolio.copy"
+      ></p>
 
-      <div class="hero-actions">
-        <a class="btn primary" href="#projects" data-cursor="VIEW">Explore projects ↓</a>
-        <a class="btn secondary" href="assets/Mirza-Dugopoljac-Portfolio.pdf" target="_blank" data-cursor="PDF">Open portfolio PDF ↗</a>
-      </div>
+      <div class="actions">
+        <a
+          class="btn primary"
+          href="#projects"
+          data-i18n="portfolio.projectsCta"
+        ></a>
 
-      <div class="hero-method">
-        <div><span>Scale</span><strong>Object → site → territory</strong></div>
-        <div><span>Tools</span><strong>Drawing · GIS · visualization</strong></div>
-        <div><span>Focus</span><strong>Landscape as experience + system</strong></div>
+        <a
+          class="btn secondary"
+          href="../assets/Mirza-Dugopoljac-Portfolio.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-i18n="common.pdf"
+        ></a>
       </div>
     </div>
 
-    <div class="portfolio-collage">
-      <span class="collage-note">07 projects / selected work</span>
-      <div class="collage-card one"><img src="assets/img/square-render-2.webp" alt="Urban Square"></div>
-      <div class="collage-card two"><img src="assets/img/planning-natural-1.webp" alt="Landscape Planning"></div>
-      <div class="collage-card three"><img src="assets/img/residential-render-2.webp" alt="Single Residence"></div>
-    </div>
-  </div>
-</header>
-
-<section class="data-band">
-  <div class="data-grid shell">
-    <div class="data-cell data-lead">
-      <div>
-        <small>Portfolio structure</small>
-        <h2>From detailed objects to larger landscape systems.</h2>
+    <!-- Portfolio hero images -->
+    <div class="portfolio-hero-art">
+      <div class="folio-img a">
+        <img
+          src="../assets/img/square-render-2.webp"
+          alt="Urban Square project visualization"
+        >
       </div>
-      <p>The sequence is organized to show range without separating design, analysis and visual communication from one another.</p>
-    </div>
-    <div class="data-cell"><span class="big">07</span><small>Projects</small></div>
-    <div class="data-cell"><span class="big">05</span><small>Project types</small></div>
-    <div class="data-cell"><span class="big">01</span><small>Connected portfolio</small></div>
-  </div>
-</section>
 
-<section class="section soft" id="projects">
-  <div class="field-notes"></div>
-  <div class="shell">
-    <div class="portfolio-index reveal">
-      <div>
-        <div class="section-label">01 / Project index</div>
-        <h2 class="section-title">The work, <em>one project at a time.</em></h2>
-        <p>Open a project to see its drawings, visualizations and the design thinking behind it.</p>
+      <div class="folio-img b">
+        <img
+          src="../assets/img/planning-natural-1.webp"
+          alt="Urban landscape planning analysis"
+        >
       </div>
-      <div class="portfolio-counter">07</div>
-    </div>
 
-    <div class="portfolio-list">
-      
-<a class="portfolio-project reveal" href="projects/urban-square.html" data-cursor="PROJECT">
-  <div class="portfolio-project-copy">
-    <small>01 / Public Space · Bursa</small>
-    <h2>Urban Square</h2>
-    <p>A public landscape organized around movement, gathering, water and atmosphere.</p>
-  </div>
-  <div class="portfolio-project-image">
-    <img src="assets/img/square-render-2.webp" alt="Urban Square">
-  </div>
-  <span class="portfolio-project-number">01</span>
-  <span class="portfolio-project-arrow">↗</span>
-</a>
-<a class="portfolio-project reveal" href="projects/urban-landscape-planning.html" data-cursor="PROJECT">
-  <div class="portfolio-project-copy">
-    <small>02 / Planning · GIS</small>
-    <h2>Urban Landscape Planning</h2>
-    <p>Natural and cultural layers translated into landscape strategy, green infrastructure and resilience.</p>
-  </div>
-  <div class="portfolio-project-image">
-    <img src="assets/img/planning-natural-1.webp" alt="Urban Landscape Planning">
-  </div>
-  <span class="portfolio-project-number">02</span>
-  <span class="portfolio-project-arrow">↗</span>
-</a>
-<a class="portfolio-project reveal" href="projects/interactive-seating.html" data-cursor="PROJECT">
-  <div class="portfolio-project-copy">
-    <small>03 / Technical Design</small>
-    <h2>Interactive Seating Unit</h2>
-    <p>A solar-powered urban furniture concept combining shade, interaction, movement and social use.</p>
-  </div>
-  <div class="portfolio-project-image">
-    <img src="assets/img/furniture-render2-1.webp" alt="Interactive Seating Unit">
-  </div>
-  <span class="portfolio-project-number">03</span>
-  <span class="portfolio-project-arrow">↗</span>
-</a>
-<a class="portfolio-project reveal" href="projects/collective-housing.html" data-cursor="PROJECT">
-  <div class="portfolio-project-copy">
-    <small>04 / Residential Landscape</small>
-    <h2>Collective Housing Landscape</h2>
-    <p>Shared outdoor space designed as the social infrastructure of everyday residential life.</p>
-  </div>
-  <div class="portfolio-project-image">
-    <img src="assets/img/housing-render-2.webp" alt="Collective Housing Landscape">
-  </div>
-  <span class="portfolio-project-number">04</span>
-  <span class="portfolio-project-arrow">↗</span>
-</a>
-<a class="portfolio-project reveal" href="projects/single-residence.html" data-cursor="PROJECT">
-  <div class="portfolio-project-copy">
-    <small>05 / Private Landscape</small>
-    <h2>Single Residence Garden</h2>
-    <p>A garden structured around comfort, activity, water and a strong geometric landscape language.</p>
-  </div>
-  <div class="portfolio-project-image">
-    <img src="assets/img/residential-render-2.webp" alt="Single Residence Garden">
-  </div>
-  <span class="portfolio-project-number">05</span>
-  <span class="portfolio-project-arrow">↗</span>
-</a>
-<a class="portfolio-project reveal" href="projects/school-canteen.html" data-cursor="PROJECT">
-  <div class="portfolio-project-copy">
-    <small>06 / Campus Landscape</small>
-    <h2>School Canteen Landscape</h2>
-    <p>A multifunctional student landscape for socializing, play and varied outdoor experiences.</p>
-  </div>
-  <div class="portfolio-project-image">
-    <img src="assets/img/kantin-render-2.webp" alt="School Canteen Landscape">
-  </div>
-  <span class="portfolio-project-number">06</span>
-  <span class="portfolio-project-arrow">↗</span>
-</a>
-<a class="portfolio-project reveal" href="projects/cat-house.html" data-cursor="PROJECT">
-  <div class="portfolio-project-copy">
-    <small>07 / Competition</small>
-    <h2>Cat House Design</h2>
-    <p>A compact shelter concept focused on safety, comfort and environmental fit for street cats.</p>
-  </div>
-  <div class="portfolio-project-image">
-    <img src="assets/img/cat-house-1.webp" alt="Cat House Design">
-  </div>
-  <span class="portfolio-project-number">07</span>
-  <span class="portfolio-project-arrow">↗</span>
-</a>
+      <div class="folio-img c">
+        <img
+          src="../assets/img/residential-render-2.webp"
+          alt="Single residence landscape visualization"
+        >
+      </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="cta-wrap">
-  <div class="shell">
-    <div class="cta reveal">
-      <h2>Seven projects.<br><em>One evolving direction.</em></h2>
-      <div class="cta-side">
-        <p>The web portfolio is built for exploration. The PDF keeps the original document sequence if you want to review it as one complete file.</p>
-        <div class="cta-links">
-          <a href="assets/Mirza-Dugopoljac-Portfolio.pdf" target="_blank" data-cursor="PDF">Open PDF ↗</a>
-          <a href="../about.html" data-cursor="ABOUT">About my approach ↗</a>
-          <a href="../contact.html" data-cursor="CONTACT">Contact me ↗</a>
+  <!-- Projects -->
+  <section
+    class="section alt"
+    id="projects"
+  >
+    <div class="paper-texture"></div>
+
+    <div class="shell">
+      <div class="section-head reveal">
+        <div
+          class="section-label"
+          data-i18n="portfolio.section"
+        ></div>
+
+        <div>
+          <h2
+            class="section-title"
+            data-i18n="portfolio.sectionTitle"
+          ></h2>
+
+          <p
+            style="max-width: 650px; color: var(--muted); line-height: 1.7;"
+            data-i18n="portfolio.sectionText"
+          ></p>
         </div>
       </div>
+
+      <div
+        class="projects"
+        id="projectList"
+      ></div>
     </div>
+  </section>
 
-    <footer>
-      <span>© 2026 Mirza Dugopoljac</span>
-      <span>Landscape Architecture · Spatial Systems · Visualization</span>
-    </footer>
-  </div>
-</section>
+  <!-- CTA -->
+  <section class="cta-wrap">
+    <div class="shell">
+      <div class="cta reveal">
+        <div class="texture"></div>
 
-<script src="portfolio.js"></script>
+        <h2 data-i18n="portfolio.footerCta"></h2>
+
+        <div class="cta-side">
+          <p data-i18n="portfolio.footerText"></p>
+
+          <div class="cta-links">
+            <a
+              href="../portfolio/index.html"
+              data-transition
+              data-i18n="common.viewWork"
+            ></a>
+
+            <a
+              href="../contact.html"
+              data-transition
+              data-i18n="common.contact"
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <span>© 2026 Mirza Dugopoljac</span>
+        <span data-i18n="common.footer"></span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/projects.js"></script>
+  <script src="../assets/js/components.js"></script>
+  <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/portfolio.js"></script>
 </body>
 </html>
