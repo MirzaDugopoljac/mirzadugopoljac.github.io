@@ -1,181 +1,151 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>About | Mirza Dugopoljac</title>
-  <meta name="theme-color" content="#211713">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap"
-    rel="stylesheet"
-  >
-
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="./assets/css/site.css">
-
-  <!-- Prevent transition flash between internal pages -->
-  <script>
-    (() => {
-      try {
-        if (sessionStorage.getItem("mirza-transition") === "1") {
-          document.documentElement.classList.add("transition-pending");
-
-          setTimeout(() => {
-            document.documentElement.classList.remove("transition-pending");
-          }, 1800);
-        }
-      } catch (error) {
-        // Ignore sessionStorage errors.
-      }
-    })();
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | Mirza Dugopoljac</title>
+<meta name="description" content="Meet Mirza Dugopoljac, a landscape architecture student at Bursa Uludağ University exploring design, planting, GIS and visualization.">
+<meta name="theme-color" content="#15251c">
+<link rel="canonical" href="https://mirzadugopoljac.github.io/about.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About | Mirza Dugopoljac">
+<meta property="og:description" content="Meet Mirza Dugopoljac, a landscape architecture student at Bursa Uludağ University exploring design, planting, GIS and visualization.">
+<meta property="og:url" content="https://mirzadugopoljac.github.io/about.html">
+<meta property="og:image" content="https://mirzadugopoljac.github.io/portfolio/assets/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="./portfolio/assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/css/site.css">
+<noscript>
+<style>.menu-toggle{display:none}.nav-right{display:flex;position:static;flex-wrap:wrap;padding:0;border:0;box-shadow:none}.nav{flex-wrap:wrap;padding-block:15px}</style>
+</noscript>
+<link rel="stylesheet" href="./assets/css/editorial.css">
+<link rel="stylesheet" href="./assets/css/earth.css">
 </head>
-
-<body
-  data-root="./"
-  data-active="about"
-  data-title-key="title.about"
->
-  <!-- Hero -->
-  <header class="hero">
-    <div class="texture"></div>
-
-    <div class="hero-center hero-shell">
-      <div class="kicker">
-        <span data-i18n="about.kicker"></span>
-        <i></i>
-        <span>Bursa · Türkiye</span>
-      </div>
-
-      <h1 data-i18n="about.title"></h1>
-
-      <p
-        class="hero-copy"
-        data-i18n="about.copy"
-      ></p>
-    </div>
-  </header>
-
-  <!-- About / Position -->
-  <section class="section">
-    <div class="paper-texture"></div>
-
-    <div class="shell">
-      <div class="section-head reveal">
-        <div
-          class="section-label"
-          data-i18n="about.section1"
-        ></div>
-
-        <h2
-          class="section-title"
-          data-i18n="about.section1Title"
-        ></h2>
-      </div>
-
-      <div class="statement-grid">
-        <article class="statement reveal">
-          <blockquote data-i18n="about.quote"></blockquote>
-          <p data-i18n="about.quoteP"></p>
-        </article>
-
-        <div class="stack">
-          <article class="mini-card reveal">
-            <small data-i18n="about.card1"></small>
-            <strong data-i18n="about.card1b"></strong>
-          </article>
-
-          <article class="mini-card reveal">
-            <small data-i18n="about.card2"></small>
-            <strong data-i18n="about.card2b"></strong>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Working method -->
-  <section class="section alt">
-    <div class="paper-texture"></div>
-
-    <div class="shell">
-      <div class="section-head reveal">
-        <div
-          class="section-label"
-          data-i18n="about.section2"
-        ></div>
-
-        <h2
-          class="section-title"
-          data-i18n="about.section2Title"
-        ></h2>
-      </div>
-
-      <div class="process-grid">
-        <article class="process reveal">
-          <small>01 / READ</small>
-          <h3 data-i18n="home.p1"></h3>
-          <p data-i18n="home.p1p"></p>
-        </article>
-
-        <article class="process reveal">
-          <small>02 / TEST</small>
-          <h3 data-i18n="home.p2"></h3>
-          <p data-i18n="home.p2p"></p>
-        </article>
-
-        <article class="process reveal">
-          <small>03 / REFINE</small>
-          <h3 data-i18n="home.p3"></h3>
-          <p data-i18n="home.p3p"></p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-wrap">
-    <div class="shell">
-      <div class="cta reveal">
-        <div class="texture"></div>
-
-        <h2 data-i18n="about.footerCta"></h2>
-
-        <div class="cta-side">
-          <p data-i18n="about.footerText"></p>
-
-          <div class="cta-links">
-            <a
-              href="./portfolio/index.html"
-              data-transition
-              data-i18n="common.viewWork"
-            ></a>
-
-            <a
-              href="./contact.html"
-              data-transition
-              data-i18n="common.contact"
-            ></a>
-          </div>
-        </div>
-      </div>
-
-      <footer>
-        <span>© 2026 Mirza Dugopoljac</span>
-        <span data-i18n="common.footer"></span>
-      </footer>
-    </div>
-  </section>
-
-  <!-- Scripts -->
-  <script src="./assets/js/i18n.js"></script>
-  <script src="./assets/js/projects.js"></script>
-  <script src="./assets/js/components.js"></script>
-  <script src="./assets/js/site.js"></script>
+<body data-root="./" data-active="about" data-title-key="title.about">
+<a class="skip-link" href="#main" data-i18n="new.skip">Skip to content</a>
+<div class="nav-wrap">
+<nav class="nav shell" aria-label="Main navigation">
+<a class="brand" href="./index.html">
+<span class="identity-square" aria-hidden="true">
+</span>
+<span>Mirza Dugopoljac<small data-i18n="new.role">Landscape architecture student</small>
+</span>
+</a>
+<button class="menu-toggle" aria-controls="navigation" aria-expanded="false" data-i18n="new.menu">Menu</button>
+<div class="nav-right" id="navigation">
+<div class="nav-links">
+<a href="./portfolio/index.html"  data-i18n="nav.work">Work</a>
+<a href="./about.html" aria-current="page" data-i18n="nav.about">About</a>
+<a href="./contact.html"  data-i18n="nav.contact">Contact</a>
+</div>
+<div class="lang" aria-label="Language">
+<button data-lang="en" aria-label="English" aria-pressed="true">EN</button>
+<button data-lang="tr" aria-label="Türkçe" aria-pressed="false">TR</button>
+<button data-lang="bs" aria-label="Bosanski" aria-pressed="false">BS</button>
+</div>
+</div>
+</nav>
+</div>
+<main id="main">
+<header class="hero">
+<div class="hero-center shell">
+<div class="kicker">
+<span data-i18n="about.kicker">ABOUT · LANDSCAPE ARCHITECTURE</span>
+<span>Bursa · Türkiye</span>
+</div>
+<h1 data-i18n="about.title">Curious about<br>
+<em>how places work.</em>
+</h1>
+<p class="hero-copy" data-i18n="about.copy">I’m a Landscape Architecture student at Bursa Uludağ University. My work moves between design, planning, planting, GIS and visualization, with a growing interest in how analysis becomes a strong spatial idea.</p>
+<div class="actions">
+<a class="btn primary" href="files/CV.pdf" download data-i18n="new.cv">Download CV ↓</a>
+<a class="btn secondary" href="contact.html"  data-i18n="new.email">Get in touch ↗</a>
+</div>
+</div>
+</header>
+<section class="section intro-section">
+<div class="shell intro-grid">
+<div class="portrait">
+<img src="assets/img/profile-2.webp" alt="Mirza Dugopoljac" width="600" height="750">
+</div>
+<div>
+<div class="section-label" data-i18n="about.section1">01 / Position</div>
+<blockquote data-i18n="about.quote">A good intervention should belong to the place, but still make the place <em>work differently.</em>
+</blockquote>
+<p data-i18n="about.quoteP">I’m most interested in the moment when analysis becomes a spatial decision: when a path, planting system, edge or structure starts solving more than one problem at once.</p>
+<div class="bio-facts">
+<div>
+<small data-i18n="new.education">Education</small>
+<strong>Bursa Uludağ University</strong>
+</div>
+<div>
+<small data-i18n="new.role">Landscape architecture student</small>
+<strong>Design · Planning · GIS</strong>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="shell">
+<div class="section-head">
+<div class="section-label" data-i18n="home.section1">01 / Approach</div>
+<h2 class="section-title" data-i18n="home.section1Title">Read first. <em>Design second.</em>
+</h2>
+</div>
+<div class="process-grid">
+<article class="process">
+<small>01</small>
+<h3 data-i18n="home.p1">Understand the site.</h3>
+<p data-i18n="home.p1p">Terrain, movement, ecology and everyday use create the first design brief.</p>
+</article>
+<article class="process">
+<small>02</small>
+<h3 data-i18n="home.p2">Test the idea.</h3>
+<p data-i18n="home.p2p">Plans, sections, models and GIS help reveal whether a concept actually works.</p>
+</article>
+<article class="process">
+<small>03</small>
+<h3 data-i18n="home.p3">Shape the experience.</h3>
+<p data-i18n="home.p3p">Planting, materials, edges and circulation turn strategy into a lived spatial experience.</p>
+</article>
+</div>
+</div>
+</section>
+<section class="cta-wrap">
+<div class="shell cta">
+<div class="section-label contact-label" data-i18n="ed.contactLabel">07 / Direct contact</div>
+<h2 data-i18n="new.talk">Let’s start<br>
+<em>a conversation.</em>
+</h2>
+<div class="cta-side">
+<p data-i18n="new.talkText">Have a project, a collaboration or an opportunity in mind? I’d love to hear about it.</p>
+<a class="btn primary" href="mailto:mirzaadc@gmail.com"  data-i18n="new.email">Get in touch ↗</a>
+<a class="email-link" href="mailto:mirzaadc@gmail.com">mirzaadc@gmail.com</a>
+</div>
+</div>
+</section>
+<footer class="shell footer">
+<span>© 2026 Mirza Dugopoljac</span>
+<span>Bursa · Türkiye</span>
+<div>
+<a href="https://www.linkedin.com/in/mirzadugopoljac/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+<a href="https://github.com/MirzaDugopoljac" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+</div>
+</footer>
+</main>
+<script src="./assets/js/i18n.js">
+</script>
+<script src="./assets/js/projects.js">
+</script>
+<script src="./assets/js/components.js">
+</script>
+<script src="./assets/js/site.js">
+</script>
+<script src="./assets/js/effects.js">
+</script>
 </body>
 </html>

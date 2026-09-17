@@ -20,14 +20,14 @@ window.I18N = {
     "bs": "PEJZAŽNA ARHITEKTURA · DIZAJN · VIZUALIZACIJA"
   },
   "home.title": {
-    "en": "Landscape<br><em>with intention.</em>",
-    "tr": "Niyetle tasarlanan<br><em>peyzaj.</em>",
-    "bs": "Pejzaž<br><em>s namjerom.</em>"
+    "en": "Read the land.<br>Shape what<br><em>comes next.</em>",
+    "tr": "Araziyi oku.<br>Geleceği<br><em>şekillendir.</em>",
+    "bs": "Čitaj prostor.<br>Oblikuj ono<br><em>što dolazi.</em>"
   },
   "home.copy": {
-    "en": "I’m <strong>Mirza Dugopoljac</strong>, a Landscape Architecture student working across spatial design, planning, GIS and visualization. I’m interested in turning site conditions into clear, memorable experiences.",
-    "tr": "Ben <strong>Mirza Dugopoljac</strong>, mekânsal tasarım, planlama, CBS ve görselleştirme alanlarında çalışan bir Peyzaj Mimarlığı öğrencisiyim. Alan koşullarını net ve akılda kalıcı deneyimlere dönüştürmekle ilgileniyorum.",
-    "bs": "Ja sam <strong>Mirza Dugopoljac</strong>, student pejzažne arhitekture koji radi kroz prostorni dizajn, planiranje, GIS i vizualizaciju. Zanima me pretvaranje uslova lokacije u jasna i upečatljiva iskustva."
+    "en": "Landscape architecture, from the first site reading to the spaces we share. I’m Mirza Dugopoljac, a student at Bursa Uludağ University working across design, GIS and visualization.",
+    "tr": "İlk alan okumasından paylaştığımız mekânlara uzanan peyzaj mimarlığı. Ben Mirza Dugopoljac; Bursa Uludağ Üniversitesi’nde tasarım, CBS ve görselleştirme üzerine çalışan bir öğrenciyim.",
+    "bs": "Pejzažna arhitektura, od prvog čitanja lokacije do prostora koje dijelimo. Ja sam Mirza Dugopoljac, student Univerziteta Bursa Uludağ, usmjeren na dizajn, GIS i vizualizaciju."
   },
   "home.ctaWork": {
     "en": "View selected work ↗",
@@ -418,5 +418,445 @@ window.I18N = {
     "en": "Portfolio | Mirza Dugopoljac",
     "tr": "Portfolyo | Mirza Dugopoljac",
     "bs": "Portfolio | Mirza Dugopoljac"
+  },
+  "new.selected": {
+    "en": "Selected work",
+    "tr": "Seçili projeler",
+    "bs": "Odabrani radovi"
+  },
+  "new.workTitle": {
+    "en": "Ideas grounded<br>in <em>place.</em>",
+    "tr": "Yerle bağ kuran<br><em>fikirler.</em>",
+    "bs": "Ideje ukorijenjene<br>u <em>prostoru.</em>"
+  },
+  "new.all": {
+    "en": "Explore all 7 projects ↗",
+    "tr": "7 projenin tamamını incele ↗",
+    "bs": "Pogledaj svih 7 projekata ↗"
+  },
+  "new.cv": {
+    "en": "Download CV ↓",
+    "tr": "Özgeçmişi indir ↓",
+    "bs": "Preuzmi CV ↓"
+  },
+  "new.pdf": {
+    "en": "Portfolio PDF ↓",
+    "tr": "Portfolyo PDF ↓",
+    "bs": "Portfolio PDF ↓"
+  },
+  "new.intro": {
+    "en": "A little about me",
+    "tr": "Kısaca ben",
+    "bs": "Ukratko o meni"
+  },
+  "new.introTitle": {
+    "en": "From reading a landscape<br>to <em>shaping its future.</em>",
+    "tr": "Peyzajı okumaktan<br><em>geleceğini şekillendirmeye.</em>",
+    "bs": "Od razumijevanja pejzaža<br>do <em>oblikovanja budućnosti.</em>"
+  },
+  "new.talk": {
+    "en": "Let’s start<br><em>a conversation.</em>",
+    "tr": "Bir sohbetle<br><em>başlayalım.</em>",
+    "bs": "Započnimo<br><em>razgovor.</em>"
+  },
+  "new.talkText": {
+    "en": "Have a project, a collaboration or an opportunity in mind? I’d love to hear about it.",
+    "tr": "Bir proje, iş birliği veya fırsat hakkında konuşmak ister misiniz? Sizden haber almak isterim.",
+    "bs": "Imate projekat, saradnju ili priliku na umu? Volio bih čuti više."
+  },
+  "new.email": {
+    "en": "Get in touch ↗",
+    "tr": "İletişime geç ↗",
+    "bs": "Javi se ↗"
+  },
+  "new.allFilter": {
+    "en": "All projects",
+    "tr": "Tüm projeler",
+    "bs": "Svi projekti"
+  },
+  "new.landscape": {
+    "en": "Landscape",
+    "tr": "Peyzaj",
+    "bs": "Pejzaž"
+  },
+  "new.planning": {
+    "en": "Planning & GIS",
+    "tr": "Planlama ve CBS",
+    "bs": "Planiranje i GIS"
+  },
+  "new.detail": {
+    "en": "Objects & details",
+    "tr": "Nesneler ve detaylar",
+    "bs": "Objekti i detalji"
+  },
+  "new.role": {
+    "en": "Landscape architecture student",
+    "tr": "Peyzaj mimarlığı öğrencisi",
+    "bs": "Student pejzažne arhitekture"
+  },
+  "new.menu": {
+    "en": "Menu",
+    "tr": "Menü",
+    "bs": "Meni"
+  },
+  "new.skip": {
+    "en": "Skip to content",
+    "tr": "İçeriğe geç",
+    "bs": "Pređi na sadržaj"
+  },
+  "new.close": {
+    "en": "Close image",
+    "tr": "Görseli kapat",
+    "bs": "Zatvori sliku"
+  },
+  "new.downloads": {
+    "en": "Take a closer look",
+    "tr": "Daha yakından incele",
+    "bs": "Pogledaj detaljnije"
+  },
+  "new.education": {
+    "en": "Education",
+    "tr": "Eğitim",
+    "bs": "Obrazovanje"
+  },
+  "new.design": {
+    "en": "Landscape design",
+    "tr": "Peyzaj tasarımı",
+    "bs": "Pejzažni dizajn"
+  },
+  "new.gis": {
+    "en": "GIS & planning",
+    "tr": "CBS ve planlama",
+    "bs": "GIS i planiranje"
+  },
+  "new.visualization": {
+    "en": "Visualization",
+    "tr": "Görselleştirme",
+    "bs": "Vizualizacija"
+  },
+  "ed.identity": {
+    "en": "Mirza Dugopoljac / Landscape architecture",
+    "tr": "Mirza Dugopoljac / Peyzaj mimarlığı",
+    "bs": "Mirza Dugopoljac / Pejzažna arhitektura"
+  },
+  "ed.work": {
+    "en": "View the work ↗",
+    "tr": "Projeleri incele ↗",
+    "bs": "Pogledaj radove ↗"
+  },
+  "ed.about": {
+    "en": "The approach",
+    "tr": "Yaklaşım",
+    "bs": "Pristup"
+  },
+  "ed.contact": {
+    "en": "Start a conversation",
+    "tr": "Bir sohbet başlat",
+    "bs": "Započni razgovor"
+  },
+  "ed.layerIntro": {
+    "en": "One landscape. Three ways of seeing.",
+    "tr": "Tek peyzaj. Üç farklı bakış.",
+    "bs": "Jedan pejzaž. Tri načina gledanja."
+  },
+  "ed.plan": {
+    "en": "Plan",
+    "tr": "Plan",
+    "bs": "Plan"
+  },
+  "ed.experience": {
+    "en": "Experience",
+    "tr": "Deneyim",
+    "bs": "Doživljaj"
+  },
+  "ed.analysis": {
+    "en": "Analysis",
+    "tr": "Analiz",
+    "bs": "Analiza"
+  },
+  "ed.planLabel": {
+    "en": "01 / Spatial structure",
+    "tr": "01 / Mekânsal yapı",
+    "bs": "01 / Prostorna struktura"
+  },
+  "ed.planTitle": {
+    "en": "An idea, made legible.",
+    "tr": "Okunabilir bir fikir.",
+    "bs": "Ideja koja se može čitati."
+  },
+  "ed.planCopy": {
+    "en": "Paths, planted edges and gathering spaces. The plan makes the relationships visible.",
+    "tr": "Yollar, bitkisel sınırlar ve buluşma alanları. Plan, ilişkileri görünür kılar.",
+    "bs": "Staze, zasađeni rubovi i prostori okupljanja. Plan čini odnose vidljivim."
+  },
+  "ed.experienceLabel": {
+    "en": "02 / Atmosphere & use",
+    "tr": "02 / Atmosfer ve kullanım",
+    "bs": "02 / Atmosfera i upotreba"
+  },
+  "ed.experienceTitle": {
+    "en": "A place to spend time.",
+    "tr": "Zaman geçirilecek bir yer.",
+    "bs": "Mjesto za boravak."
+  },
+  "ed.experienceCopy": {
+    "en": "Light, water, material and movement. A drawing becomes an everyday experience.",
+    "tr": "Işık, su, malzeme ve hareket. Bir çizim gündelik deneyime dönüşür.",
+    "bs": "Svjetlo, voda, materijal i kretanje. Crtež postaje svakodnevni doživljaj."
+  },
+  "ed.analysisLabel": {
+    "en": "03 / Reading the landscape",
+    "tr": "03 / Peyzajı okumak",
+    "bs": "03 / Čitanje pejzaža"
+  },
+  "ed.analysisTitle": {
+    "en": "Every decision starts somewhere.",
+    "tr": "Her kararın bir başlangıcı var.",
+    "bs": "Svaka odluka negdje počinje."
+  },
+  "ed.analysisCopy": {
+    "en": "Terrain, water and ecological patterns. GIS layers reveal what a site is already telling us.",
+    "tr": "Arazi, su ve ekolojik örüntüler. CBS katmanları alanın bize anlattıklarını ortaya çıkarır.",
+    "bs": "Teren, voda i ekološki obrasci. GIS slojevi otkrivaju ono što nam lokacija već govori."
+  },
+  "ed.open": {
+    "en": "Explore the case study ↗",
+    "tr": "Projeyi keşfet ↗",
+    "bs": "Istraži projekat ↗"
+  },
+  "ed.thesisLabel": {
+    "en": "01 / The starting point",
+    "tr": "01 / Başlangıç noktası",
+    "bs": "01 / Polazna tačka"
+  },
+  "ed.thesis": {
+    "en": "A landscape isn’t an empty canvas. It is a living system of water, movement and memory. <em>Design starts with paying attention.</em>",
+    "tr": "Peyzaj boş bir tuval değildir. Su, hareket ve hafızadan oluşan canlı bir sistemdir. <em>Tasarım, dikkatle bakmakla başlar.</em>",
+    "bs": "Pejzaž nije prazno platno. To je živi sistem vode, kretanja i sjećanja. <em>Dizajn počinje pažljivim posmatranjem.</em>"
+  },
+  "ed.proof1": {
+    "en": "Site before form",
+    "tr": "Biçimden önce alan",
+    "bs": "Lokacija prije forme"
+  },
+  "ed.proof1copy": {
+    "en": "Terrain, ecology and everyday use come before the first design decision.",
+    "tr": "Arazi, ekoloji ve gündelik kullanım ilk tasarım kararından önce gelir.",
+    "bs": "Teren, ekologija i svakodnevna upotreba prethode prvoj projektnoj odluci."
+  },
+  "ed.proof2": {
+    "en": "Across scales",
+    "tr": "Ölçekler arasında",
+    "bs": "Kroz različite skale"
+  },
+  "ed.proof2copy": {
+    "en": "From a city’s green infrastructure to the detail of a place to sit.",
+    "tr": "Bir kentin yeşil altyapısından bir oturma alanının detayına kadar.",
+    "bs": "Od zelene infrastrukture grada do detalja mjesta za sjedenje."
+  },
+  "ed.proof3": {
+    "en": "Drawn, tested, explained",
+    "tr": "Çizildi, denendi, açıklandı",
+    "bs": "Nacrtano, ispitano, objašnjeno"
+  },
+  "ed.proof3copy": {
+    "en": "Plans, sections and visual studies make the thinking open to inspection.",
+    "tr": "Planlar, kesitler ve görsel çalışmalar tasarım düşüncesini incelemeye açar.",
+    "bs": "Planovi, presjeci i vizualne studije omogućavaju uvid u razmišljanje."
+  },
+  "ed.doors": {
+    "en": "02 / Three ways in",
+    "tr": "02 / Üç giriş noktası",
+    "bs": "02 / Tri polazišta"
+  },
+  "ed.door1": {
+    "en": "The landscape",
+    "tr": "Peyzaj",
+    "bs": "Pejzaž"
+  },
+  "ed.door1copy": {
+    "en": "Public spaces, residential gardens and shared ground. Explore the projects through plans and lived atmosphere.",
+    "tr": "Kamusal alanlar, konut bahçeleri ve ortak zeminler. Projeleri planlar ve mekânsal atmosfer üzerinden keşfedin.",
+    "bs": "Javni prostori, stambeni vrtovi i zajedničko tlo. Istražite projekte kroz planove i atmosferu prostora."
+  },
+  "ed.door2": {
+    "en": "The layers",
+    "tr": "Katmanlar",
+    "bs": "Slojevi"
+  },
+  "ed.door2copy": {
+    "en": "Site analysis and GIS — reading natural and cultural systems before deciding what should change.",
+    "tr": "Alan analizi ve CBS — neyin değişmesi gerektiğine karar vermeden önce doğal ve kültürel sistemleri okumak.",
+    "bs": "Analiza lokacije i GIS — čitanje prirodnih i kulturnih sistema prije odluke o promjeni."
+  },
+  "ed.door3": {
+    "en": "The details",
+    "tr": "Detaylar",
+    "bs": "Detalji"
+  },
+  "ed.door3copy": {
+    "en": "Small structures, urban furniture and technical studies. Looking closer at how an idea meets everyday use.",
+    "tr": "Küçük yapılar, kent mobilyaları ve teknik çalışmalar. Bir fikrin gündelik kullanımla buluşmasına yakından bakmak.",
+    "bs": "Male strukture, urbani namještaj i tehničke studije. Detaljniji pogled na susret ideje i svakodnevne upotrebe."
+  },
+  "ed.capabilities": {
+    "en": "03 / Capability index",
+    "tr": "03 / Çalışma alanları",
+    "bs": "03 / Područja rada"
+  },
+  "ed.cap1": {
+    "en": "Landscape & public space",
+    "tr": "Peyzaj ve kamusal alan",
+    "bs": "Pejzaž i javni prostor"
+  },
+  "ed.cap1copy": {
+    "en": "Spatial concepts, circulation, planting and shared outdoor life.",
+    "tr": "Mekânsal kavramlar, dolaşım, bitkilendirme ve ortak açık alan yaşamı.",
+    "bs": "Prostorni koncepti, kretanje, sadnja i zajednički život na otvorenom."
+  },
+  "ed.cap2": {
+    "en": "Planning & GIS",
+    "tr": "Planlama ve CBS",
+    "bs": "Planiranje i GIS"
+  },
+  "ed.cap2copy": {
+    "en": "Natural and cultural analysis, mapping and landscape strategy.",
+    "tr": "Doğal ve kültürel analiz, haritalama ve peyzaj stratejisi.",
+    "bs": "Prirodna i kulturna analiza, kartiranje i pejzažna strategija."
+  },
+  "ed.cap3": {
+    "en": "Technical design",
+    "tr": "Teknik tasarım",
+    "bs": "Tehnički dizajn"
+  },
+  "ed.cap3copy": {
+    "en": "Plans, sections and details that connect the idea to its construction.",
+    "tr": "Fikri yapımla ilişkilendiren planlar, kesitler ve detaylar.",
+    "bs": "Planovi, presjeci i detalji koji povezuju ideju s izvedbom."
+  },
+  "ed.cap4": {
+    "en": "Spatial visualization",
+    "tr": "Mekânsal görselleştirme",
+    "bs": "Prostorna vizualizacija"
+  },
+  "ed.cap4copy": {
+    "en": "Models and images to explore material, light and atmosphere.",
+    "tr": "Malzeme, ışık ve atmosferi araştıran modeller ve görseller.",
+    "bs": "Modeli i slike za istraživanje materijala, svjetla i atmosfere."
+  },
+  "ed.registry": {
+    "en": "04 / Selected work registry",
+    "tr": "04 / Seçili proje dizini",
+    "bs": "04 / Registar odabranih radova"
+  },
+  "ed.registryTitle": {
+    "en": "The thinking.<br><em>On the ground.</em>",
+    "tr": "Düşüncenin<br><em>zemindeki karşılığı.</em>",
+    "bs": "Razmišljanje.<br><em>Na terenu.</em>"
+  },
+  "ed.case": {
+    "en": "Open case file ↗",
+    "tr": "Proje dosyasını aç ↗",
+    "bs": "Otvori projekat ↗"
+  },
+  "ed.practice": {
+    "en": "05 / The practice",
+    "tr": "05 / Yaklaşımım",
+    "bs": "05 / Praksa"
+  },
+  "ed.practiceTitle": {
+    "en": "Curiosity is<br><em>a working method.</em>",
+    "tr": "Merak bir<br><em>çalışma yöntemidir.</em>",
+    "bs": "Radoznalost je<br><em>metoda rada.</em>"
+  },
+  "ed.notes": {
+    "en": "06 / From the project files",
+    "tr": "06 / Proje dosyalarından",
+    "bs": "06 / Iz projektnih bilješki"
+  },
+  "ed.notesTitle": {
+    "en": "Look a little closer.",
+    "tr": "Biraz daha yakından bak.",
+    "bs": "Pogledaj malo bliže."
+  },
+  "ed.contactLabel": {
+    "en": "07 / Direct contact",
+    "tr": "07 / Doğrudan iletişim",
+    "bs": "07 / Direktni kontakt"
+  },
+  "ed.pause": {
+    "en": "Pause field",
+    "tr": "Alanı duraklat",
+    "bs": "Pauziraj polje"
+  },
+  "ed.resume": {
+    "en": "Resume field",
+    "tr": "Alanı sürdür",
+    "bs": "Pokreni polje"
+  },
+  "ed.field": {
+    "en": "Contour study / illustrative terrain",
+    "tr": "Eşyükselti çalışması / temsili arazi",
+    "bs": "Studija izohipsi / ilustrativni teren"
+  },
+  "ed.index": {
+    "en": "Portfolio index",
+    "tr": "Portfolyo dizini",
+    "bs": "Indeks portfolija"
+  },
+  "ed.projects": {
+    "en": "Project records",
+    "tr": "Proje kaydı",
+    "bs": "Projektnih zapisa"
+  },
+  "ed.drawings": {
+    "en": "Project visuals",
+    "tr": "Proje görseli",
+    "bs": "Projektnih vizuala"
+  },
+  "ed.languages": {
+    "en": "Reading languages",
+    "tr": "Okuma dili",
+    "bs": "Jezika"
+  },
+  "ed.location": {
+    "en": "Bursa, Türkiye / Landscape architecture",
+    "tr": "Bursa, Türkiye / Peyzaj mimarlığı",
+    "bs": "Bursa, Türkiye / Pejzažna arhitektura"
+  },
+  "ed.doorTag1": {
+    "en": "Public space · Landscape",
+    "tr": "Kamusal alan · Peyzaj",
+    "bs": "Javni prostor · Pejzaž"
+  },
+  "ed.doorTag2": {
+    "en": "Site analysis · GIS",
+    "tr": "Alan analizi · CBS",
+    "bs": "Analiza lokacije · GIS"
+  },
+  "ed.doorTag3": {
+    "en": "Objects · Technical design",
+    "tr": "Nesneler · Teknik tasarım",
+    "bs": "Objekti · Tehnički dizajn"
+  },
+  "ed.capTag1": {
+    "en": "Plan / Plant / Connect",
+    "tr": "Planla / Bitkilendir / Bağla",
+    "bs": "Planiraj / Zasadi / Poveži"
+  },
+  "ed.capTag2": {
+    "en": "Read / Map / Synthesize",
+    "tr": "Oku / Haritala / Sentezle",
+    "bs": "Čitaj / Kartiraj / Poveži"
+  },
+  "ed.capTag3": {
+    "en": "Draw / Test / Refine",
+    "tr": "Çiz / Dene / Geliştir",
+    "bs": "Crtaj / Ispitaj / Doradi"
+  },
+  "ed.capTag4": {
+    "en": "Model / Light / Compose",
+    "tr": "Modelle / Aydınlat / Düzenle",
+    "bs": "Modeliraj / Osvijetli / Oblikuj"
   }
 };

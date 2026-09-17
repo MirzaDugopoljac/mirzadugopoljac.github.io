@@ -1,215 +1,394 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Mirza Dugopoljac | Landscape Architecture</title>
-  <meta name="theme-color" content="#211713">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap"
-    rel="stylesheet"
-  >
-
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="./assets/css/site.css">
-
-  <!-- Prevent transition flash between internal pages -->
-  <script>
-    (() => {
-      try {
-        if (sessionStorage.getItem("mirza-transition") === "1") {
-          document.documentElement.classList.add("transition-pending");
-
-          setTimeout(() => {
-            document.documentElement.classList.remove("transition-pending");
-          }, 1800);
-        }
-      } catch (error) {
-        // Ignore sessionStorage errors.
-      }
-    })();
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mirza Dugopoljac | Landscape Architecture</title>
+<meta name="description" content="Mirza Dugopoljac — landscape architecture student in Bursa. Explore landscape design, public spaces, GIS planning and architectural visualization.">
+<meta name="theme-color" content="#15251c">
+<link rel="canonical" href="https://mirzadugopoljac.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mirza Dugopoljac | Landscape Architecture">
+<meta property="og:description" content="Mirza Dugopoljac — landscape architecture student in Bursa. Explore landscape design, public spaces, GIS planning and architectural visualization.">
+<meta property="og:url" content="https://mirzadugopoljac.github.io/">
+<meta property="og:image" content="https://mirzadugopoljac.github.io/portfolio/assets/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="./portfolio/assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/css/site.css">
+<noscript>
+<style>.menu-toggle{display:none}.nav-right{display:flex;position:static;flex-wrap:wrap;padding:0;border:0;box-shadow:none}.nav{flex-wrap:wrap;padding-block:15px}</style>
+</noscript>
+<link rel="stylesheet" href="./assets/css/editorial.css">
+<link rel="stylesheet" href="./assets/css/earth.css">
 </head>
-
-<body
-  data-root="./"
-  data-active="home"
-  data-title-key="title.home"
->
-  <!-- Hero -->
-  <header class="hero">
-    <div class="texture"></div>
-
-    <div class="hero-center hero-shell">
-      <div class="kicker">
-        <span data-i18n="home.kicker"></span>
-        <i></i>
-        <span>Bursa · Türkiye</span>
-      </div>
-
-      <h1 data-i18n="home.title"></h1>
-
-      <p
-        class="hero-copy"
-        data-i18n="home.copy"
-      ></p>
-
-      <div class="actions">
-        <a
-          class="btn primary"
-          href="portfolio/index.html"
-          data-transition
-          data-i18n="home.ctaWork"
-        ></a>
-
-        <a
-          class="btn secondary"
-          href="about.html"
-          data-transition
-          data-i18n="home.ctaAbout"
-        ></a>
-      </div>
-
-      <div class="hero-chips">
-        <span data-i18n="home.chipDesign"></span>
-        <span data-i18n="home.chipPlanning"></span>
-        <span>GIS</span>
-        <span data-i18n="home.chipVisualization"></span>
-      </div>
-    </div>
-  </header>
-
-  <!-- Stats -->
-  <section class="strip">
-    <div class="strip-grid shell">
-      <div class="strip-cell strip-lead">
-        <h2 data-i18n="home.bandTitle"></h2>
-        <p data-i18n="home.bandText"></p>
-      </div>
-
-      <div class="strip-cell">
-        <strong class="big">07</strong>
-        <small data-i18n="home.statProjects"></small>
-      </div>
-
-      <div class="strip-cell">
-        <strong class="big">03</strong>
-        <small data-i18n="home.statLanguages"></small>
-      </div>
-
-      <div class="strip-cell">
-        <strong class="big">LA</strong>
-        <small data-i18n="home.statLandscape"></small>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section class="section">
-    <div class="paper-texture"></div>
-
-    <div class="shell">
-      <div class="section-head reveal">
-        <div
-          class="section-label"
-          data-i18n="home.section1"
-        ></div>
-
-        <h2
-          class="section-title"
-          data-i18n="home.section1Title"
-        ></h2>
-      </div>
-
-      <div class="process-grid">
-        <article class="process reveal">
-          <small>01 / READ</small>
-          <h3 data-i18n="home.p1"></h3>
-          <p data-i18n="home.p1p"></p>
-        </article>
-
-        <article class="process reveal">
-          <small>02 / TEST</small>
-          <h3 data-i18n="home.p2"></h3>
-          <p data-i18n="home.p2p"></p>
-        </article>
-
-        <article class="process reveal">
-          <small>03 / SHAPE</small>
-          <h3 data-i18n="home.p3"></h3>
-          <p data-i18n="home.p3p"></p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Selected projects -->
-  <section class="section alt">
-    <div class="paper-texture"></div>
-
-    <div class="shell">
-      <div class="section-head reveal">
-        <div
-          class="section-label"
-          data-i18n="home.section2"
-        ></div>
-
-        <h2
-          class="section-title"
-          data-i18n="home.section2Title"
-        ></h2>
-      </div>
-
-      <div
-        class="projects"
-        id="homeProjects"
-      ></div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-wrap">
-    <div class="shell">
-      <div class="cta reveal">
-        <div class="texture"></div>
-
-        <h2 data-i18n="home.footerCta"></h2>
-
-        <div class="cta-side">
-          <p data-i18n="home.footerText"></p>
-
-          <div class="cta-links">
-            <a
-              href="./portfolio/index.html"
-              data-transition
-              data-i18n="common.viewWork"
-            ></a>
-
-            <a
-              href="./contact.html"
-              data-transition
-              data-i18n="common.contact"
-            ></a>
-          </div>
-        </div>
-      </div>
-
-      <footer>
-        <span>© 2026 Mirza Dugopoljac</span>
-        <span data-i18n="common.footer"></span>
-      </footer>
-    </div>
-  </section>
-
-  <!-- Scripts -->
-  <script src="./assets/js/i18n.js"></script>
-  <script src="./assets/js/projects.js"></script>
-  <script src="./assets/js/components.js"></script>
-  <script src="./assets/js/site.js"></script>
+<body data-root="./" data-active="home" data-title-key="title.home">
+<a class="skip-link" href="#main" data-i18n="new.skip">Skip to content</a>
+<div class="nav-wrap">
+<nav class="nav shell" aria-label="Main navigation">
+<a class="brand" href="./index.html">
+<span class="identity-square" aria-hidden="true">
+</span>
+<span>Mirza Dugopoljac<small data-i18n="new.role">Landscape architecture student</small>
+</span>
+</a>
+<button class="menu-toggle" aria-controls="navigation" aria-expanded="false" data-i18n="new.menu">Menu</button>
+<div class="nav-right" id="navigation">
+<div class="nav-links">
+<a href="./portfolio/index.html"  data-i18n="nav.work">Work</a>
+<a href="./about.html"  data-i18n="nav.about">About</a>
+<a href="./contact.html"  data-i18n="nav.contact">Contact</a>
+</div>
+<div class="lang" aria-label="Language">
+<button data-lang="en" aria-label="English" aria-pressed="true">EN</button>
+<button data-lang="tr" aria-label="Türkçe" aria-pressed="false">TR</button>
+<button data-lang="bs" aria-label="Bosanski" aria-pressed="false">BS</button>
+</div>
+</div>
+</nav>
+</div>
+<main id="main">
+<div class="field-environment" aria-hidden="true">
+<canvas id="terrainField">
+</canvas>
+</div>
+<header class="home-hero shell">
+<div class="home-intro">
+<div class="identity-line" data-i18n="ed.identity">Mirza Dugopoljac / Landscape architecture</div>
+<h1 data-i18n="home.title">Read the land.<br>Shape what<br>
+<em>comes next.</em>
+</h1>
+<p class="hero-copy" data-i18n="home.copy">Landscape architecture, from the first site reading to the spaces we share. I’m Mirza Dugopoljac, a student at Bursa Uludağ University working across design, GIS and visualization.</p>
+<div class="actions">
+<a class="btn primary" href="#selected-work"  data-i18n="ed.work">View the work ↗</a>
+<a class="btn secondary" href="#practice"  data-i18n="ed.about">The approach</a>
+<a class="text-link" href="mailto:mirzaadc@gmail.com"  data-i18n="ed.contact">Start a conversation</a>
+</div>
+</div>
+<section class="landscape-instrument" aria-label="Landscape project layers">
+<p class="instrument-intro" data-i18n="ed.layerIntro">One landscape. Three ways of seeing.</p>
+<div class="layer-stage">
+<div class="layer-sheet sheet-back" aria-hidden="true">
+<span>03 / ANALYSIS</span>
+<div class="sheet-grid">
+</div>
+</div>
+<div class="layer-sheet sheet-middle" aria-hidden="true">
+<span>02 / EXPERIENCE</span>
+</div>
+<a class="layer-sheet sheet-front" id="layerCase" href="portfolio/projects/urban-square.html">
+<div class="sheet-head">
+<span>MD / FIELD STUDIES</span>
+<span aria-hidden="true">↗</span>
+</div>
+<img id="layerImage" src="assets/img/square-plan-1.webp" alt="Urban Square masterplan" width="1100" height="750" fetchpriority="high">
+<div class="sheet-foot">
+<span id="layerProject">Urban Square</span>
+<span id="layerCode">MD—01</span>
+</div>
+</a>
+<span class="orbit orbit-one" aria-hidden="true">
+</span>
+<span class="orbit orbit-two" aria-hidden="true">
+</span>
+</div>
+<div class="layer-tabs" role="tablist" aria-label="Project layer">
+<button id="tab-plan" role="tab" aria-selected="true" aria-controls="layer-panel" data-layer="plan">
+<span data-i18n="ed.plan">Plan</span>
+</button>
+<button id="tab-experience" role="tab" aria-selected="false" aria-controls="layer-panel" tabindex="-1" data-layer="experience">
+<span data-i18n="ed.experience">Experience</span>
+</button>
+<button id="tab-analysis" role="tab" aria-selected="false" aria-controls="layer-panel" tabindex="-1" data-layer="analysis">
+<span data-i18n="ed.analysis">Analysis</span>
+</button>
+</div>
+<div id="layer-panel" role="tabpanel" aria-labelledby="tab-plan" tabindex="0">
+<span class="micro" id="layerLabel" data-i18n="ed.planLabel">01 / Spatial structure</span>
+<h2 id="layerTitle" data-i18n="ed.planTitle">An idea, made legible.</h2>
+<p id="layerCopy" data-i18n="ed.planCopy">Paths, planted edges and gathering spaces. The plan makes the relationships visible.</p>
+<a class="text-link" href="portfolio/projects/urban-square.html" id="layerLink" data-i18n="ed.open">Explore the case study ↗</a>
+</div>
+</section>
+<div class="hero-baseline">
+<div class="disciplines">
+<span data-i18n="new.design">Landscape design</span>
+<span>/</span>
+<span data-i18n="new.gis">GIS & planning</span>
+<span>/</span>
+<span data-i18n="new.visualization">Visualization</span>
+</div>
+<span class="micro">PORTFOLIO / 2026</span>
+</div>
+</header>
+<section class="editorial-section thesis-section shell" id="thesis">
+<span class="section-marker" aria-hidden="true">
+</span>
+<div class="section-label" data-i18n="ed.thesisLabel">01 / The starting point</div>
+<h2 class="thesis-statement" data-i18n="ed.thesis">A landscape isn’t an empty canvas. It is a living system of water, movement and memory. <em>Design starts with paying attention.</em>
+</h2>
+<div class="proof-strip">
+<article>
+<h3 class="micro" data-i18n="ed.proof1">Site before form</h3>
+<p data-i18n="ed.proof1copy">Terrain, ecology and everyday use come before the first design decision.</p>
+</article>
+<article>
+<h3 class="micro" data-i18n="ed.proof2">Across scales</h3>
+<p data-i18n="ed.proof2copy">From a city’s green infrastructure to the detail of a place to sit.</p>
+</article>
+<article>
+<h3 class="micro" data-i18n="ed.proof3">Drawn, tested, explained</h3>
+<p data-i18n="ed.proof3copy">Plans, sections and visual studies make the thinking open to inspection.</p>
+</article>
+</div>
+</section>
+<section class="editorial-section doors-section shell">
+<span class="section-marker" aria-hidden="true">
+</span>
+<h2 class="section-label" data-i18n="ed.doors">02 / Three ways in</h2>
+<div class="doors">
+<a class="door" href="portfolio/index.html">
+<div class="door-top">
+<span>01</span>
+<span aria-hidden="true">↗</span>
+</div>
+<h3 data-i18n="ed.door1">The landscape</h3>
+<p data-i18n="ed.door1copy">Public spaces, residential gardens and shared ground. Explore the projects through plans and lived atmosphere.</p>
+<span class="door-tag" data-i18n="ed.doorTag1">Public space · Landscape</span>
+</a>
+<a class="door" href="portfolio/projects/urban-landscape-planning.html">
+<div class="door-top">
+<span>02</span>
+<span aria-hidden="true">↗</span>
+</div>
+<h3 data-i18n="ed.door2">The layers</h3>
+<p data-i18n="ed.door2copy">Site analysis and GIS — reading natural and cultural systems before deciding what should change.</p>
+<span class="door-tag" data-i18n="ed.doorTag2">Site analysis · GIS</span>
+</a>
+<a class="door" href="portfolio/projects/interactive-seating.html">
+<div class="door-top">
+<span>03</span>
+<span aria-hidden="true">↗</span>
+</div>
+<h3 data-i18n="ed.door3">The details</h3>
+<p data-i18n="ed.door3copy">Small structures, urban furniture and technical studies. Looking closer at how an idea meets everyday use.</p>
+<span class="door-tag" data-i18n="ed.doorTag3">Objects · Technical design</span>
+</a>
+</div>
+</section>
+<section class="editorial-section capabilities-section shell" id="capabilities">
+<span class="section-marker" aria-hidden="true">
+</span>
+<h2 class="section-label" data-i18n="ed.capabilities">03 / Capability index</h2>
+<div class="capability-list">
+<a class="capability" href="portfolio/projects/urban-square.html">
+<span class="micro">01</span>
+<h3 data-i18n="ed.cap1">Landscape & public space</h3>
+<div>
+<p data-i18n="ed.cap1copy">Spatial concepts, circulation, planting and shared outdoor life.</p>
+<span class="micro capability-tag" data-i18n="ed.capTag1">Plan / Plant / Connect</span>
+</div>
+<span aria-hidden="true">↗</span>
+</a>
+<a class="capability" href="portfolio/projects/urban-landscape-planning.html">
+<span class="micro">02</span>
+<h3 data-i18n="ed.cap2">Planning & GIS</h3>
+<div>
+<p data-i18n="ed.cap2copy">Natural and cultural analysis, mapping and landscape strategy.</p>
+<span class="micro capability-tag" data-i18n="ed.capTag2">Read / Map / Synthesize</span>
+</div>
+<span aria-hidden="true">↗</span>
+</a>
+<a class="capability" href="portfolio/projects/interactive-seating.html">
+<span class="micro">03</span>
+<h3 data-i18n="ed.cap3">Technical design</h3>
+<div>
+<p data-i18n="ed.cap3copy">Plans, sections and details that connect the idea to its construction.</p>
+<span class="micro capability-tag" data-i18n="ed.capTag3">Draw / Test / Refine</span>
+</div>
+<span aria-hidden="true">↗</span>
+</a>
+<a class="capability" href="portfolio/projects/collective-housing.html">
+<span class="micro">04</span>
+<h3 data-i18n="ed.cap4">Spatial visualization</h3>
+<div>
+<p data-i18n="ed.cap4copy">Models and images to explore material, light and atmosphere.</p>
+<span class="micro capability-tag" data-i18n="ed.capTag4">Model / Light / Compose</span>
+</div>
+<span aria-hidden="true">↗</span>
+</a>
+</div>
+</section>
+<section class="editorial-section registry-section shell" id="selected-work">
+<span class="section-marker" aria-hidden="true">
+</span>
+<div class="section-head">
+<div>
+<div class="section-label" data-i18n="ed.registry">04 / Selected work registry</div>
+<h2 class="section-title" data-i18n="ed.registryTitle">The thinking.<br>
+<em>On the ground.</em>
+</h2>
+</div>
+<a class="text-link" href="portfolio/index.html"  data-i18n="new.all">Explore all 7 projects ↗</a>
+</div>
+<div id="homeProjects" class="work-registry">
+<article class="work-record">
+<div class="record-meta">
+<span>P-01</span>
+<span>Bursa</span>
+<span>Public Space</span>
+</div>
+<a class="record-image" href="portfolio/projects/urban-square.html">
+<img src="assets/img/square-render-2.webp" alt="Urban Square" loading="lazy" width="1400" height="900">
+<span class="image-cross" aria-hidden="true">+</span>
+</a>
+<div class="record-description">
+<h3>
+<a href="portfolio/projects/urban-square.html">Urban Square</a>
+</h3>
+<p>A public landscape organized around movement, gathering, water and atmosphere.</p>
+<a class="text-link" href="portfolio/projects/urban-square.html">Open case file ↗</a>
+</div>
+</article>
+<article class="work-record">
+<div class="record-meta">
+<span>P-02</span>
+<span>Bursa</span>
+<span>Planning · GIS</span>
+</div>
+<a class="record-image" href="portfolio/projects/urban-landscape-planning.html">
+<img src="assets/img/planning-natural-1.webp" alt="Urban Landscape Planning" loading="lazy" width="1400" height="900">
+<span class="image-cross" aria-hidden="true">+</span>
+</a>
+<div class="record-description">
+<h3>
+<a href="portfolio/projects/urban-landscape-planning.html">Urban Landscape Planning</a>
+</h3>
+<p>Natural and cultural layers translated into landscape strategy, green infrastructure and resilience.</p>
+<a class="text-link" href="portfolio/projects/urban-landscape-planning.html">Open case file ↗</a>
+</div>
+</article>
+<article class="work-record">
+<div class="record-meta">
+<span>P-04</span>
+<span>Academic project</span>
+<span>Residential Landscape</span>
+</div>
+<a class="record-image" href="portfolio/projects/collective-housing.html">
+<img src="assets/img/housing-render-2.webp" alt="Collective Housing Landscape" loading="lazy" width="1400" height="900">
+<span class="image-cross" aria-hidden="true">+</span>
+</a>
+<div class="record-description">
+<h3>
+<a href="portfolio/projects/collective-housing.html">Collective Housing Landscape</a>
+</h3>
+<p>Shared outdoor space designed as the social infrastructure of everyday residential life.</p>
+<a class="text-link" href="portfolio/projects/collective-housing.html">Open case file ↗</a>
+</div>
+</article>
+</div>
+</section>
+<section class="editorial-section practice-section shell" id="practice">
+<span class="section-marker" aria-hidden="true">
+</span>
+<div class="section-label" data-i18n="ed.practice">05 / The practice</div>
+<div class="practice-grid">
+<div>
+<h2 class="section-title" data-i18n="ed.practiceTitle">Curiosity is<br>
+<em>a working method.</em>
+</h2>
+<p data-i18n="about.copy">I’m a Landscape Architecture student at Bursa Uludağ University. My work moves between design, planning, planting, GIS and visualization, with a growing interest in how analysis becomes a strong spatial idea.</p>
+<p data-i18n="about.quoteP">I’m most interested in the moment when analysis becomes a spatial decision: when a path, planting system, edge or structure starts solving more than one problem at once.</p>
+<div class="actions">
+<a class="text-link" href="about.html"  data-i18n="home.ctaAbout">About my approach</a>
+<a class="text-link" href="files/CV.pdf" download data-i18n="new.cv">Download CV ↓</a>
+</div>
+</div>
+<figure class="practice-portrait">
+<img src="assets/img/profile-2.webp" alt="Mirza Dugopoljac" loading="lazy" width="600" height="750">
+<figcaption>
+<span>Mirza Dugopoljac</span>
+<span>Bursa Uludağ University</span>
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="editorial-section notes-section shell">
+<div class="section-label" data-i18n="ed.notes">06 / From the project files</div>
+<h2 class="section-title" data-i18n="ed.notesTitle">Look a little closer.</h2>
+<div class="project-notes">
+<a class="project-note" href="portfolio/projects/urban-landscape-planning.html">
+<span class="micro" data-note-meta="urban-landscape-planning">P-02 / Planning · GIS</span>
+<h3 data-note-title="urban-landscape-planning">Urban Landscape Planning</h3>
+<p data-note-copy="urban-landscape-planning">This planning study reads topography, slope, aspect, hydrology, geology, soil, climate, ecology, land use, transportation and cultural values together. The synthesis turns those layers into landscape strategies rather than treating mapping as a final output.</p>
+<span class="text-link" data-i18n="ed.case">Open case file ↗</span>
+</a>
+<a class="project-note" href="portfolio/projects/interactive-seating.html">
+<span class="micro" data-note-meta="interactive-seating">P-03 / Technical Design</span>
+<h3 data-note-title="interactive-seating">Interactive Seating Unit</h3>
+<p data-note-copy="interactive-seating">The seating unit combines resting, shade and interaction in one object. A solar canopy supplies energy to interactive ground elements while the circular seating form creates a more social, semi-enclosed experience.</p>
+<span class="text-link" data-i18n="ed.case">Open case file ↗</span>
+</a>
+</div>
+</section>
+<section class="index-strip shell" aria-label="Portfolio contents">
+<h2 class="micro" data-i18n="ed.index">Portfolio index</h2>
+<div>
+<strong>07</strong>
+<span class="micro" data-i18n="ed.projects">Project records</span>
+</div>
+<div>
+<strong>42</strong>
+<span class="micro" data-i18n="ed.drawings">Project visuals</span>
+</div>
+<div>
+<strong>03</strong>
+<span class="micro" data-i18n="ed.languages">Reading languages</span>
+</div>
+</section>
+<div class="field-control">
+<span class="field-dot" aria-hidden="true">
+</span>
+<span class="micro" data-i18n="ed.field">Contour study / illustrative terrain</span>
+<button id="fieldToggle" aria-pressed="false" data-i18n="ed.pause">Pause field</button>
+</div>
+<section class="cta-wrap">
+<div class="shell cta">
+<div class="section-label contact-label" data-i18n="ed.contactLabel">07 / Direct contact</div>
+<h2 data-i18n="new.talk">Let’s start<br>
+<em>a conversation.</em>
+</h2>
+<div class="cta-side">
+<p data-i18n="new.talkText">Have a project, a collaboration or an opportunity in mind? I’d love to hear about it.</p>
+<a class="btn primary" href="mailto:mirzaadc@gmail.com"  data-i18n="new.email">Get in touch ↗</a>
+<a class="email-link" href="mailto:mirzaadc@gmail.com">mirzaadc@gmail.com</a>
+</div>
+</div>
+</section>
+<footer class="shell footer">
+<span>© 2026 Mirza Dugopoljac</span>
+<span>Bursa · Türkiye</span>
+<div>
+<a href="https://www.linkedin.com/in/mirzadugopoljac/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+<a href="https://github.com/MirzaDugopoljac" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+</div>
+</footer>
+</main>
+<script src="./assets/js/i18n.js">
+</script>
+<script src="./assets/js/projects.js">
+</script>
+<script src="./assets/js/components.js">
+</script>
+<script src="./assets/js/site.js">
+</script>
+<script src="./assets/js/home-projects.js">
+</script>
+<script src="assets/js/terrain.js">
+</script>
+<script src="./assets/js/effects.js">
+</script>
 </body>
 </html>
