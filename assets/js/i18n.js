@@ -863,5 +863,95 @@ window.I18N = {
     "en": "Çamurun Sırlı Hali",
     "tr": "Çamurun Sırlı Hali",
     "bs": "Çamurun Sırlı Hali"
+  },
+  "nav.itech": {
+    "en": "iTech",
+    "tr": "iTech",
+    "bs": "iTech"
+  },
+  "title.itech": {
+    "en": "iTech | Mirza Dugopoljac",
+    "tr": "iTech | Mirza Dugopoljac",
+    "bs": "iTech | Mirza Dugopoljac"
+  },
+  "it.label": {
+    "en": "DESIGN MEETS TECHNOLOGY",
+    "tr": "TASARIM TEKNOLOJİYLE BULUŞUYOR",
+    "bs": "DIZAJN SUSREĆE TEHNOLOGIJU"
+  },
+  "it.title": {
+    "en": "Ideas into<br><em>real-world impact.</em>",
+    "tr": "Fikirlerden<br><em>gerçek etkiye.</em>",
+    "bs": "Od ideje do<br><em>stvarnog utjecaja.</em>"
+  },
+  "it.intro": {
+    "en": "iTech is an international R&D team working across software, electronics and intelligent systems. I contribute to the team in design.",
+    "tr": "iTech; yazılım, elektronik ve akıllı sistemler üzerinde çalışan uluslararası bir Ar-Ge ekibidir. Ekibe tasarım alanında katkı sağlıyorum.",
+    "bs": "iTech je međunarodni istraživačko-razvojni tim koji radi na softveru, elektronici i inteligentnim sistemima. Timu doprinosim kroz dizajn."
+  },
+  "it.visit": {
+    "en": "Explore itechtr.com ↗",
+    "tr": "itechtr.com’u keşfet ↗",
+    "bs": "Istraži itechtr.com ↗"
+  },
+  "it.work": {
+    "en": "Discover the projects ↓",
+    "tr": "Projeleri keşfet ↓",
+    "bs": "Otkrij projekte ↓"
+  },
+  "it.index": {
+    "en": "01 / SELECTED DEVELOPMENT PROJECTS",
+    "tr": "01 / GELİŞTİRİLEN SEÇİLİ PROJELER",
+    "bs": "01 / ODABRANI PROJEKTI U RAZVOJU"
+  },
+  "it.heading": {
+    "en": "Three directions.<br>One curious team.",
+    "tr": "Üç yön.<br>Meraklı bir ekip.",
+    "bs": "Tri pravca.<br>Jedan radoznao tim."
+  },
+  "it.status": {
+    "en": "IN DEVELOPMENT",
+    "tr": "GELİŞTİRME AŞAMASINDA",
+    "bs": "U RAZVOJU"
+  },
+  "it.glasses": {
+    "en": "Smart eyewear exploring AI-assisted accessibility and everyday interaction. The family includes Vision, Lite and Pro concepts.",
+    "tr": "Yapay zekâ destekli erişilebilirlik ve günlük etkileşimi araştıran akıllı gözlükler. Ürün ailesi Vision, Lite ve Pro konseptlerini içeriyor.",
+    "bs": "Pametne naočale koje istražuju pristupačnost uz AI i svakodnevnu interakciju. Porodica uključuje Vision, Lite i Pro koncepte."
+  },
+  "it.strix": {
+    "en": "An agricultural platform combining AI, sensing and autonomous navigation to support more precise use of resources.",
+    "tr": "Kaynakların daha hassas kullanımını desteklemek için yapay zekâ, algılama ve otonom navigasyonu birleştiren tarım platformu.",
+    "bs": "Poljoprivredna platforma koja povezuje AI, senzore i autonomnu navigaciju za preciznije korištenje resursa."
+  },
+  "it.sobit": {
+    "en": "A UAV research project exploring safer landmine detection through intelligent sensing, with a humanitarian focus.",
+    "tr": "İnsani amaçlarla, akıllı algılama üzerinden daha güvenli mayın tespitini araştıran İHA projesi.",
+    "bs": "Istraživački projekat bespilotne letjelice za sigurnije otkrivanje mina pomoću inteligentnih senzora, s humanitarnim fokusom."
+  },
+  "it.more": {
+    "en": "Explore on iTech ↗",
+    "tr": "iTech’te incele ↗",
+    "bs": "Istraži na iTech stranici ↗"
+  },
+  "it.note": {
+    "en": "Project descriptions and visuals: iTech. These are development projects; visit the official site for current information.",
+    "tr": "Proje açıklamaları ve görseller: iTech. Projeler geliştirme aşamasındadır; güncel bilgi için resmî siteyi ziyaret edin.",
+    "bs": "Opisi i vizuali projekata: iTech. Projekti su u razvoju; posjetite službenu stranicu za aktuelne informacije."
+  },
+  "it.end": {
+    "en": "Meet the team.<br><em>Follow the work.</em>",
+    "tr": "Ekiple tanış.<br><em>Çalışmaları takip et.</em>",
+    "bs": "Upoznaj tim.<br><em>Prati njihov rad.</em>"
+  },
+  "it.pause": {
+    "en": "Pause animation",
+    "tr": "Animasyonu durdur",
+    "bs": "Pauziraj animaciju"
+  },
+  "it.resume": {
+    "en": "Resume animation",
+    "tr": "Animasyonu sürdür",
+    "bs": "Nastavi animaciju"
   }
 };
