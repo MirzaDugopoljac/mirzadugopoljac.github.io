@@ -83,6 +83,8 @@ html, body {
   line-height: 1.65;
 }
 
+.ceramic-hero__actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+
 .ceramic-hero__cta {
   display: inline-flex;
   align-items: center;
