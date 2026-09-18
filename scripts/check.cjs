@@ -5,7 +5,7 @@ process.chdir(path.join(__dirname, '..'));
 const context = {window:{}};
 vm.runInNewContext(fs.readFileSync('assets/js/i18n.js','utf8'),context);
 vm.runInNewContext(fs.readFileSync('assets/js/projects.js','utf8'),context);
-const pages = ['index.html','about.html','contact.html','portfolio/index.html',...context.window.PROJECTS.map(p=>`portfolio/projects/${p.slug}.html`)];
+const pages = ['camurun-sirli-hali-hero-pack/index.html','index.html','about.html','contact.html','portfolio/index.html',...context.window.PROJECTS.map(p=>`portfolio/projects/${p.slug}.html`)];
 const errors=[];
 for(const file of pages){
   const html=fs.readFileSync(file,'utf8');

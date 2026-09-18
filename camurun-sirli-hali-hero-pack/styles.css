@@ -1,0 +1,172 @@
+:root {
+  color-scheme: dark;
+  --cream: #f6efe6;
+  --clay: #c99a64;
+  --ink: #1d1714;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: var(--ink);
+  font-family: "Manrope", sans-serif;
+}
+
+.ceramic-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  overflow: hidden;
+  color: var(--cream);
+  background: #191410;
+}
+
+.ceramic-hero__film,
+.ceramic-hero__shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ceramic-hero__film {
+  z-index: -3;
+  object-fit: cover;
+}
+
+.ceramic-hero__shade {
+  z-index: -2;
+  background:
+    linear-gradient(90deg, rgba(18, 13, 10, .84) 0%, rgba(18, 13, 10, .45) 42%, rgba(18, 13, 10, .06) 72%),
+    linear-gradient(0deg, rgba(18, 13, 10, .42) 0%, transparent 42%);
+  animation: shade-cycle 11.1667s linear infinite;
+}
+
+.ceramic-hero__copy {
+  position: absolute;
+  left: clamp(1.4rem, 6vw, 7rem);
+  bottom: clamp(3.5rem, 10vh, 7rem);
+  width: min(680px, 86vw);
+  animation: copy-cycle 11.1667s ease both infinite;
+}
+
+.ceramic-hero__eyebrow {
+  margin: 0 0 1.1rem;
+  color: #e3bd8f;
+  font-size: clamp(.68rem, .85vw, .82rem);
+  font-weight: 600;
+  letter-spacing: .24em;
+}
+
+.ceramic-hero h1 {
+  max-width: 12ch;
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(3.2rem, 6.5vw, 7.5rem);
+  font-weight: 600;
+  line-height: .91;
+  letter-spacing: -.045em;
+  text-wrap: balance;
+}
+
+.ceramic-hero h1 em {
+  color: #e3bd8f;
+  font-weight: 500;
+}
+
+.ceramic-hero__intro {
+  max-width: 41ch;
+  margin: 1.45rem 0 1.8rem;
+  color: rgba(246, 239, 230, .83);
+  font-size: clamp(.92rem, 1.25vw, 1.1rem);
+  line-height: 1.65;
+}
+
+.ceramic-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .9rem 1.15rem .9rem 1.3rem;
+  border: 1px solid rgba(246, 239, 230, .52);
+  border-radius: 999px;
+  color: inherit;
+  text-decoration: none;
+  font-size: .84rem;
+  font-weight: 600;
+  transition: color .25s ease, background .25s ease, transform .25s ease;
+  backdrop-filter: blur(8px);
+}
+
+.ceramic-hero__cta:hover {
+  color: var(--ink);
+  background: var(--cream);
+  transform: translateY(-2px);
+}
+
+.ceramic-hero__cta span {
+  font-size: 1.1rem;
+  transition: transform .25s ease;
+}
+
+.ceramic-hero__cta:hover span { transform: translate(2px, -2px); }
+
+.ceramic-hero__hint {
+  position: absolute;
+  right: clamp(1.4rem, 3vw, 3rem);
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  font-size: .62rem;
+  letter-spacing: .26em;
+  opacity: .68;
+  animation: copy-cycle 11.1667s ease both infinite;
+}
+
+.ceramic-hero__hint span {
+  width: 44px;
+  height: 1px;
+  background: currentColor;
+}
+
+@keyframes copy-cycle {
+  0% { opacity: 0; transform: translateY(20px); }
+  9%, 69% { opacity: 1; transform: translateY(0); }
+  79%, 100% { opacity: 0; transform: translateY(-10px); }
+}
+
+@keyframes shade-cycle {
+  0%, 70% { opacity: 1; }
+  81%, 100% { opacity: 0; }
+}
+
+@media (max-width: 700px) {
+  .ceramic-hero__shade {
+    background: linear-gradient(0deg, rgba(18, 13, 10, .88) 0%, rgba(18, 13, 10, .38) 52%, rgba(18, 13, 10, .06) 78%);
+  }
+
+  .ceramic-hero__copy {
+    bottom: 4.4rem;
+    width: calc(100% - 2.8rem);
+  }
+
+  .ceramic-hero h1 {
+    font-size: clamp(3rem, 15vw, 5.5rem);
+  }
+
+  .ceramic-hero__intro { max-width: 33ch; }
+  .ceramic-hero__hint { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ceramic-hero__copy,
+  .ceramic-hero__hint,
+  .ceramic-hero__shade {
+    animation: none;
+  }
+}
+
+.portfolio-return{position:absolute;inset:0 0 auto;z-index:5;display:flex;justify-content:space-between;gap:20px;padding:24px clamp(1.4rem,6vw,7rem);color:var(--cream);font-size:.8rem;background:linear-gradient(#1d1714a6,transparent)}
+.portfolio-return a{color:inherit;text-decoration:none}.portfolio-return a:hover{text-decoration:underline}.portfolio-return a:focus-visible{outline:2px solid var(--clay);outline-offset:5px}
+@media(max-width:700px){.portfolio-return{flex-wrap:wrap;font-size:.7rem;gap:12px}.ceramic-hero{min-height:max(100svh,640px)}}

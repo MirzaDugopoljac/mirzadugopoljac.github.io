@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Çamurun Sırlı Hali</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="portfolio-return" aria-label="Portfolyo"><a href="../index.html">← Mirza Dugopoljac / Portfolyo</a><span>Çamurun Sırlı Hali</span></nav>
+  <main class="ceramic-hero" aria-label="Çamurun Sırlı Hali tanıtımı">
+    <video
+      class="ceramic-hero__film"
+      id="ceramicFilm"
+      poster="camurun-sirli-hali-poster-desktop.jpg"
+      autoplay muted loop playsinline preload="metadata"
+      aria-hidden="true"
+    ></video>
+
+    <div class="ceramic-hero__shade" aria-hidden="true"></div>
+
+    <section class="ceramic-hero__copy">
+      <p class="ceramic-hero__eyebrow">SERAMİK · TASARIM · ATÖLYE</p>
+      <h1>Toprağın ateşle<br><em>buluştuğu yer.</em></h1>
+      <p class="ceramic-hero__intro">Her parça elde şekillenir; her iz kendine özgü bir hikâye taşır.</p>
+      <!-- Replace the href below with the friend's exact Instagram profile URL. -->
+      <a class="ceramic-hero__cta" href="#" target="_blank" rel="noopener noreferrer">
+        Instagram’da keşfet <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+
+    <div class="ceramic-hero__hint" aria-hidden="true">
+      <span></span> KEŞFET
+    </div>
+  </main>
+
+  <script>
+    const film = document.querySelector('#ceramicFilm');
+    const mobile = matchMedia('(max-width: 700px)').matches;
+    film.poster = mobile
+      ? 'camurun-sirli-hali-poster-mobile.jpg'
+      : 'camurun-sirli-hali-poster-desktop.jpg';
+    film.src = mobile
+      ? 'camurun-sirli-hali-hero-mobile.mp4'
+      : 'camurun-sirli-hali-hero-desktop.mp4';
+
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      film.removeAttribute('autoplay');
+      film.pause();
+    }
+  </script>
+</body>
+</html>

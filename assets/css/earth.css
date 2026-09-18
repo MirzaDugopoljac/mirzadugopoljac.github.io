@@ -65,3 +65,6 @@ em,.cta h2 em{color:#acbd8d}
 @keyframes survey-orbit{to{rotate:45deg;scale:1.06}}
 @media(max-width:760px){.nav-right{background:#192c20fa}.layer-stage .sheet-back{transform:translate(32px,-20px) rotate(-9deg)}.layer-stage .sheet-middle{transform:translate(16px,-10px) rotate(-9deg)}.loader-brand{top:24px}.loader-foot{font-size:.5rem}}
 @media(prefers-reduced-motion:reduce){.reveal-ready{opacity:1;transform:none}.home-loader,.route-veil{transition:none}.loader-topography i{animation:none}.layer-stage .sheet-front{transform:rotate(-9deg)}}
+
+/* Keep the expanded navigation readable on tablet widths. */
+@media(min-width:761px) and (max-width:1050px){.nav{flex-wrap:wrap;padding-block:12px;gap:8px}.nav-right{width:100%;justify-content:space-between}.nav-links{gap:22px}.nav-links a{white-space:nowrap}}

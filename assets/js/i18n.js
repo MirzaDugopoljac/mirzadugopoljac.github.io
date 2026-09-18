@@ -858,5 +858,10 @@ window.I18N = {
     "en": "Model / Light / Compose",
     "tr": "Modelle / Aydınlat / Düzenle",
     "bs": "Modeliraj / Osvijetli / Oblikuj"
+  },
+  "nav.ceramics": {
+    "en": "Çamurun Sırlı Hali",
+    "tr": "Çamurun Sırlı Hali",
+    "bs": "Çamurun Sırlı Hali"
   }
 };
