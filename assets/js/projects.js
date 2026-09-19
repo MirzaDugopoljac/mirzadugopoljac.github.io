@@ -1,7 +1,198 @@
 window.PROJECTS = [
   {
-    "slug": "urban-square",
+    "slug": "gemlik",
     "num": "01",
+    "cover": "gemlik-09.webp",
+    "title": {
+      "en": "Proje 5 — Gemlik",
+      "tr": "Proje 5 — Gemlik",
+      "bs": "Proje 5 — Gemlik"
+    },
+    "category": {
+      "en": "Coastal Landscape",
+      "tr": "Kıyı Peyzajı",
+      "bs": "Obalni pejzaž"
+    },
+    "context": {
+      "en": "Gemlik, Bursa · 2026",
+      "tr": "Gemlik, Bursa · 2026",
+      "bs": "Gemlik, Bursa · 2026"
+    },
+    "focus": {
+      "en": "Coastal ecology · public space · exposure",
+      "tr": "Kıyı ekolojisi · kamusal alan · maruziyet",
+      "bs": "Obalna ekologija · javni prostor · izloženost"
+    },
+    "desc": {
+      "en": "A coastal landscape where ecology, memory and everyday life meet the Sea of Marmara.",
+      "tr": "Ekoloji, hafıza ve gündelik yaşamın Marmara Denizi ile buluştuğu bir kıyı peyzajı.",
+      "bs": "Obalni pejzaž gdje se ekologija, sjećanje i svakodnevni život susreću s Mramornim morem."
+    },
+    "story": {
+      "en": "Developed for Landscape Project 5 at Bursa Uludağ University, Gemlik explores exposure to wind, waves, salinity, pollution and human activity. The sea cucumber concept translates these pressures into a public landscape: cultivation pools, environmental information stations, a coastal memory workshop and a continuous ecology route connect recreation with awareness of the coast. The final jury submission is dated 26 June 2026.",
+      "tr": "Bursa Uludağ Üniversitesi Peyzaj Projesi 5 kapsamında geliştirilen Gemlik; rüzgâr, dalga, tuzluluk, kirlilik ve insan kullanımına maruziyeti ele alır. Deniz hıyarı konsepti bu etkileri kamusal peyzaja dönüştürür: yetiştiricilik havuzları, maruziyet bilgilendirme noktaları, kıyının hafızası atölyesi ve ekoloji rotası, rekreasyonu kıyı farkındalığıyla birleştirir. Final teslimi 26 Haziran 2026 tarihlidir.",
+      "bs": "Razvijen za Pejzažni projekat 5 na Univerzitetu Bursa Uludağ, Gemlik istražuje izloženost vjetru, valovima, slanosti, zagađenju i ljudskim aktivnostima. Koncept morskog krastavca pretvara ove utjecaje u javni pejzaž: bazeni za uzgoj, informativne stanice, radionica sjećanja obale i ekološka ruta povezuju rekreaciju sa sviješću o obali. Završni rad predan je 26. juna 2026."
+    },
+    "gallery": [
+      [
+        "gemlik-09.webp",
+        {
+          "en": "Public square at dusk",
+          "tr": "Gün batımında meydan",
+          "bs": "Javni trg u sumrak"
+        }
+      ],
+      [
+        "gemlik-06.webp",
+        {
+          "en": "The waterfront after sunset",
+          "tr": "Gün batımından sonra kıyı",
+          "bs": "Obala nakon zalaska sunca"
+        }
+      ],
+      [
+        "gemlik-08.webp",
+        {
+          "en": "Coastal memory workshop",
+          "tr": "Kıyının hafızası atölyesi",
+          "bs": "Radionica sjećanja obale"
+        }
+      ],
+      [
+        "gemlik-12.webp",
+        {
+          "en": "Coastal ecology route",
+          "tr": "Kıyı ekolojisi rotası",
+          "bs": "Staza obalne ekologije"
+        }
+      ],
+      [
+        "gemlik-05.webp",
+        {
+          "en": "Sea cucumber cultivation pools",
+          "tr": "Deniz hıyarı yetiştiricilik havuzları",
+          "bs": "Bazeni za uzgoj morskih krastavaca"
+        }
+      ],
+      [
+        "gemlik-07.webp",
+        {
+          "en": "Environmental exposure stations",
+          "tr": "Maruziyet bilgilendirme noktaları",
+          "bs": "Stanice informacija o okolišu"
+        }
+      ],
+      [
+        "gemlik-04.webp",
+        {
+          "en": "Waterfront fitness",
+          "tr": "Kıyıda spor",
+          "bs": "Sport uz obalu"
+        }
+      ],
+      [
+        "gemlik-01.webp",
+        {
+          "en": "Play landscape",
+          "tr": "Oyun peyzajı",
+          "bs": "Pejzaž za igru"
+        }
+      ],
+      [
+        "gemlik-13.webp",
+        {
+          "en": "Seafront food stands",
+          "tr": "Kıyı yemek stantları",
+          "bs": "Štandovi hrane uz more"
+        }
+      ],
+      [
+        "gemlik-10.webp",
+        {
+          "en": "Festival promenade",
+          "tr": "Festival promenadı",
+          "bs": "Festivalska promenada"
+        }
+      ],
+      [
+        "gemlik-11.webp",
+        {
+          "en": "Waterfront café",
+          "tr": "Kıyı kafesi",
+          "bs": "Obalni kafić"
+        }
+      ],
+      [
+        "gemlik-02.webp",
+        {
+          "en": "Campus gateway",
+          "tr": "Kampüs girişi",
+          "bs": "Ulaz u kampus"
+        }
+      ],
+      [
+        "gemlik-03.webp",
+        {
+          "en": "Transit and cycle connections",
+          "tr": "Ulaşım ve bisiklet bağlantıları",
+          "bs": "Javni prijevoz i biciklističke veze"
+        }
+      ]
+    ],
+    "drawings": [
+      [
+        "gemlik-concept.webp",
+        {
+          "en": "Concept / 1:2000",
+          "tr": "Konsept / 1:2000",
+          "bs": "Koncept / 1:2000"
+        }
+      ],
+      [
+        "gemlik-plan.webp",
+        {
+          "en": "Spatial plan / 1:2000",
+          "tr": "Yapısal plan / 1:2000",
+          "bs": "Prostorni plan / 1:2000"
+        }
+      ],
+      [
+        "gemlik-planting.webp",
+        {
+          "en": "Planting plan / 1:2000",
+          "tr": "Bitkisel plan / 1:2000",
+          "bs": "Plan sadnje / 1:2000"
+        }
+      ],
+      [
+        "gemlik-sections.webp",
+        {
+          "en": "Sections",
+          "tr": "Kesitler",
+          "bs": "Presjeci"
+        }
+      ],
+      [
+        "gemlik-details.webp",
+        {
+          "en": "Materials and details",
+          "tr": "Malzeme ve detaylar",
+          "bs": "Materijali i detalji"
+        }
+      ],
+      [
+        "gemlik-furniture.webp",
+        {
+          "en": "Public space elements",
+          "tr": "Kamusal alan elemanları",
+          "bs": "Elementi javnog prostora"
+        }
+      ]
+    ]
+  },
+  {
+    "slug": "urban-square",
+    "num": "02",
     "cover": "square-render-2.webp",
     "title": {
       "en": "Urban Square",
@@ -102,7 +293,7 @@ window.PROJECTS = [
   },
   {
     "slug": "urban-landscape-planning",
-    "num": "02",
+    "num": "03",
     "cover": "planning-natural-1.webp",
     "title": {
       "en": "Urban Landscape Planning",
@@ -171,7 +362,7 @@ window.PROJECTS = [
   },
   {
     "slug": "interactive-seating",
-    "num": "03",
+    "num": "04",
     "cover": "furniture-render2-1.webp",
     "title": {
       "en": "Interactive Seating Unit",
@@ -256,7 +447,7 @@ window.PROJECTS = [
   },
   {
     "slug": "collective-housing",
-    "num": "04",
+    "num": "05",
     "cover": "housing-render-2.webp",
     "title": {
       "en": "Collective Housing Landscape",
@@ -333,7 +524,7 @@ window.PROJECTS = [
   },
   {
     "slug": "single-residence",
-    "num": "05",
+    "num": "06",
     "cover": "residential-render-2.webp",
     "title": {
       "en": "Single Residence Garden",
@@ -444,152 +635,6 @@ window.PROJECTS = [
           "en": "Site overview",
           "tr": "Alan görünümü",
           "bs": "Pregled lokacije"
-        }
-      ]
-    ]
-  },
-  {
-    "slug": "school-canteen",
-    "num": "06",
-    "cover": "kantin-render-2.webp",
-    "title": {
-      "en": "School Canteen Landscape",
-      "tr": "Kantin Çevresi Peyzajı",
-      "bs": "Pejzaž oko školske kantine"
-    },
-    "category": {
-      "en": "Campus Landscape",
-      "tr": "Kampüs Peyzajı",
-      "bs": "Kampus pejzaž"
-    },
-    "desc": {
-      "en": "A multifunctional student landscape for socializing, play and varied outdoor experiences.",
-      "tr": "Sosyalleşme, oyun ve farklı açık alan deneyimleri için çok işlevli öğrenci peyzajı.",
-      "bs": "Višenamjenski studentski pejzaž za druženje, igru i različita vanjska iskustva."
-    },
-    "context": {
-      "en": "Academic project",
-      "tr": "Akademik proje",
-      "bs": "Akademski projekat"
-    },
-    "focus": {
-      "en": "Social use · play · concept development",
-      "tr": "Sosyal kullanım · oyun · konsept geliştirme",
-      "bs": "Društvena upotreba · igra · razvoj koncepta"
-    },
-    "story": {
-      "en": "The canteen surroundings are designed as more than a food-and-drink zone. Social, play and experiential spaces overlap to increase spatial variety and student interaction.",
-      "tr": "Kantin çevresi yalnızca yeme-içme alanı olarak değil, sosyal, oyun ve deneyim alanlarının bir araya geldiği çok işlevli bir açık alan olarak tasarlanmıştır. Amaç mekânsal çeşitliliği ve öğrenci etkileşimini artırmaktır.",
-      "bs": "Okruženje kantine zamišljeno je kao više od zone za hranu i piće. Prostori za druženje, igru i iskustvo preklapaju se kako bi povećali prostornu raznolikost i interakciju studenata."
-    },
-    "gallery": [
-      [
-        "kantin-process-1.webp",
-        {
-          "en": "Concept sketch",
-          "tr": "Konsept eskizi",
-          "bs": "Konceptualna skica"
-        }
-      ],
-      [
-        "kantin-process-2.webp",
-        {
-          "en": "Developed plan",
-          "tr": "Geliştirilmiş plan",
-          "bs": "Razrađeni plan"
-        }
-      ],
-      [
-        "kantin-process-3.webp",
-        {
-          "en": "Section study",
-          "tr": "Kesit çalışması",
-          "bs": "Studija presjeka"
-        }
-      ],
-      [
-        "kantin-process-4.webp",
-        {
-          "en": "Physical model",
-          "tr": "Fiziksel maket",
-          "bs": "Fizički model"
-        }
-      ],
-      [
-        "kantin-render-1.webp",
-        {
-          "en": "Aerial visualization",
-          "tr": "Hava perspektifi",
-          "bs": "Zračna vizualizacija"
-        }
-      ],
-      [
-        "kantin-render-2.webp",
-        {
-          "en": "Overall visualization",
-          "tr": "Genel görselleştirme",
-          "bs": "Opća vizualizacija"
-        }
-      ],
-      [
-        "kantin-render-3.webp",
-        {
-          "en": "Activity space",
-          "tr": "Etkinlik alanı",
-          "bs": "Prostor aktivnosti"
-        }
-      ],
-      [
-        "kantin-render-4.webp",
-        {
-          "en": "Night atmosphere",
-          "tr": "Gece atmosferi",
-          "bs": "Noćna atmosfera"
-        }
-      ]
-    ]
-  },
-  {
-    "slug": "cat-house",
-    "num": "07",
-    "cover": "cat-house-1.webp",
-    "title": {
-      "en": "Cat House Design",
-      "tr": "Kedi Evi Tasarımı",
-      "bs": "Dizajn kućice za mačke"
-    },
-    "category": {
-      "en": "Competition",
-      "tr": "Yarışma",
-      "bs": "Konkurs"
-    },
-    "desc": {
-      "en": "A compact shelter concept focused on safety, comfort and environmental fit for street cats.",
-      "tr": "Sokak kedileri için güvenlik, konfor ve çevreyle uyuma odaklanan kompakt barınak tasarımı.",
-      "bs": "Kompaktan koncept skloništa za ulične mačke usmjeren na sigurnost, udobnost i uklapanje u okruženje."
-    },
-    "context": {
-      "en": "Design competition",
-      "tr": "Tasarım yarışması",
-      "bs": "Dizajnerski konkurs"
-    },
-    "focus": {
-      "en": "Welfare · shelter · compact design",
-      "tr": "Refah · barınma · kompakt tasarım",
-      "bs": "Dobrobit · sklonište · kompaktan dizajn"
-    },
-    "story": {
-      "en": "The design responds to climate, shelter and everyday animal needs through a compact solution for resting and protection. It also considers how a small object can fit visually into its surrounding environment.",
-      "tr": "Tasarım, iklim koşulları ile korunma ve gündelik hayvan ihtiyaçlarına kompakt bir dinlenme ve koruma çözümüyle cevap verir. Aynı zamanda küçük bir nesnenin çevresine görsel olarak nasıl uyum sağlayabileceğini ele alır.",
-      "bs": "Dizajn odgovara na klimu, potrebu za skloništem i svakodnevne potrebe životinja kroz kompaktno rješenje za odmor i zaštitu. Razmatra i kako se mali objekat može vizualno uklopiti u okolinu."
-    },
-    "gallery": [
-      [
-        "cat-house-1.webp",
-        {
-          "en": "Competition presentation board",
-          "tr": "Yarışma sunum paftası",
-          "bs": "Konkursni prezentacijski pano"
         }
       ]
     ]

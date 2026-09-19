@@ -34,18 +34,19 @@
   });
   const dialog = document.getElementById('lightbox');
   if (dialog) {
-    let opener;
-    const image = dialog.querySelector('img');
-    document.addEventListener('click', event => {
-      const link = event.target.closest('[data-lightbox]');
-      if (!link) return;
-      event.preventDefault(); opener = link;
-      image.src = link.href;
-      image.alt = link.querySelector('img')?.alt || '';
-      dialog.showModal();
-    });
-    dialog.querySelector('[data-close]').addEventListener('click', () => dialog.close());
-    dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
-    dialog.addEventListener('close', () => { image.removeAttribute('src'); opener?.focus(); });
+    let opener,index=0,startX=0;
+    const image=dialog.querySelector('img');
+    const controls=document.createElement('div');controls.className='gallery-controls';
+    controls.innerHTML='<button type="button" data-prev aria-label="Previous image">←</button><span class="gallery-status" aria-live="polite"></span><button type="button" data-next aria-label="Next image">→</button>';
+    dialog.append(controls);
+    const links=()=>[...document.querySelectorAll('[data-lightbox]')];
+    function show(next){const items=links();index=(next+items.length)%items.length;image.src=items[index].href;image.alt=items[index].querySelector('img')?.alt||'';controls.querySelector('.gallery-status').textContent=`${String(index+1).padStart(2,'0')} / ${items.length} — ${image.alt}`;}
+    document.addEventListener('click',event=>{const link=event.target.closest('[data-lightbox]');if(!link||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;event.preventDefault();opener=link;show(links().indexOf(link));dialog.showModal();document.body.style.overflow='hidden';});
+    controls.querySelector('[data-prev]').addEventListener('click',()=>show(index-1));controls.querySelector('[data-next]').addEventListener('click',()=>show(index+1));
+    dialog.addEventListener('keydown',event=>{if(event.key==='ArrowRight'){event.preventDefault();show(index+1);}if(event.key==='ArrowLeft'){event.preventDefault();show(index-1);}});
+    image.addEventListener('touchstart',e=>{startX=e.changedTouches[0].clientX;},{passive:true});image.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-startX;if(Math.abs(dx)>60)show(index+(dx<0?1:-1));},{passive:true});
+    dialog.querySelector('[data-close]').addEventListener('click',()=>dialog.close());
+    dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
+    dialog.addEventListener('close',()=>{image.removeAttribute('src');document.body.style.overflow='';opener?.focus();});
   }
 })();

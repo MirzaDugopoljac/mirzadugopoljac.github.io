@@ -14,9 +14,9 @@
     const project = window.PROJECTS.find(p=>p.slug===layer.slug);
     const image = document.getElementById('layerImage');
     image.src = 'assets/img/'+layer.image;
-    image.alt = project.title[lang]+' — '+window.trText('ed.'+active);
+    image.alt = project.title[lang]+' â€” '+window.trText('ed.'+active);
     document.getElementById('layerProject').textContent=project.title[lang];
-    document.getElementById('layerCode').textContent='MD—'+project.num;
+    document.getElementById('layerCode').textContent='MDâ€”'+project.num;
     document.getElementById('layerCase').href='portfolio/projects/'+layer.slug+'.html';
     document.getElementById('layerLink').href='portfolio/projects/'+layer.slug+'.html';
     document.getElementById('layer-panel').setAttribute('aria-labelledby','tab-'+active);
@@ -45,9 +45,9 @@
   });
   function render() {
     const lang=window.siteLang();
-    list.innerHTML=['urban-square','urban-landscape-planning','collective-housing'].map(slug=>{
+    list.innerHTML=['gemlik','urban-square','urban-landscape-planning','collective-housing'].map(slug=>{
       const p=window.PROJECTS.find(project=>project.slug===slug);
-      return `<article class="work-record"><div class="record-meta"><span>P-${p.num}</span><span>${p.context[lang]}</span><span>${p.category[lang]}</span></div><a class="record-image" href="portfolio/projects/${p.slug}.html"><img src="assets/img/${p.cover}" alt="${p.title[lang]}" loading="lazy" width="1400" height="900"><span class="image-cross" aria-hidden="true">+</span></a><div class="record-description"><h3><a href="portfolio/projects/${p.slug}.html">${p.title[lang]}</a></h3><p>${p.desc[lang]}</p><a class="text-link" href="portfolio/projects/${p.slug}.html">${window.trText('ed.case')}</a></div></article>`;
+      return `<article class="work-record"><div class="record-meta"><span>P-${p.num}</span><span>${p.context[lang]}</span><span>${p.category[lang]}</span></div><a class="record-image" href="portfolio/projects/${p.slug}.html"><img src="assets/img/${p.cover}" ${p.slug==='gemlik' ? `srcset="assets/img/gemlik-09-800.webp 800w, assets/img/gemlik-09.webp 1600w" sizes="90vw"` : ''} alt="${p.title[lang]}" loading="lazy" width="1400" height="900"><span class="image-cross" aria-hidden="true">+</span></a><div class="record-description"><h3><a href="portfolio/projects/${p.slug}.html">${p.title[lang]}</a></h3><p>${p.desc[lang]}</p><a class="text-link" href="portfolio/projects/${p.slug}.html">${window.trText('ed.case')}</a></div></article>`;
     }).join('');
     document.querySelectorAll('[data-note-title]').forEach(el=>{
       const p=window.PROJECTS.find(project=>project.slug===el.dataset.noteTitle);

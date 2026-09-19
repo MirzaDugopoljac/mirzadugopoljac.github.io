@@ -90,7 +90,7 @@
       finish();
     }
   }
-  homeIntro();
+  // Content is available immediately; no mandatory loading sequence.
 
   const stage=document.querySelector('.layer-stage');
   stage?.addEventListener('pointermove',event=>{
@@ -110,32 +110,5 @@
     reduced.addEventListener('change',()=>{if(reduced.matches){observer.disconnect();document.querySelectorAll('.reveal-ready').forEach(el=>el.classList.add('is-visible'));}});
   }
 
-  // Only ordinary local HTML navigation is intercepted; downloads, anchors and modified clicks retain native behavior.
-  let navigating=false;
-  function clearTransition(){document.querySelector('.route-veil')?.remove();navigating=false;}
-  addEventListener('pageshow',clearTransition);
-  document.addEventListener('click',event=>{
-    const link=event.target.closest('a[href]');
-    if(!link||event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey||link.target||link.hasAttribute('download')||reduced.matches)return;
-    const url=new URL(link.href,location.href);
-    if(url.origin!==location.origin||!url.pathname.endsWith('.html')||(url.pathname===location.pathname&&url.search===location.search))return;
-    if(navigating){event.preventDefault();return;}
-    event.preventDefault();navigating=true;
-    const veil=document.createElement('div');veil.className='route-veil';veil.setAttribute('aria-hidden','true');
-    const canvas=document.createElement('canvas');canvas.width=innerWidth;canvas.height=innerHeight;veil.append(canvas);document.body.append(veil);
-    const ctx=canvas.getContext('2d');const start=performance.now();
-    const px=event.clientX||innerWidth/2,py=event.clientY||innerHeight/2;
-    function draw(now){
-      const t=Math.min(1,(now-start)/320);veil.classList.add('active');
-      if(ctx){ctx.clearRect(0,0,canvas.width,canvas.height);for(let i=0;i<650;i++){
-        const angle=i*2.39996,radius=Math.sqrt(i/650)*Math.max(innerWidth,innerHeight)*t;
-        ctx.fillStyle=i%3?'#aac496':'#c79a71';ctx.globalAlpha=(1-t)*.7;
-        ctx.fillRect(px+Math.cos(angle)*radius,py+Math.sin(angle)*radius*.65,2,2);
-      }}
-      if(t<1)requestAnimationFrame(draw);
-    }
-    requestAnimationFrame(draw);
-    setTimeout(()=>location.assign(url.href),330);
-    setTimeout(clearTransition,1800);
-  });
+
 })();

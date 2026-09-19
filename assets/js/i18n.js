@@ -20,9 +20,9 @@ window.I18N = {
     "bs": "PEJZAŽNA ARHITEKTURA · DIZAJN · VIZUALIZACIJA"
   },
   "home.title": {
-    "en": "Read the land.<br>Shape what<br><em>comes next.</em>",
-    "tr": "Araziyi oku.<br>Geleceği<br><em>şekillendir.</em>",
-    "bs": "Čitaj prostor.<br>Oblikuj ono<br><em>što dolazi.</em>"
+    "en": "MIRZA<br><em>DUGOPOLJAC</em>",
+    "tr": "MIRZA<br><em>DUGOPOLJAC</em>",
+    "bs": "MIRZA<br><em>DUGOPOLJAC</em>"
   },
   "home.copy": {
     "en": "Landscape architecture, from the first site reading to the spaces we share. I’m Mirza Dugopoljac, a student at Bursa Uludağ University working across design, GIS and visualization.",
@@ -255,14 +255,14 @@ window.I18N = {
     "bs": "ODABRANI RADOVI · 07 PROJEKATA"
   },
   "portfolio.title": {
-    "en": "Landscape at<br><em>different scales.</em>",
-    "tr": "Farklı ölçeklerde<br><em>peyzaj.</em>",
-    "bs": "Pejzaž na<br><em>različitim skalama.</em>"
+    "en": "Six projects.<br><em>Many ways of seeing.</em>",
+    "tr": "Altı proje.<br><em>Farklı bakışlar.</em>",
+    "bs": "Šest projekata.<br><em>Različiti pogledi.</em>"
   },
   "portfolio.copy": {
-    "en": "Seven projects moving between public space, planning, residential landscape, technical design and competition work. Different briefs, but the same interest in how a site can become clearer, more useful and more memorable.",
-    "tr": "Kamusal alan, planlama, konut peyzajı, teknik tasarım ve yarışma çalışmaları arasında ilerleyen yedi proje. Farklı briefler; fakat bir alanın nasıl daha net, daha kullanışlı ve daha akılda kalıcı hale gelebileceğine yönelik aynı merak.",
-    "bs": "Sedam projekata između javnog prostora, planiranja, stambenog pejzaža, tehničkog dizajna i konkursnih radova. Različiti zadaci, ali isto interesovanje za to kako lokacija može postati jasnija, korisnija i upečatljivija."
+    "en": "Six projects exploring coastal landscapes, public spaces, residential gardens, planning and technical design.",
+    "tr": "Kıyı peyzajı, kamusal alanlar, konut bahçeleri, planlama ve teknik tasarımı araştıran altı proje.",
+    "bs": "Šest projekata koji istražuju obalne pejzaže, javne prostore, stambene vrtove, planiranje i tehnički dizajn."
   },
   "portfolio.section": {
     "en": "01 / Project index",
@@ -280,9 +280,9 @@ window.I18N = {
     "bs": "Otvori projekat da vidiš crteže, vizualizacije i dizajnersko razmišljanje."
   },
   "portfolio.footerCta": {
-    "en": "Seven projects.<br><em>One evolving direction.</em>",
-    "tr": "Yedi proje.<br><em>Gelişen tek bir yön.</em>",
-    "bs": "Sedam projekata.<br><em>Jedan pravac koji se razvija.</em>"
+    "en": "Six projects exploring coastal landscapes, public spaces, residential gardens, planning and technical design.",
+    "tr": "Kıyı peyzajı, kamusal alanlar, konut bahçeleri, planlama ve teknik tasarımı araştıran altı proje.",
+    "bs": "Šest projekata koji istražuju obalne pejzaže, javne prostore, stambene vrtove, planiranje i tehnički dizajn."
   },
   "portfolio.footerText": {
     "en": "The web portfolio is built for exploration. The PDF keeps the original document sequence.",
@@ -430,9 +430,9 @@ window.I18N = {
     "bs": "Ideje ukorijenjene<br>u <em>prostoru.</em>"
   },
   "new.all": {
-    "en": "Explore all 7 projects ↗",
-    "tr": "7 projenin tamamını incele ↗",
-    "bs": "Pogledaj svih 7 projekata ↗"
+    "en": "Explore all 6 projects ↗",
+    "tr": "6 projenin tamamını incele ↗",
+    "bs": "Pogledaj svih 6 projekata ↗"
   },
   "new.cv": {
     "en": "Download CV ↓",

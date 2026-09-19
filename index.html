@@ -23,8 +23,9 @@
 </noscript>
 <link rel="stylesheet" href="./assets/css/editorial.css">
 <link rel="stylesheet" href="./assets/css/earth.css">
-</head>
-<body data-root="./" data-active="home" data-title-key="title.home">
+<link rel="stylesheet" href="./assets/css/exhibition.css">
+<link rel="stylesheet" href="./assets/os/os.css"><link rel="preload" as="image" href="./assets/os/wallpaper.webp"></head>
+<body data-root="./" data-active="home" data-title-key="title.home"><div id="static-content">
 <a class="skip-link" href="#main" data-i18n="new.skip">Skip to content</a>
 <div class="nav-wrap">
 <nav class="nav shell" aria-label="Main navigation">
@@ -39,6 +40,7 @@
 <div class="nav-links">
 <a href="./portfolio/index.html"  data-i18n="nav.work">Work</a>
 <a href="./about.html"  data-i18n="nav.about">About</a>
+<a href="./files/CV.pdf"  data-i18n="new.cv">Download CV ↓</a>
 <a href="./contact.html"  data-i18n="nav.contact">Contact</a>
 <a href="./camurun-sirli-hali-hero-pack/index.html"  data-i18n="nav.ceramics">Çamurun Sırlı Hali</a>
 <a href="./itech.html"  data-i18n="nav.itech">iTech</a>
@@ -59,17 +61,20 @@
 <header class="home-hero shell">
 <div class="home-intro">
 <div class="identity-line" data-i18n="ed.identity">Mirza Dugopoljac / Landscape architecture</div>
-<h1 data-i18n="home.title">Read the land.<br>Shape what<br>
-<em>comes next.</em>
+<h1 data-i18n="home.title">MIRZA<br>
+<em>DUGOPOLJAC</em>
 </h1>
-<p class="hero-copy" data-i18n="home.copy">Landscape architecture, from the first site reading to the spaces we share. I’m Mirza Dugopoljac, a student at Bursa Uludağ University working across design, GIS and visualization.</p>
+<p class="hero-copy" data-i18n="new.design">Landscape design</p>
+<a class="hero-scroll micro" href="#selected-work">↓ &nbsp; <span data-i18n="ed.work">View the work ↗</span>
+</a>
 <div class="actions">
 <a class="btn primary" href="#selected-work"  data-i18n="ed.work">View the work ↗</a>
 <a class="btn secondary" href="#practice"  data-i18n="ed.about">The approach</a>
 <a class="text-link" href="mailto:mirzaadc@gmail.com"  data-i18n="ed.contact">Start a conversation</a>
 </div>
 </div>
-<section class="landscape-instrument" aria-label="Landscape project layers">
+</header>
+<section class="landscape-instrument shell" aria-label="Landscape project layers">
 <p class="instrument-intro" data-i18n="ed.layerIntro">One landscape. Three ways of seeing.</p>
 <div class="layer-stage">
 <div class="layer-sheet sheet-back" aria-hidden="true">
@@ -85,7 +90,7 @@
 <span>MD / FIELD STUDIES</span>
 <span aria-hidden="true">↗</span>
 </div>
-<img id="layerImage" src="assets/img/square-plan-1.webp" alt="Urban Square masterplan" width="1100" height="750" fetchpriority="high">
+<img id="layerImage" src="assets/img/square-plan-1.webp" alt="Urban Square masterplan" fetchpriority="high" width="1983" height="1139" decoding="async">
 <div class="sheet-foot">
 <span id="layerProject">Urban Square</span>
 <span id="layerCode">MD—01</span>
@@ -124,7 +129,6 @@
 </div>
 <span class="micro">PORTFOLIO / 2026</span>
 </div>
-</header>
 <section class="editorial-section thesis-section shell" id="thesis">
 <span class="section-marker" aria-hidden="true">
 </span>
@@ -233,17 +237,35 @@
 <em>On the ground.</em>
 </h2>
 </div>
-<a class="text-link" href="portfolio/index.html"  data-i18n="new.all">Explore all 7 projects ↗</a>
+<a class="text-link" href="portfolio/index.html"  data-i18n="new.all">Explore all 6 projects ↗</a>
 </div>
 <div id="homeProjects" class="work-registry">
 <article class="work-record">
 <div class="record-meta">
 <span>P-01</span>
+<span>Gemlik, Bursa · 2026</span>
+<span>Coastal Landscape</span>
+</div>
+<a class="record-image" href="portfolio/projects/gemlik.html">
+<img src="assets/img/gemlik-09.webp" alt="Proje 5 — Gemlik" loading="lazy" width="1600" height="900" decoding="async" srcset="assets/img/gemlik-09-800.webp 800w, assets/img/gemlik-09.webp 1600w" sizes="(max-width: 760px) 90vw, 85vw">
+<span class="image-cross" aria-hidden="true">+</span>
+</a>
+<div class="record-description">
+<h3>
+<a href="portfolio/projects/gemlik.html">Proje 5 — Gemlik</a>
+</h3>
+<p>A coastal landscape where ecology, memory and everyday life meet the Sea of Marmara.</p>
+<a class="text-link" href="portfolio/projects/gemlik.html">Open case file ↗</a>
+</div>
+</article>
+<article class="work-record">
+<div class="record-meta">
+<span>P-02</span>
 <span>Bursa</span>
 <span>Public Space</span>
 </div>
 <a class="record-image" href="portfolio/projects/urban-square.html">
-<img src="assets/img/square-render-2.webp" alt="Urban Square" loading="lazy" width="1400" height="900">
+<img src="assets/img/square-render-2.webp" alt="Urban Square" loading="lazy" width="920" height="613" decoding="async">
 <span class="image-cross" aria-hidden="true">+</span>
 </a>
 <div class="record-description">
@@ -256,12 +278,12 @@
 </article>
 <article class="work-record">
 <div class="record-meta">
-<span>P-02</span>
+<span>P-03</span>
 <span>Bursa</span>
 <span>Planning · GIS</span>
 </div>
 <a class="record-image" href="portfolio/projects/urban-landscape-planning.html">
-<img src="assets/img/planning-natural-1.webp" alt="Urban Landscape Planning" loading="lazy" width="1400" height="900">
+<img src="assets/img/planning-natural-1.webp" alt="Urban Landscape Planning" loading="lazy" width="991" height="1398" decoding="async">
 <span class="image-cross" aria-hidden="true">+</span>
 </a>
 <div class="record-description">
@@ -274,12 +296,12 @@
 </article>
 <article class="work-record">
 <div class="record-meta">
-<span>P-04</span>
+<span>P-05</span>
 <span>Academic project</span>
 <span>Residential Landscape</span>
 </div>
 <a class="record-image" href="portfolio/projects/collective-housing.html">
-<img src="assets/img/housing-render-2.webp" alt="Collective Housing Landscape" loading="lazy" width="1400" height="900">
+<img src="assets/img/housing-render-2.webp" alt="Collective Housing Landscape" loading="lazy" width="958" height="538" decoding="async">
 <span class="image-cross" aria-hidden="true">+</span>
 </a>
 <div class="record-description">
@@ -309,7 +331,7 @@
 </div>
 </div>
 <figure class="practice-portrait">
-<img src="assets/img/profile-2.webp" alt="Mirza Dugopoljac" loading="lazy" width="600" height="750">
+<img src="assets/img/profile-2.webp" alt="Mirza Dugopoljac" loading="lazy" width="409" height="547" decoding="async">
 <figcaption>
 <span>Mirza Dugopoljac</span>
 <span>Bursa Uludağ University</span>
@@ -321,16 +343,16 @@
 <div class="section-label" data-i18n="ed.notes">06 / From the project files</div>
 <h2 class="section-title" data-i18n="ed.notesTitle">Look a little closer.</h2>
 <div class="project-notes">
-<a class="project-note" href="portfolio/projects/urban-landscape-planning.html">
-<span class="micro" data-note-meta="urban-landscape-planning">P-02 / Planning · GIS</span>
-<h3 data-note-title="urban-landscape-planning">Urban Landscape Planning</h3>
-<p data-note-copy="urban-landscape-planning">This planning study reads topography, slope, aspect, hydrology, geology, soil, climate, ecology, land use, transportation and cultural values together. The synthesis turns those layers into landscape strategies rather than treating mapping as a final output.</p>
+<a class="project-note" href="portfolio/projects/urban-square.html">
+<span class="micro" data-note-meta="urban-square">P-02 / Public Space</span>
+<h3 data-note-title="urban-square">Urban Square</h3>
+<p data-note-copy="urban-square">The project reimagines an underused site as a public square with a stronger social and experiential identity. Movement, planting, water and gathering areas are designed as one connected landscape system.</p>
 <span class="text-link" data-i18n="ed.case">Open case file ↗</span>
 </a>
-<a class="project-note" href="portfolio/projects/interactive-seating.html">
-<span class="micro" data-note-meta="interactive-seating">P-03 / Technical Design</span>
-<h3 data-note-title="interactive-seating">Interactive Seating Unit</h3>
-<p data-note-copy="interactive-seating">The seating unit combines resting, shade and interaction in one object. A solar canopy supplies energy to interactive ground elements while the circular seating form creates a more social, semi-enclosed experience.</p>
+<a class="project-note" href="portfolio/projects/urban-landscape-planning.html">
+<span class="micro" data-note-meta="urban-landscape-planning">P-03 / Planning · GIS</span>
+<h3 data-note-title="urban-landscape-planning">Urban Landscape Planning</h3>
+<p data-note-copy="urban-landscape-planning">This planning study reads topography, slope, aspect, hydrology, geology, soil, climate, ecology, land use, transportation and cultural values together. The synthesis turns those layers into landscape strategies rather than treating mapping as a final output.</p>
 <span class="text-link" data-i18n="ed.case">Open case file ↗</span>
 </a>
 </div>
@@ -338,11 +360,11 @@
 <section class="index-strip shell" aria-label="Portfolio contents">
 <h2 class="micro" data-i18n="ed.index">Portfolio index</h2>
 <div>
-<strong>07</strong>
+<strong>06</strong>
 <span class="micro" data-i18n="ed.projects">Project records</span>
 </div>
 <div>
-<strong>42</strong>
+<strong>46</strong>
 <span class="micro" data-i18n="ed.drawings">Project visuals</span>
 </div>
 <div>
@@ -378,19 +400,13 @@
 </div>
 </footer>
 </main>
-<script src="./assets/js/i18n.js">
-</script>
-<script src="./assets/js/projects.js">
-</script>
-<script src="./assets/js/components.js">
-</script>
-<script src="./assets/js/site.js">
-</script>
-<script src="./assets/js/home-projects.js">
-</script>
-<script src="assets/js/terrain.js">
-</script>
-<script src="./assets/js/effects.js">
-</script>
-</body>
+
+
+
+
+
+
+
+
+</div><script src="./assets/js/projects.js"></script><script src="./assets/vendor/gsap/gsap.min.js"></script><script src="./assets/vendor/gsap/Flip.min.js"></script><script type="module" src="./assets/os/desktop.js"></script></body>
 </html>

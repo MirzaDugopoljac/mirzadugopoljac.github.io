@@ -1,4 +1,6 @@
 (() => {
+ document.documentElement.classList.add('itech-surface');
+ if(window.parent!==window){document.documentElement.classList.add('itech-embedded');try{const sync=()=>{document.documentElement.dataset.osTheme=parent.document.documentElement.dataset.osTheme||'light';};sync();new MutationObserver(sync).observe(parent.document.documentElement,{attributes:true,attributeFilter:['data-os-theme']});}catch{}}
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
  const page=document.querySelector('.itech-page'),button=document.getElementById('itech-motion');
  let paused=reduced.matches;
