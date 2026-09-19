@@ -4,9 +4,9 @@ window.PROJECTS = [
     "num": "01",
     "cover": "gemlik-09.webp",
     "title": {
-      "en": "Proje 5 — Gemlik",
-      "tr": "Proje 5 — Gemlik",
-      "bs": "Proje 5 — Gemlik"
+      "en": "Gemlik Coastal Landscape",
+      "tr": "Gemlik Kıyı Peyzajı",
+      "bs": "Obalni pejzaž Gemlika"
     },
     "category": {
       "en": "Coastal Landscape",
